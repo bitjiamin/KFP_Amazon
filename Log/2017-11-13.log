@@ -1,0 +1,645 @@
+2017-11-13 11:55:17,381 - Administrator login
+2017-11-13 11:55:17,451 - Initialize UI
+2017-11-13 11:56:13,671 - Administrator login
+2017-11-13 11:56:13,741 - Initialize UI
+2017-11-13 11:57:14,971 - Administrator login
+2017-11-13 11:57:15,021 - Initialize UI
+2017-11-13 11:57:15,051 - Initialize sequence table
+2017-11-13 11:57:15,091 - Load sequence
+2017-11-13 11:57:15,091 - Initialize sequence tree
+2017-11-13 11:57:15,111 - Connect PLC OK!
+2017-11-13 11:57:15,111 - ZMQ Server Start, Port: 5555
+2017-11-13 12:08:01,231 - Administrator login
+2017-11-13 12:08:01,291 - Initialize UI
+2017-11-13 12:08:01,331 - Initialize sequence table
+2017-11-13 12:08:01,351 - Load sequence
+2017-11-13 12:08:01,351 - Initialize sequence tree
+2017-11-13 12:08:01,371 - ZMQ Server Start, Port: 5555
+2017-11-13 12:08:01,371 - Connect PLC OK!
+2017-11-13 12:10:55,998 - Administrator login
+2017-11-13 12:10:56,048 - Initialize UI
+2017-11-13 12:10:56,088 - Initialize sequence table
+2017-11-13 12:10:56,108 - Load sequence
+2017-11-13 12:10:56,108 - Initialize sequence tree
+2017-11-13 12:10:56,128 - ZMQ Server Start, Port: 5555
+2017-11-13 12:10:56,128 - Connect PLC OK!
+2017-11-13 12:16:52,541 - Administrator login
+2017-11-13 12:16:52,601 - Initialize UI
+2017-11-13 12:16:52,641 - Initialize sequence table
+2017-11-13 12:16:52,711 - Load sequence
+2017-11-13 12:16:52,711 - Initialize sequence tree
+2017-11-13 12:16:52,721 - ZMQ Server Start, Port: 5555
+2017-11-13 12:16:52,721 - Connect PLC OK!
+2017-11-13 12:17:20,953 - Reload sequence
+2017-11-13 12:17:20,953 - Initialize sequence tree
+2017-11-13 12:17:24,560 - Reload sequence
+2017-11-13 12:17:24,560 - Initialize sequence tree
+2017-11-13 12:18:12,577 - Administrator login
+2017-11-13 12:18:12,657 - Initialize UI
+2017-11-13 12:18:12,687 - Initialize sequence table
+2017-11-13 12:18:12,767 - Load sequence
+2017-11-13 12:18:12,767 - Initialize sequence tree
+2017-11-13 12:18:12,767 - Connect PLC OK!
+2017-11-13 12:18:12,787 - ZMQ Server Start, Port: 5555
+2017-11-13 12:18:28,917 - Reload sequence
+2017-11-13 12:18:28,917 - Initialize sequence tree
+2017-11-13 12:24:19,177 - Administrator login
+2017-11-13 12:24:19,227 - Initialize UI
+2017-11-13 12:24:19,257 - Initialize sequence table
+2017-11-13 12:24:19,347 - Load sequence
+2017-11-13 12:24:19,347 - Initialize sequence tree
+2017-11-13 12:24:19,357 - Connect PLC OK!
+2017-11-13 12:24:19,377 - ZMQ Server Start, Port: 5555
+2017-11-13 13:35:46,113 - Administrator login
+2017-11-13 13:35:46,153 - Initialize UI
+2017-11-13 13:35:46,193 - Initialize sequence table
+2017-11-13 13:35:46,404 - Load sequence
+2017-11-13 13:35:46,404 - Initialize sequence tree
+2017-11-13 14:01:58,078 - Administrator login
+2017-11-13 14:01:58,128 - Initialize UI
+2017-11-13 14:01:58,159 - Initialize sequence table
+2017-11-13 14:01:58,228 - Load sequence
+2017-11-13 14:01:58,228 - Initialize sequence tree
+2017-11-13 14:01:58,239 - ZMQ Server Start, Port: 5555
+2017-11-13 14:01:58,239 - Connect PLC OK!
+2017-11-13 14:03:29,848 - Administrator login
+2017-11-13 14:03:29,908 - Initialize UI
+2017-11-13 14:03:29,948 - Initialize sequence table
+2017-11-13 14:03:30,008 - Load sequence
+2017-11-13 14:03:30,008 - Initialize sequence tree
+2017-11-13 14:03:30,008 - Connect PLC OK!
+2017-11-13 14:03:30,019 - ZMQ Server Start, Port: 5555
+2017-11-13 14:03:38,868 - Administrator login
+2017-11-13 14:03:38,908 - Initialize UI
+2017-11-13 14:03:38,939 - Initialize sequence table
+2017-11-13 14:03:39,008 - Load sequence
+2017-11-13 14:03:39,019 - Initialize sequence tree
+2017-11-13 14:03:39,029 - ZMQ Server Start, Port: 5555
+2017-11-13 14:03:39,029 - Connect PLC OK!
+2017-11-13 14:04:28,388 - Administrator login
+2017-11-13 14:04:28,439 - Initialize UI
+2017-11-13 14:04:28,479 - Initialize sequence table
+2017-11-13 14:04:28,539 - Load sequence
+2017-11-13 14:04:28,539 - Initialize sequence tree
+2017-11-13 14:04:40,868 - Administrator login
+2017-11-13 14:04:40,908 - Initialize UI
+2017-11-13 14:04:40,959 - Initialize sequence table
+2017-11-13 14:04:41,029 - Load sequence
+2017-11-13 14:04:41,029 - Initialize sequence tree
+2017-11-13 14:04:41,118 - ZMQ Server Start, Port: 5555
+2017-11-13 14:08:36,439 - Administrator login
+2017-11-13 14:08:36,488 - Initialize UI
+2017-11-13 14:08:36,519 - Initialize sequence table
+2017-11-13 14:08:36,598 - Load sequence
+2017-11-13 14:08:36,598 - Initialize sequence tree
+2017-11-13 14:08:44,588 - Administrator login
+2017-11-13 14:08:44,639 - Initialize UI
+2017-11-13 14:08:44,668 - Initialize sequence table
+2017-11-13 14:08:44,739 - Load sequence
+2017-11-13 14:08:44,739 - Initialize sequence tree
+2017-11-13 14:08:44,759 - ZMQ Server Start, Port: 5555
+2017-11-13 14:08:54,479 - Administrator login
+2017-11-13 14:08:54,519 - Initialize UI
+2017-11-13 14:08:54,559 - Initialize sequence table
+2017-11-13 14:08:54,628 - Load sequence
+2017-11-13 14:08:54,628 - Initialize sequence tree
+2017-11-13 14:08:54,639 - ZMQ Server Start, Port: 5555
+2017-11-13 14:11:23,168 - Administrator login
+2017-11-13 14:11:23,219 - Initialize UI
+2017-11-13 14:11:23,248 - Initialize sequence table
+2017-11-13 14:11:37,029 - Administrator login
+2017-11-13 14:11:37,078 - Initialize UI
+2017-11-13 14:11:37,108 - Initialize sequence table
+2017-11-13 14:12:56,219 - Administrator login
+2017-11-13 14:12:56,259 - Initialize UI
+2017-11-13 14:12:56,299 - Initialize sequence table
+2017-11-13 14:13:07,699 - Administrator login
+2017-11-13 14:13:07,748 - Initialize UI
+2017-11-13 14:13:07,779 - Initialize sequence table
+2017-11-13 14:13:42,878 - Administrator login
+2017-11-13 14:13:42,928 - Initialize UI
+2017-11-13 14:13:42,968 - Initialize sequence table
+2017-11-13 14:15:25,979 - Administrator login
+2017-11-13 14:15:26,019 - Initialize UI
+2017-11-13 14:15:26,059 - Initialize sequence table
+2017-11-13 14:15:26,148 - Load sequence
+2017-11-13 14:15:26,148 - Initialize sequence tree
+2017-11-13 14:15:26,168 - ZMQ Server Start, Port: 5555
+2017-11-13 14:16:28,271 - Administrator login
+2017-11-13 14:16:28,320 - Initialize UI
+2017-11-13 14:16:28,351 - Initialize sequence table
+2017-11-13 14:16:28,430 - Load sequence
+2017-11-13 14:16:28,430 - Initialize sequence tree
+2017-11-13 14:16:28,450 - ZMQ Server Start, Port: 5555
+2017-11-13 14:18:04,246 - Administrator login
+2017-11-13 14:18:04,307 - Initialize UI
+2017-11-13 14:18:04,347 - Initialize sequence table
+2017-11-13 14:18:04,437 - Load sequence
+2017-11-13 14:18:04,437 - Initialize sequence tree
+2017-11-13 14:18:04,457 - ZMQ Server Start, Port: 5555
+2017-11-13 14:19:57,847 - Administrator login
+2017-11-13 14:19:57,896 - Initialize UI
+2017-11-13 14:19:57,937 - Initialize sequence table
+2017-11-13 14:23:34,986 - Administrator login
+2017-11-13 14:23:35,026 - Initialize UI
+2017-11-13 14:23:35,056 - Initialize sequence table
+2017-11-13 14:24:55,667 - Administrator login
+2017-11-13 14:24:55,707 - Initialize UI
+2017-11-13 14:24:55,746 - Initialize sequence table
+2017-11-13 14:27:24,072 - Administrator login
+2017-11-13 14:27:24,131 - Initialize UI
+2017-11-13 14:27:24,171 - Initialize sequence table
+2017-11-13 14:31:01,022 - Administrator login
+2017-11-13 14:31:01,081 - Initialize UI
+2017-11-13 14:31:01,111 - Initialize sequence table
+2017-11-13 14:31:01,201 - Load sequence
+2017-11-13 14:31:01,201 - Initialize sequence tree
+2017-11-13 14:31:01,222 - ZMQ Server Start, Port: 5555
+2017-11-13 14:32:37,182 - Administrator login
+2017-11-13 14:32:37,232 - Initialize UI
+2017-11-13 14:32:37,262 - Initialize sequence table
+2017-11-13 14:32:37,342 - Load sequence
+2017-11-13 14:32:37,342 - Initialize sequence tree
+2017-11-13 14:32:37,361 - ZMQ Server Start, Port: 5555
+2017-11-13 14:36:11,059 - Administrator login
+2017-11-13 14:36:11,108 - Initialize UI
+2017-11-13 14:36:11,139 - Initialize sequence table
+2017-11-13 14:36:11,239 - Load sequence
+2017-11-13 14:36:11,239 - Initialize sequence tree
+2017-11-13 14:36:31,908 - Administrator login
+2017-11-13 14:36:31,959 - Initialize UI
+2017-11-13 14:36:31,988 - Initialize sequence table
+2017-11-13 14:36:32,069 - Load sequence
+2017-11-13 14:36:32,069 - Initialize sequence tree
+2017-11-13 14:36:51,479 - Administrator login
+2017-11-13 14:36:51,519 - Initialize UI
+2017-11-13 14:36:51,559 - Initialize sequence table
+2017-11-13 14:36:51,648 - Load sequence
+2017-11-13 14:36:51,648 - Initialize sequence tree
+2017-11-13 14:36:51,668 - ZMQ Server Start, Port: 5555
+2017-11-13 14:45:48,430 - Administrator login
+2017-11-13 14:45:48,470 - Initialize UI
+2017-11-13 14:46:03,150 - Administrator login
+2017-11-13 14:46:03,180 - Initialize UI
+2017-11-13 14:48:01,889 - Administrator login
+2017-11-13 14:48:01,910 - Initialize UI
+2017-11-13 14:48:13,009 - Administrator login
+2017-11-13 14:48:13,039 - Initialize UI
+2017-11-13 14:48:13,079 - Initialize sequence table
+2017-11-13 15:21:30,489 - Administrator login
+2017-11-13 15:21:30,529 - Initialize UI
+2017-11-13 15:21:30,559 - Initialize sequence table
+2017-11-13 15:21:45,070 - Administrator login
+2017-11-13 15:21:45,099 - Initialize UI
+2017-11-13 15:21:45,129 - Initialize sequence table
+2017-11-13 15:22:14,409 - Administrator login
+2017-11-13 15:22:14,449 - Initialize UI
+2017-11-13 15:22:14,489 - Initialize sequence table
+2017-11-13 15:22:59,799 - Administrator login
+2017-11-13 15:22:59,839 - Initialize UI
+2017-11-13 15:22:59,870 - Initialize sequence table
+2017-11-13 15:23:36,619 - Administrator login
+2017-11-13 15:23:36,660 - Initialize UI
+2017-11-13 15:23:36,700 - Initialize sequence table
+2017-11-13 15:24:56,649 - Administrator login
+2017-11-13 15:24:56,689 - Initialize UI
+2017-11-13 15:24:56,720 - Initialize sequence table
+2017-11-13 15:24:56,799 - Load sequence
+2017-11-13 15:24:56,799 - Initialize sequence tree
+2017-11-13 15:24:56,900 - ZMQ Server Start, Port: 5555
+2017-11-13 15:29:52,007 - Administrator login
+2017-11-13 15:29:52,038 - Initialize UI
+2017-11-13 15:29:52,078 - Initialize sequence table
+2017-11-13 15:29:52,158 - Load sequence
+2017-11-13 15:29:52,158 - Initialize sequence tree
+2017-11-13 15:29:52,267 - ZMQ Server Start, Port: 5555
+2017-11-13 15:30:02,167 - Administrator login
+2017-11-13 15:30:02,198 - Initialize UI
+2017-11-13 15:30:02,227 - Initialize sequence table
+2017-11-13 15:30:02,308 - Load sequence
+2017-11-13 15:30:02,308 - Initialize sequence tree
+2017-11-13 15:30:02,457 - ZMQ Server Start, Port: 5555
+2017-11-13 15:30:03,828 - Start test
+2017-11-13 15:30:03,937 - Test item: function1
+2017-11-13 15:30:03,937 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-13 15:30:03,937 - Skip item: function2
+2017-11-13 15:30:03,937 - function2 result:[None, None]
+2017-11-13 15:30:04,438 - Test item: function3
+2017-11-13 15:30:04,438 - function3 result:[0, 'fun3']
+2017-11-13 15:30:04,937 - Test item: function4
+2017-11-13 15:30:04,937 - function4 result:[0.5, 'fun4']
+2017-11-13 15:30:05,438 - Test item: function5
+2017-11-13 15:30:05,438 - function5 result:[0.5, 'fun5']
+2017-11-13 15:30:05,937 - Test item: function6
+2017-11-13 15:30:05,937 - function6 result:[0.5, 'fun6']
+2017-11-13 15:30:06,438 - Test item: function7
+2017-11-13 15:30:06,438 - function7 result:[0.5, 'fun7']
+2017-11-13 15:30:06,937 - Test item: function8
+2017-11-13 15:30:06,937 - function8 result:[0.9, 'fun8']
+2017-11-13 15:30:07,438 - Test item: function9
+2017-11-13 15:30:07,438 - function9 result:[0.9, 'fun9']
+2017-11-13 15:30:07,937 - Test item: function9
+2017-11-13 15:30:07,937 - function9 result:[0.9, 'fun9']
+2017-11-13 15:30:08,438 - Test item: function10
+2017-11-13 15:30:08,438 - function10 result:[0.5, 'fun10']
+2017-11-13 15:30:08,438 - total time£º 4.60
+2017-11-13 15:30:30,687 - Administrator login
+2017-11-13 15:30:30,718 - Initialize UI
+2017-11-13 15:30:30,758 - Initialize sequence table
+2017-11-13 15:30:30,838 - Load sequence
+2017-11-13 15:30:30,838 - Initialize sequence tree
+2017-11-13 15:30:30,927 - ZMQ Server Start, Port: 5555
+2017-11-13 15:33:09,240 - Administrator login
+2017-11-13 15:33:09,279 - Initialize UI
+2017-11-13 15:33:09,310 - Initialize sequence table
+2017-11-13 15:33:30,519 - Administrator login
+2017-11-13 15:33:30,559 - Initialize UI
+2017-11-13 15:33:30,590 - Initialize sequence table
+2017-11-13 15:33:30,670 - Load sequence
+2017-11-13 15:33:30,670 - Initialize sequence tree
+2017-11-13 15:33:30,710 - ZMQ Server Start, Port: 5555
+2017-11-13 15:33:36,550 - Start test
+2017-11-13 15:33:36,660 - Test item: function1
+2017-11-13 15:33:36,660 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-13 15:33:36,660 - Skip item: function2
+2017-11-13 15:33:36,660 - function2 result:[None, None]
+2017-11-13 15:33:37,160 - Test item: function3
+2017-11-13 15:33:37,160 - function3 result:[0, 'fun3']
+2017-11-13 15:33:37,660 - Test item: function4
+2017-11-13 15:33:37,660 - function4 result:[0.5, 'fun4']
+2017-11-13 15:33:38,160 - Test item: function5
+2017-11-13 15:33:38,160 - function5 result:[0.5, 'fun5']
+2017-11-13 15:33:38,660 - Test item: function6
+2017-11-13 15:33:38,660 - function6 result:[0.5, 'fun6']
+2017-11-13 15:33:39,160 - Test item: function7
+2017-11-13 15:33:39,160 - function7 result:[0.5, 'fun7']
+2017-11-13 15:33:39,660 - Test item: function8
+2017-11-13 15:33:39,660 - function8 result:[0.9, 'fun8']
+2017-11-13 15:33:40,160 - Test item: function9
+2017-11-13 15:33:40,160 - function9 result:[0.9, 'fun9']
+2017-11-13 15:33:40,660 - Test item: function9
+2017-11-13 15:33:40,660 - function9 result:[0.9, 'fun9']
+2017-11-13 15:33:41,160 - Test item: function10
+2017-11-13 15:33:41,160 - function10 result:[0.5, 'fun10']
+2017-11-13 15:33:41,160 - total time£º 4.60
+2017-11-13 15:43:04,091 - Administrator login
+2017-11-13 15:43:04,131 - Initialize UI
+2017-11-13 15:43:04,161 - Initialize sequence table
+2017-11-13 15:43:30,800 - Administrator login
+2017-11-13 15:43:30,840 - Initialize UI
+2017-11-13 15:43:30,881 - Initialize sequence table
+2017-11-13 15:43:42,580 - Administrator login
+2017-11-13 15:43:42,621 - Initialize UI
+2017-11-13 15:43:42,651 - Initialize sequence table
+2017-11-13 15:43:42,730 - Load sequence
+2017-11-13 15:43:42,730 - Initialize sequence tree
+2017-11-13 15:43:42,780 - ZMQ Server Start, Port: 5555
+2017-11-13 15:44:51,126 - Administrator login
+2017-11-13 15:44:51,166 - Initialize UI
+2017-11-13 15:44:51,196 - Initialize sequence table
+2017-11-13 15:44:51,286 - Load sequence
+2017-11-13 15:44:51,286 - Initialize sequence tree
+2017-11-13 15:44:51,335 - ZMQ Server Start, Port: 5555
+2017-11-13 15:44:54,875 - Start test
+2017-11-13 15:44:54,976 - Test item: function1
+2017-11-13 15:44:54,976 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-13 15:44:54,976 - Skip item: function2
+2017-11-13 15:44:54,976 - function2 result:[None, None]
+2017-11-13 15:44:55,476 - Test item: function3
+2017-11-13 15:44:55,476 - function3 result:[0, 'fun3']
+2017-11-13 15:44:55,976 - Test item: function4
+2017-11-13 15:44:55,976 - function4 result:[0.5, 'fun4']
+2017-11-13 15:44:56,476 - Test item: function5
+2017-11-13 15:44:56,476 - function5 result:[0.5, 'fun5']
+2017-11-13 15:44:56,976 - Test item: function6
+2017-11-13 15:44:56,976 - function6 result:[0.5, 'fun6']
+2017-11-13 15:44:57,476 - Test item: function7
+2017-11-13 15:44:57,476 - function7 result:[0.5, 'fun7']
+2017-11-13 15:44:57,976 - Test item: function8
+2017-11-13 15:44:57,976 - function8 result:[0.9, 'fun8']
+2017-11-13 15:44:58,476 - Test item: function9
+2017-11-13 15:44:58,476 - function9 result:[0.9, 'fun9']
+2017-11-13 15:44:58,976 - Test item: function9
+2017-11-13 15:44:58,976 - function9 result:[0.9, 'fun9']
+2017-11-13 15:44:59,476 - Test item: function10
+2017-11-13 15:44:59,476 - function10 result:[0.5, 'fun10']
+2017-11-13 15:44:59,476 - total time£º 4.60
+2017-11-13 15:47:48,587 - Administrator login
+2017-11-13 15:47:48,636 - Initialize UI
+2017-11-13 15:47:48,667 - Initialize sequence table
+2017-11-13 15:47:48,756 - Load sequence
+2017-11-13 15:47:48,756 - Initialize sequence tree
+2017-11-13 15:47:48,876 - ZMQ Server Start, Port: 5555
+2017-11-13 15:47:54,707 - Start test
+2017-11-13 15:47:54,816 - Test item: function1
+2017-11-13 15:47:54,816 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-13 15:47:54,816 - Skip item: function2
+2017-11-13 15:47:54,816 - function2 result:[None, None]
+2017-11-13 15:47:55,316 - Test item: function3
+2017-11-13 15:47:55,316 - function3 result:[0, 'fun3']
+2017-11-13 15:47:55,816 - Test item: function4
+2017-11-13 15:47:55,816 - function4 result:[0.5, 'fun4']
+2017-11-13 15:47:56,316 - Test item: function5
+2017-11-13 15:47:56,316 - function5 result:[0.5, 'fun5']
+2017-11-13 15:47:56,816 - Test item: function6
+2017-11-13 15:47:56,816 - function6 result:[0.5, 'fun6']
+2017-11-13 15:47:57,316 - Test item: function7
+2017-11-13 15:47:57,316 - function7 result:[0.5, 'fun7']
+2017-11-13 15:47:57,816 - Test item: function8
+2017-11-13 15:47:57,816 - function8 result:[0.9, 'fun8']
+2017-11-13 15:47:58,316 - Test item: function9
+2017-11-13 15:47:58,316 - function9 result:[0.9, 'fun9']
+2017-11-13 15:47:58,816 - Test item: function9
+2017-11-13 15:47:58,816 - function9 result:[0.9, 'fun9']
+2017-11-13 15:47:59,316 - Test item: function10
+2017-11-13 15:47:59,316 - function10 result:[0.5, 'fun10']
+2017-11-13 15:47:59,316 - total time£º 4.60
+2017-11-13 15:57:55,127 - Administrator login
+2017-11-13 15:57:55,156 - Initialize UI
+2017-11-13 15:57:55,197 - Initialize sequence table
+2017-11-13 15:57:55,296 - Load sequence
+2017-11-13 15:57:55,296 - Initialize sequence tree
+2017-11-13 15:57:55,416 - ZMQ Server Start, Port: 5555
+2017-11-13 16:00:59,736 - Administrator login
+2017-11-13 16:00:59,776 - Initialize UI
+2017-11-13 16:00:59,816 - Initialize sequence table
+2017-11-13 16:00:59,896 - Load sequence
+2017-11-13 16:00:59,896 - Initialize sequence tree
+2017-11-13 16:01:00,036 - ZMQ Server Start, Port: 5555
+2017-11-13 16:02:47,687 - Administrator login
+2017-11-13 16:02:47,726 - Initialize UI
+2017-11-13 16:02:47,756 - Initialize sequence table
+2017-11-13 16:02:47,836 - Initialize UI
+2017-11-13 16:03:26,467 - Administrator login
+2017-11-13 16:03:26,506 - Initialize UI
+2017-11-13 16:03:26,536 - Initialize sequence table
+2017-11-13 16:03:26,616 - Initialize UI
+2017-11-13 16:03:59,276 - Administrator login
+2017-11-13 16:03:59,316 - Initialize UI
+2017-11-13 16:03:59,347 - Initialize sequence table
+2017-11-13 16:03:59,437 - Initialize UI
+2017-11-13 16:09:46,396 - Administrator login
+2017-11-13 16:09:46,437 - Initialize UI
+2017-11-13 16:09:46,476 - Initialize sequence table
+2017-11-13 16:10:03,496 - Administrator login
+2017-11-13 16:10:03,526 - Initialize UI
+2017-11-13 16:10:03,556 - Initialize sequence table
+2017-11-13 16:10:27,427 - Administrator login
+2017-11-13 16:10:27,467 - Initialize UI
+2017-11-13 16:10:27,506 - Initialize sequence table
+2017-11-13 16:10:27,587 - Load sequence
+2017-11-13 16:10:27,587 - Initialize sequence tree
+2017-11-13 16:10:27,647 - ZMQ Server Start, Port: 5555
+2017-11-13 16:10:30,036 - Start test
+2017-11-13 16:10:30,147 - Test item: function1
+2017-11-13 16:10:30,147 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-13 16:10:30,147 - Skip item: function2
+2017-11-13 16:10:30,147 - function2 result:[None, None]
+2017-11-13 16:10:30,647 - Test item: function3
+2017-11-13 16:10:30,647 - function3 result:[0, 'fun3']
+2017-11-13 16:10:31,147 - Test item: function4
+2017-11-13 16:10:31,147 - function4 result:[0.5, 'fun4']
+2017-11-13 16:10:31,647 - Test item: function5
+2017-11-13 16:10:31,647 - function5 result:[0.5, 'fun5']
+2017-11-13 16:10:32,147 - Test item: function6
+2017-11-13 16:10:32,147 - function6 result:[0.5, 'fun6']
+2017-11-13 16:10:32,647 - Test item: function7
+2017-11-13 16:10:32,647 - function7 result:[0.5, 'fun7']
+2017-11-13 16:10:33,147 - Test item: function8
+2017-11-13 16:10:33,147 - function8 result:[0.9, 'fun8']
+2017-11-13 16:10:33,647 - Test item: function9
+2017-11-13 16:10:33,647 - function9 result:[0.9, 'fun9']
+2017-11-13 16:10:34,147 - Test item: function9
+2017-11-13 16:10:34,147 - function9 result:[0.9, 'fun9']
+2017-11-13 16:10:34,647 - Test item: function10
+2017-11-13 16:10:34,647 - function10 result:[0.5, 'fun10']
+2017-11-13 16:10:34,647 - total time£º 4.60
+2017-11-13 16:11:44,736 - Administrator login
+2017-11-13 16:11:44,766 - Initialize UI
+2017-11-13 16:11:44,807 - Initialize sequence table
+2017-11-13 16:11:44,937 - Load sequence
+2017-11-13 16:11:44,937 - Initialize sequence tree
+2017-11-13 16:11:45,107 - ZMQ Server Start, Port: 5555
+2017-11-13 16:11:47,836 - Start test
+2017-11-13 16:11:47,986 - Test item: function1
+2017-11-13 16:11:47,986 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-13 16:11:47,986 - Skip item: function2
+2017-11-13 16:11:47,986 - function2 result:[None, None]
+2017-11-13 16:11:48,486 - Test item: function3
+2017-11-13 16:11:48,486 - function3 result:[0, 'fun3']
+2017-11-13 16:11:48,986 - Test item: function4
+2017-11-13 16:11:48,986 - function4 result:[0.5, 'fun4']
+2017-11-13 16:11:49,486 - Test item: function5
+2017-11-13 16:11:49,486 - function5 result:[0.5, 'fun5']
+2017-11-13 16:11:49,986 - Test item: function6
+2017-11-13 16:11:49,986 - function6 result:[0.5, 'fun6']
+2017-11-13 16:11:50,486 - Test item: function7
+2017-11-13 16:11:50,486 - function7 result:[0.5, 'fun7']
+2017-11-13 16:11:50,986 - Test item: function8
+2017-11-13 16:11:50,986 - function8 result:[0.9, 'fun8']
+2017-11-13 16:11:51,486 - Test item: function9
+2017-11-13 16:11:51,486 - function9 result:[0.9, 'fun9']
+2017-11-13 16:11:51,986 - Test item: function9
+2017-11-13 16:11:51,986 - function9 result:[0.9, 'fun9']
+2017-11-13 16:11:52,486 - Test item: function10
+2017-11-13 16:11:52,486 - function10 result:[0.5, 'fun10']
+2017-11-13 16:11:52,486 - total time£º 4.60
+2017-11-13 16:16:44,576 - Administrator login
+2017-11-13 16:16:44,616 - Initialize UI
+2017-11-13 16:16:44,647 - Initialize sequence table
+2017-11-13 16:16:44,726 - Load sequence
+2017-11-13 16:16:44,726 - Initialize sequence tree
+2017-11-13 16:16:44,796 - ZMQ Server Start, Port: 5555
+2017-11-13 16:21:43,598 - Administrator login
+2017-11-13 16:21:43,638 - Initialize UI
+2017-11-13 16:21:43,667 - Initialize sequence table
+2017-11-13 16:30:00,577 - Administrator login
+2017-11-13 16:30:00,617 - Initialize UI
+2017-11-13 16:30:00,657 - Initialize sequence table
+2017-11-13 16:32:57,167 - Administrator login
+2017-11-13 16:32:57,207 - Initialize UI
+2017-11-13 16:32:57,238 - Initialize sequence table
+2017-11-13 16:33:16,497 - Administrator login
+2017-11-13 16:33:16,537 - Initialize UI
+2017-11-13 16:33:16,577 - Initialize sequence table
+2017-11-13 16:33:52,958 - Administrator login
+2017-11-13 16:33:52,998 - Initialize UI
+2017-11-13 16:33:53,028 - Initialize sequence table
+2017-11-13 16:33:53,118 - Load sequence
+2017-11-13 16:33:53,118 - Initialize sequence tree
+2017-11-13 16:33:53,247 - ZMQ Server Start, Port: 5555
+2017-11-13 16:36:30,049 - Administrator login
+2017-11-13 16:36:30,098 - Initialize UI
+2017-11-13 16:36:30,128 - Initialize sequence table
+2017-11-13 16:36:30,208 - Load sequence
+2017-11-13 16:36:30,208 - Initialize sequence tree
+2017-11-13 16:36:30,328 - ZMQ Server Start, Port: 5555
+2017-11-13 16:38:43,657 - Administrator login
+2017-11-13 16:38:43,697 - Initialize UI
+2017-11-13 16:38:43,727 - Initialize sequence table
+2017-11-13 16:38:43,808 - Load sequence
+2017-11-13 16:38:43,808 - Initialize sequence tree
+2017-11-13 16:38:43,868 - ZMQ Server Start, Port: 5555
+2017-11-13 16:38:52,680 - 'TcpTool' object has no attribute 'skt'
+2017-11-13 16:39:00,180 - Administrator login
+2017-11-13 16:39:00,230 - Initialize UI
+2017-11-13 16:39:00,270 - Initialize sequence table
+2017-11-13 16:39:00,350 - Load sequence
+2017-11-13 16:39:00,350 - Initialize sequence tree
+2017-11-13 16:39:00,400 - ZMQ Server Start, Port: 5555
+2017-11-13 16:39:03,711 - 'TcpTool' object has no attribute 'skt'
+2017-11-13 16:42:01,382 - Administrator login
+2017-11-13 16:42:01,431 - Initialize UI
+2017-11-13 16:42:01,471 - Initialize sequence table
+2017-11-13 16:42:18,662 - Administrator login
+2017-11-13 16:42:18,721 - Initialize UI
+2017-11-13 16:42:18,761 - Initialize sequence table
+2017-11-13 16:42:18,851 - Load sequence
+2017-11-13 16:42:18,851 - Initialize sequence tree
+2017-11-13 16:42:18,982 - ZMQ Server Start, Port: 5555
+2017-11-13 16:45:33,742 - Administrator login
+2017-11-13 16:45:33,792 - Initialize UI
+2017-11-13 16:45:33,822 - Initialize sequence table
+2017-11-13 16:55:19,763 - Administrator login
+2017-11-13 16:55:19,803 - Initialize UI
+2017-11-13 16:55:19,833 - Initialize sequence table
+2017-11-13 16:55:34,833 - Administrator login
+2017-11-13 16:55:34,904 - Initialize UI
+2017-11-13 16:55:34,953 - Initialize sequence table
+2017-11-13 16:55:35,023 - Load sequence
+2017-11-13 16:55:35,023 - Initialize sequence tree
+2017-11-13 16:55:35,063 - ZMQ Server Start, Port: 5555
+2017-11-13 16:59:14,091 - Administrator login
+2017-11-13 16:59:14,131 - Initialize UI
+2017-11-13 16:59:14,161 - Initialize sequence table
+2017-11-13 16:59:14,240 - Load sequence
+2017-11-13 16:59:14,240 - Initialize sequence tree
+2017-11-13 16:59:14,300 - ZMQ Server Start, Port: 5555
+2017-11-13 17:05:26,095 - Administrator login
+2017-11-13 17:05:26,135 - Initialize UI
+2017-11-13 17:05:26,166 - Initialize sequence table
+2017-11-13 17:05:26,256 - Load sequence
+2017-11-13 17:05:26,256 - Initialize sequence tree
+2017-11-13 17:05:26,326 - ZMQ Server Start, Port: 5555
+2017-11-13 17:05:43,031 - Reload sequence
+2017-11-13 17:05:43,040 - Initialize sequence tree
+2017-11-13 17:08:27,444 - Administrator login
+2017-11-13 17:08:27,464 - Initialize UI
+2017-11-13 17:08:27,495 - Initialize sequence table
+2017-11-13 17:08:27,595 - Load sequence
+2017-11-13 17:08:27,595 - Initialize sequence tree
+2017-11-13 17:08:27,674 - ZMQ Server Start, Port: 5555
+2017-11-13 17:10:21,123 - Administrator login
+2017-11-13 17:10:21,163 - Initialize UI
+2017-11-13 17:10:48,383 - Administrator login
+2017-11-13 17:10:48,423 - Initialize UI
+2017-11-13 17:10:48,452 - Initialize sequence table
+2017-11-13 17:10:48,552 - Load sequence
+2017-11-13 17:10:48,552 - Initialize sequence tree
+2017-11-13 17:10:48,612 - ZMQ Server Start, Port: 5555
+2017-11-13 17:12:26,348 - Administrator login
+2017-11-13 17:12:26,398 - Initialize UI
+2017-11-13 17:13:07,758 - Administrator login
+2017-11-13 17:13:07,808 - Initialize UI
+2017-11-13 17:13:07,838 - Initialize sequence table
+2017-11-13 17:13:21,337 - Administrator login
+2017-11-13 17:13:21,377 - Initialize UI
+2017-11-13 17:13:21,407 - Initialize sequence table
+2017-11-13 17:13:21,467 - Load sequence
+2017-11-13 17:13:21,467 - Initialize sequence tree
+2017-11-13 17:13:21,507 - ZMQ Server Start, Port: 5555
+2017-11-13 17:13:47,998 - Administrator login
+2017-11-13 17:13:48,038 - Initialize UI
+2017-11-13 17:13:48,097 - Initialize sequence table
+2017-11-13 17:13:48,148 - Load sequence
+2017-11-13 17:13:48,148 - Initialize sequence tree
+2017-11-13 17:13:48,227 - ZMQ Server Start, Port: 5555
+2017-11-13 17:17:13,755 - Administrator login
+2017-11-13 17:17:13,795 - Initialize UI
+2017-11-13 17:17:13,835 - Initialize sequence table
+2017-11-13 17:17:13,894 - Load sequence
+2017-11-13 17:17:13,894 - Initialize sequence tree
+2017-11-13 17:17:13,964 - ZMQ Server Start, Port: 5555
+2017-11-13 17:18:09,315 - Administrator login
+2017-11-13 17:18:09,355 - Initialize UI
+2017-11-13 17:18:09,414 - Load sequence
+2017-11-13 17:18:09,414 - Initialize sequence tree
+2017-11-13 17:18:09,475 - ZMQ Server Start, Port: 5555
+2017-11-13 17:19:09,634 - Administrator login
+2017-11-13 17:19:09,684 - Initialize UI
+2017-11-13 17:19:09,704 - Initialize sequence table
+2017-11-13 17:19:09,775 - Load sequence
+2017-11-13 17:19:09,775 - Initialize sequence tree
+2017-11-13 17:19:09,825 - ZMQ Server Start, Port: 5555
+2017-11-13 17:24:56,532 - Administrator login
+2017-11-13 17:24:56,603 - Initialize UI
+2017-11-13 17:24:56,632 - Initialize sequence table
+2017-11-13 17:24:56,773 - Load sequence
+2017-11-13 17:24:56,773 - Initialize sequence tree
+2017-11-13 17:24:56,943 - ZMQ Server Start, Port: 5555
+2017-11-13 17:25:39,392 - Administrator login
+2017-11-13 17:25:39,423 - Initialize UI
+2017-11-13 17:25:39,452 - Initialize sequence table
+2017-11-13 17:26:02,343 - Administrator login
+2017-11-13 17:26:02,372 - Initialize UI
+2017-11-13 17:26:02,412 - Initialize sequence table
+2017-11-13 17:30:10,993 - Administrator login
+2017-11-13 17:30:11,032 - Initialize UI
+2017-11-13 17:30:11,062 - Initialize sequence table
+2017-11-13 17:30:31,532 - Administrator login
+2017-11-13 17:30:31,562 - Initialize UI
+2017-11-13 17:30:31,603 - Initialize sequence table
+2017-11-13 17:32:00,233 - Administrator login
+2017-11-13 17:32:00,273 - Initialize UI
+2017-11-13 17:32:00,312 - Initialize sequence table
+2017-11-13 17:32:29,363 - Administrator login
+2017-11-13 17:32:29,403 - Initialize UI
+2017-11-13 17:32:29,432 - Initialize sequence table
+2017-11-13 17:32:47,493 - Administrator login
+2017-11-13 17:32:47,532 - Initialize UI
+2017-11-13 17:32:47,562 - Initialize sequence table
+2017-11-13 17:32:57,603 - Administrator login
+2017-11-13 17:32:57,643 - Initialize UI
+2017-11-13 17:32:57,672 - Initialize sequence table
+2017-11-13 17:34:03,403 - Administrator login
+2017-11-13 17:34:03,443 - Initialize UI
+2017-11-13 17:34:03,503 - Initialize sequence table
+2017-11-13 17:34:03,583 - Load sequence
+2017-11-13 17:34:03,583 - Initialize sequence tree
+2017-11-13 17:34:03,723 - ZMQ Server Start, Port: 5555
+2017-11-13 17:38:41,199 - Administrator login
+2017-11-13 17:38:41,239 - Initialize UI
+2017-11-13 17:38:41,269 - Initialize sequence table
+2017-11-13 17:38:41,338 - Load sequence
+2017-11-13 17:38:41,338 - Initialize sequence tree
+2017-11-13 17:38:41,388 - ZMQ Server Start, Port: 5555
+2017-11-13 17:40:02,035 - Administrator login
+2017-11-13 17:40:02,075 - Initialize UI
+2017-11-13 17:40:02,105 - Initialize sequence table
+2017-11-13 17:40:02,195 - Load sequence
+2017-11-13 17:40:02,195 - Initialize sequence tree
+2017-11-13 17:40:02,244 - ZMQ Server Start, Port: 5555
+2017-11-13 17:41:51,632 - Administrator login
+2017-11-13 17:41:51,672 - Initialize UI
+2017-11-13 17:41:51,703 - Initialize sequence table
+2017-11-13 17:41:51,782 - Load sequence
+2017-11-13 17:41:51,782 - Initialize sequence tree
+2017-11-13 17:41:51,832 - ZMQ Server Start, Port: 5555
+2017-11-13 17:42:38,676 - Administrator login
+2017-11-13 17:42:38,716 - Initialize UI
+2017-11-13 17:42:38,745 - Initialize sequence table
+2017-11-13 17:42:38,815 - Load sequence
+2017-11-13 17:42:38,815 - Initialize sequence tree
+2017-11-13 17:42:38,865 - ZMQ Server Start, Port: 5555
+2017-11-13 17:42:52,425 - Administrator login
+2017-11-13 17:42:52,465 - Initialize UI
+2017-11-13 17:42:52,496 - Initialize sequence table
+2017-11-13 17:42:52,585 - Load sequence
+2017-11-13 17:42:52,585 - Initialize sequence tree
+2017-11-13 17:42:52,716 - ZMQ Server Start, Port: 5555
+2017-11-13 17:43:54,540 - Administrator login
+2017-11-13 17:43:54,591 - Initialize UI
+2017-11-13 17:43:54,621 - Initialize sequence table
+2017-11-13 17:43:54,730 - Load sequence
+2017-11-13 17:43:54,730 - Initialize sequence tree
+2017-11-13 17:43:54,800 - ZMQ Server Start, Port: 5555

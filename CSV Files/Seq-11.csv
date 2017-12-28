@@ -1,0 +1,7 @@
+TestItem,Function,Mode,Low Limit,Up Limit,Next Step,Level
+PreTest,function1,test,nan,nan,continue,root
+Read_Image,function2,test,-1,2,continue,root
+Get Image Size,function3,test,0,0,continue,root
+Get Image Size:Width,function3,test,0,1000,continue,child
+Get Image Size:Height,function3,test,0,1000,continue,child
+PostTest,function4,test,-1,2,continue,root

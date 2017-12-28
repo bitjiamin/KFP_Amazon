@@ -1,0 +1,2033 @@
+2017-11-20 10:54:34,150 - Administrator login
+2017-11-20 10:54:34,409 - Initialize UI
+2017-11-20 10:54:34,440 - Initialize sequence table
+2017-11-20 10:54:34,489 - Initialize sequence tree
+2017-11-20 10:54:34,710 - ZMQ Server Start, Port: 5555
+2017-11-20 11:09:37,289 - Administrator login
+2017-11-20 11:09:37,380 - Initialize UI
+2017-11-20 11:09:37,470 - Initialize sequence table
+2017-11-20 11:09:37,579 - Initialize sequence tree
+2017-11-20 11:09:37,750 - ZMQ Server Start, Port: 5555
+2017-11-20 11:09:40,640 - Start test
+2017-11-20 11:09:40,750 - Test item: function1
+2017-11-20 11:09:40,750 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 11:09:40,750 - Skip item: function2
+2017-11-20 11:09:40,759 - function2 result:[None, None]
+2017-11-20 11:09:41,259 - Test item: function3
+2017-11-20 11:09:41,259 - function3 result:[0, 'fun3']
+2017-11-20 11:09:41,759 - Test item: function4
+2017-11-20 11:09:41,759 - function4 result:[0.5, 'fun4']
+2017-11-20 11:09:42,259 - Test item: function5
+2017-11-20 11:09:42,259 - function5 result:[0.5, 'fun5']
+2017-11-20 11:09:42,759 - Test item: function6
+2017-11-20 11:09:42,759 - function6 result:[0.5, 'fun6']
+2017-11-20 11:09:43,259 - Test item: function7
+2017-11-20 11:09:43,259 - function7 result:[0.5, 'fun7']
+2017-11-20 11:09:43,759 - Test item: function8
+2017-11-20 11:09:43,759 - function8 result:[0.9, 'fun8']
+2017-11-20 11:09:44,259 - Test item: function9
+2017-11-20 11:09:44,259 - function9 result:[0.9, 'fun9']
+2017-11-20 11:09:44,759 - Test item: function9
+2017-11-20 11:09:44,759 - function9 result:[0.9, 'fun9']
+2017-11-20 11:09:45,259 - Test item: function10
+2017-11-20 11:09:45,259 - function10 result:[0.5, 'fun10']
+2017-11-20 11:09:45,259 - total time£º 4.61
+2017-11-20 11:11:46,689 - Administrator login
+2017-11-20 11:11:46,740 - Initialize UI
+2017-11-20 11:11:46,799 - Initialize sequence table
+2017-11-20 11:11:46,889 - Initialize sequence tree
+2017-11-20 11:11:47,119 - ZMQ Server Start, Port: 5555
+2017-11-20 11:11:48,830 - Start test
+2017-11-20 11:11:48,950 - Test item: function1
+2017-11-20 11:11:48,950 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 11:11:48,950 - Skip item: function2
+2017-11-20 11:11:48,950 - function2 result:[None, None]
+2017-11-20 11:11:49,449 - Test item: function3
+2017-11-20 11:11:49,449 - function3 result:[0, 'fun3']
+2017-11-20 11:11:49,950 - Test item: function4
+2017-11-20 11:11:49,950 - function4 result:[0.5, 'fun4']
+2017-11-20 11:11:50,449 - Test item: function5
+2017-11-20 11:11:50,449 - function5 result:[0.5, 'fun5']
+2017-11-20 11:11:50,950 - Test item: function6
+2017-11-20 11:11:50,950 - function6 result:[0.5, 'fun6']
+2017-11-20 11:11:51,449 - Test item: function7
+2017-11-20 11:11:51,449 - function7 result:[0.5, 'fun7']
+2017-11-20 11:11:51,950 - Test item: function8
+2017-11-20 11:11:51,950 - function8 result:[0.9, 'fun8']
+2017-11-20 11:11:52,449 - Test item: function9
+2017-11-20 11:11:52,449 - function9 result:[0.9, 'fun9']
+2017-11-20 11:11:52,950 - Test item: function9
+2017-11-20 11:11:52,950 - function9 result:[0.9, 'fun9']
+2017-11-20 11:11:53,449 - Test item: function10
+2017-11-20 11:11:53,449 - function10 result:[0.5, 'fun10']
+2017-11-20 11:11:53,449 - total time£º 4.60
+2017-11-20 11:12:12,590 - Administrator login
+2017-11-20 11:12:12,640 - Initialize UI
+2017-11-20 11:12:12,689 - Initialize sequence table
+2017-11-20 11:12:12,779 - Initialize sequence tree
+2017-11-20 11:12:13,519 - ZMQ Server Start, Port: 5555
+2017-11-20 11:12:14,759 - Start test
+2017-11-20 11:12:14,870 - Test item: function1
+2017-11-20 11:12:14,870 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 11:12:14,870 - Skip item: function2
+2017-11-20 11:12:14,880 - function2 result:[None, None]
+2017-11-20 11:12:15,380 - Test item: function3
+2017-11-20 11:12:15,380 - function3 result:[0, 'fun3']
+2017-11-20 11:12:15,880 - Test item: function4
+2017-11-20 11:12:15,880 - function4 result:[0.5, 'fun4']
+2017-11-20 11:12:16,380 - Test item: function5
+2017-11-20 11:12:16,380 - function5 result:[0.5, 'fun5']
+2017-11-20 11:12:16,880 - Test item: function6
+2017-11-20 11:12:16,880 - function6 result:[0.5, 'fun6']
+2017-11-20 11:12:17,380 - Test item: function7
+2017-11-20 11:12:17,380 - function7 result:[0.5, 'fun7']
+2017-11-20 11:12:17,880 - Test item: function8
+2017-11-20 11:12:17,880 - function8 result:[0.9, 'fun8']
+2017-11-20 11:12:18,380 - Test item: function9
+2017-11-20 11:12:18,380 - function9 result:[0.9, 'fun9']
+2017-11-20 11:12:18,880 - Test item: function9
+2017-11-20 11:12:18,880 - function9 result:[0.9, 'fun9']
+2017-11-20 11:12:19,380 - Test item: function10
+2017-11-20 11:12:19,380 - function10 result:[0.5, 'fun10']
+2017-11-20 11:12:19,380 - total time£º 4.60
+2017-11-20 11:37:30,500 - Administrator login
+2017-11-20 11:37:30,559 - Initialize UI
+2017-11-20 11:37:30,590 - Initialize sequence table
+2017-11-20 11:37:30,720 - Initialize sequence tree
+2017-11-20 11:37:30,920 - ZMQ Server Start, Port: 5555
+2017-11-20 11:37:32,500 - Start test
+2017-11-20 11:37:32,609 - Test item: function1
+2017-11-20 11:37:32,609 - Test item: function1
+2017-11-20 11:37:32,609 - Test item: function1
+2017-11-20 11:37:32,609 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 11:37:32,609 - Skip item: function2
+2017-11-20 11:37:32,609 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 11:37:32,609 - Test item: function1
+2017-11-20 11:37:32,609 - function2 result:[None, None]
+2017-11-20 11:37:32,619 - Skip item: function2
+2017-11-20 11:37:32,619 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 11:37:32,630 - function2 result:[None, None]
+2017-11-20 11:37:32,630 - Skip item: function2
+2017-11-20 11:37:32,630 - function2 result:[None, None]
+2017-11-20 11:37:33,119 - Test item: function3
+2017-11-20 11:37:33,119 - function3 result:[0, 'fun3']
+2017-11-20 11:37:33,129 - Test item: function3
+2017-11-20 11:37:33,129 - function3 result:[0, 'fun3']
+2017-11-20 11:37:33,140 - Test item: function3
+2017-11-20 11:37:33,140 - function3 result:[0, 'fun3']
+2017-11-20 11:37:33,619 - Test item: function4
+2017-11-20 11:37:33,619 - function4 result:[0.5, 'fun4']
+2017-11-20 11:37:33,630 - Test item: function4
+2017-11-20 11:37:33,630 - function4 result:[0.5, 'fun4']
+2017-11-20 11:37:33,640 - Test item: function4
+2017-11-20 11:37:33,640 - function4 result:[0.5, 'fun4']
+2017-11-20 11:37:34,119 - Test item: function5
+2017-11-20 11:37:34,119 - function5 result:[0.5, 'fun5']
+2017-11-20 11:37:34,129 - Test item: function5
+2017-11-20 11:37:34,129 - function5 result:[0.5, 'fun5']
+2017-11-20 11:37:34,140 - Test item: function5
+2017-11-20 11:37:34,140 - function5 result:[0.5, 'fun5']
+2017-11-20 11:37:34,619 - Test item: function6
+2017-11-20 11:37:34,619 - function6 result:[0.5, 'fun6']
+2017-11-20 11:37:34,630 - Test item: function6
+2017-11-20 11:37:34,630 - function6 result:[0.5, 'fun6']
+2017-11-20 11:37:34,640 - Test item: function6
+2017-11-20 11:37:34,640 - function6 result:[0.5, 'fun6']
+2017-11-20 11:37:35,119 - Test item: function7
+2017-11-20 11:37:35,119 - function7 result:[0.5, 'fun7']
+2017-11-20 11:37:35,129 - Test item: function7
+2017-11-20 11:37:35,129 - function7 result:[0.5, 'fun7']
+2017-11-20 11:37:35,140 - Test item: function7
+2017-11-20 11:37:35,140 - function7 result:[0.5, 'fun7']
+2017-11-20 11:37:35,619 - Test item: function8
+2017-11-20 11:37:35,619 - function8 result:[0.9, 'fun8']
+2017-11-20 11:37:35,630 - Test item: function8
+2017-11-20 11:37:35,630 - function8 result:[0.9, 'fun8']
+2017-11-20 11:37:35,640 - Test item: function8
+2017-11-20 11:37:35,640 - function8 result:[0.9, 'fun8']
+2017-11-20 11:37:36,119 - Test item: function9
+2017-11-20 11:37:36,119 - function9 result:[0.9, 'fun9']
+2017-11-20 11:37:36,129 - Test item: function9
+2017-11-20 11:37:36,129 - function9 result:[0.9, 'fun9']
+2017-11-20 11:37:36,140 - Test item: function9
+2017-11-20 11:37:36,140 - function9 result:[0.9, 'fun9']
+2017-11-20 11:37:36,619 - Test item: function9
+2017-11-20 11:37:36,619 - function9 result:[0.9, 'fun9']
+2017-11-20 11:37:36,630 - Test item: function9
+2017-11-20 11:37:36,630 - function9 result:[0.9, 'fun9']
+2017-11-20 11:37:36,640 - Test item: function9
+2017-11-20 11:37:36,640 - function9 result:[0.9, 'fun9']
+2017-11-20 11:37:37,119 - Test item: function10
+2017-11-20 11:37:37,119 - function10 result:[0.5, 'fun10']
+2017-11-20 11:37:37,119 - total time£º 4.60
+2017-11-20 11:37:37,129 - Test item: function10
+2017-11-20 11:37:37,129 - function10 result:[0.5, 'fun10']
+2017-11-20 11:37:37,129 - total time£º 4.61
+2017-11-20 11:37:37,140 - Test item: function10
+2017-11-20 11:37:37,140 - function10 result:[0.5, 'fun10']
+2017-11-20 11:37:37,140 - total time£º 4.61
+2017-11-20 11:44:42,390 - Administrator login
+2017-11-20 11:44:42,449 - Initialize UI
+2017-11-20 11:44:42,500 - Initialize sequence table
+2017-11-20 11:44:42,579 - Initialize sequence tree
+2017-11-20 11:44:42,579 - Initialize sequence tree
+2017-11-20 11:44:42,710 - ZMQ Server Start, Port: 5555
+2017-11-20 11:44:45,070 - Start test
+2017-11-20 11:44:58,279 - Administrator login
+2017-11-20 11:44:58,329 - Initialize UI
+2017-11-20 11:44:58,380 - Initialize sequence table
+2017-11-20 11:44:58,480 - Initialize sequence tree
+2017-11-20 11:44:58,480 - Initialize sequence tree
+2017-11-20 11:44:58,590 - ZMQ Server Start, Port: 5555
+2017-11-20 11:45:48,720 - Administrator login
+2017-11-20 11:45:48,790 - Initialize UI
+2017-11-20 11:45:48,830 - Initialize sequence table
+2017-11-20 11:45:48,920 - Initialize sequence tree
+2017-11-20 11:45:48,929 - Initialize sequence tree
+2017-11-20 11:45:49,059 - ZMQ Server Start, Port: 5555
+2017-11-20 11:46:01,119 - Administrator login
+2017-11-20 11:46:01,160 - Initialize UI
+2017-11-20 11:46:01,209 - Initialize sequence table
+2017-11-20 11:46:01,299 - Initialize sequence tree
+2017-11-20 11:46:01,299 - Initialize sequence tree
+2017-11-20 11:46:01,500 - ZMQ Server Start, Port: 5555
+2017-11-20 11:47:32,462 - Administrator login
+2017-11-20 11:47:32,521 - Initialize UI
+2017-11-20 11:47:32,572 - Initialize sequence table
+2017-11-20 11:47:32,651 - Initialize sequence tree
+2017-11-20 11:47:32,662 - Initialize sequence tree
+2017-11-20 11:47:32,662 - Initialize sequence tree
+2017-11-20 11:47:32,951 - ZMQ Server Start, Port: 5555
+2017-11-20 11:53:18,321 - Administrator login
+2017-11-20 11:53:18,382 - Initialize UI
+2017-11-20 11:53:54,702 - Administrator login
+2017-11-20 11:53:54,761 - Initialize UI
+2017-11-20 11:54:14,582 - Administrator login
+2017-11-20 11:54:14,641 - Initialize UI
+2017-11-20 11:54:14,671 - Initialize sequence table
+2017-11-20 11:54:14,761 - Initialize sequence tree
+2017-11-20 11:54:14,772 - Initialize sequence tree
+2017-11-20 11:54:14,902 - ZMQ Server Start, Port: 5555
+2017-11-20 11:56:49,580 - Administrator login
+2017-11-20 11:56:49,654 - Initialize UI
+2017-11-20 11:57:01,276 - Administrator login
+2017-11-20 11:57:01,353 - Initialize UI
+2017-11-20 11:57:01,480 - Initialize sequence table
+2017-11-20 11:57:01,564 - Initialize sequence tree
+2017-11-20 11:57:01,567 - Initialize sequence tree
+2017-11-20 11:57:01,687 - ZMQ Server Start, Port: 5555
+2017-11-20 12:02:11,465 - Administrator login
+2017-11-20 12:02:11,529 - Initialize UI
+2017-11-20 12:02:11,634 - Initialize sequence table
+2017-11-20 12:02:11,737 - Initialize sequence tree
+2017-11-20 12:02:11,743 - Initialize sequence tree
+2017-11-20 12:02:11,904 - ZMQ Server Start, Port: 5555
+2017-11-20 12:09:43,236 - Administrator login
+2017-11-20 12:09:43,300 - Initialize UI
+2017-11-20 12:09:43,371 - Initialize sequence table
+2017-11-20 12:09:43,460 - Initialize sequence tree
+2017-11-20 12:09:43,462 - Initialize sequence tree
+2017-11-20 12:09:43,648 - ZMQ Server Start, Port: 5555
+2017-11-20 12:09:45,171 - Start test
+2017-11-20 13:46:16,634 - Administrator login
+2017-11-20 13:46:16,704 - Initialize UI
+2017-11-20 13:46:16,793 - Initialize sequence table
+2017-11-20 13:46:16,868 - Initialize sequence tree
+2017-11-20 13:46:16,871 - Initialize sequence tree
+2017-11-20 13:46:17,071 - ZMQ Server Start, Port: 5555
+2017-11-20 13:46:18,686 - Start test
+2017-11-20 13:46:54,210 - Administrator login
+2017-11-20 13:46:54,276 - Initialize UI
+2017-11-20 13:46:54,385 - Initialize sequence table
+2017-11-20 13:47:19,098 - Administrator login
+2017-11-20 13:47:19,152 - Initialize UI
+2017-11-20 13:47:19,210 - Initialize sequence table
+2017-11-20 13:47:19,313 - Initialize sequence tree
+2017-11-20 13:47:19,315 - Initialize sequence tree
+2017-11-20 13:47:19,483 - ZMQ Server Start, Port: 5555
+2017-11-20 13:47:47,430 - Administrator login
+2017-11-20 13:47:47,495 - Initialize UI
+2017-11-20 13:47:47,551 - Initialize sequence table
+2017-11-20 13:47:47,647 - Initialize sequence tree
+2017-11-20 13:47:47,648 - Initialize sequence tree
+2017-11-20 13:47:47,756 - ZMQ Server Start, Port: 5555
+2017-11-20 13:47:51,075 - Start test
+2017-11-20 13:49:08,352 - Administrator login
+2017-11-20 13:49:08,421 - Initialize UI
+2017-11-20 13:49:08,479 - Initialize sequence table
+2017-11-20 13:49:08,566 - Initialize sequence tree
+2017-11-20 13:49:08,568 - Initialize sequence tree
+2017-11-20 13:49:08,688 - ZMQ Server Start, Port: 5555
+2017-11-20 13:49:11,983 - Start test
+2017-11-20 13:52:58,129 - Administrator login
+2017-11-20 13:52:58,193 - Initialize UI
+2017-11-20 13:52:58,260 - Initialize sequence table
+2017-11-20 13:52:58,338 - Initialize sequence tree
+2017-11-20 13:52:58,340 - Initialize sequence tree
+2017-11-20 13:52:58,516 - ZMQ Server Start, Port: 5555
+2017-11-20 13:52:59,833 - Start test
+2017-11-20 13:52:59,955 - Test item: function1
+2017-11-20 13:52:59,955 - Test item: function1
+2017-11-20 13:52:59,956 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 13:52:59,959 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 13:52:59,960 - Skip item: function2
+2017-11-20 13:52:59,960 - function2 result:[None, None]
+2017-11-20 13:52:59,960 - Skip item: function2
+2017-11-20 13:52:59,960 - function2 result:[None, None]
+2017-11-20 13:53:00,460 - Test item: function3
+2017-11-20 13:53:00,460 - function3 result:[0, 'fun3']
+2017-11-20 13:53:00,460 - Test item: function3
+2017-11-20 13:53:00,460 - function3 result:[0, 'fun3']
+2017-11-20 13:53:02,974 - Test item: function4
+2017-11-20 13:53:02,974 - function4 result:[0.5, 'fun4']
+2017-11-20 13:53:02,975 - Test item: function4
+2017-11-20 13:53:02,976 - function4 result:[0.5, 'fun4']
+2017-11-20 13:53:48,335 - Administrator login
+2017-11-20 13:53:48,407 - Initialize UI
+2017-11-20 13:53:48,487 - Initialize sequence table
+2017-11-20 13:53:48,569 - Initialize sequence tree
+2017-11-20 13:53:48,574 - Initialize sequence tree
+2017-11-20 13:53:48,723 - ZMQ Server Start, Port: 5555
+2017-11-20 13:53:51,791 - Start test
+2017-11-20 13:53:51,904 - Test item: function1
+2017-11-20 13:53:51,904 - Test item: function1
+2017-11-20 13:53:51,904 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 13:53:51,905 - Skip item: function2
+2017-11-20 13:53:51,905 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 13:53:51,907 - Skip item: function2
+2017-11-20 13:53:51,908 - function2 result:[None, None]
+2017-11-20 13:53:51,910 - function2 result:[None, None]
+2017-11-20 13:53:56,024 - Test item: function3
+2017-11-20 13:53:56,024 - function3 result:[0, 'fun3']
+2017-11-20 13:53:56,025 - Test item: function3
+2017-11-20 13:53:56,026 - function3 result:[0, 'fun3']
+2017-11-20 13:54:44,075 - Administrator login
+2017-11-20 13:54:44,126 - Initialize UI
+2017-11-20 13:54:44,167 - Initialize sequence table
+2017-11-20 13:54:44,236 - Initialize sequence tree
+2017-11-20 13:54:44,239 - Initialize sequence tree
+2017-11-20 13:54:44,332 - ZMQ Server Start, Port: 5555
+2017-11-20 13:54:45,924 - Start test
+2017-11-20 13:54:46,038 - Test item: function1
+2017-11-20 13:54:46,038 - Test item: function1
+2017-11-20 13:54:46,039 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 13:54:46,039 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 13:54:46,039 - Skip item: function2
+2017-11-20 13:54:46,041 - function2 result:[None, None]
+2017-11-20 13:54:46,041 - Skip item: function2
+2017-11-20 13:54:46,041 - function2 result:[None, None]
+2017-11-20 13:55:13,421 - Administrator login
+2017-11-20 13:55:13,476 - Initialize UI
+2017-11-20 13:55:13,513 - Initialize sequence table
+2017-11-20 13:55:13,591 - Initialize sequence tree
+2017-11-20 13:55:13,592 - Initialize sequence tree
+2017-11-20 13:55:13,751 - ZMQ Server Start, Port: 5555
+2017-11-20 13:55:15,604 - Start test
+2017-11-20 13:55:15,736 - Test item: function1
+2017-11-20 13:55:15,736 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 13:55:15,737 - Skip item: function2
+2017-11-20 13:55:15,737 - function2 result:[None, None]
+2017-11-20 13:55:15,737 - Test item: function1
+2017-11-20 13:55:15,739 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 13:55:15,739 - Skip item: function2
+2017-11-20 13:55:15,740 - function2 result:[None, None]
+2017-11-20 13:55:56,164 - Administrator login
+2017-11-20 13:55:56,226 - Initialize UI
+2017-11-20 13:55:56,263 - Initialize sequence table
+2017-11-20 13:55:56,331 - Initialize sequence tree
+2017-11-20 13:55:56,332 - Initialize sequence tree
+2017-11-20 13:55:56,431 - ZMQ Server Start, Port: 5555
+2017-11-20 13:55:59,545 - Start test
+2017-11-20 13:55:59,677 - Test item: function1
+2017-11-20 13:55:59,679 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 13:55:59,679 - Test item: function1
+2017-11-20 13:55:59,680 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 13:55:59,680 - Skip item: function2
+2017-11-20 13:55:59,680 - function2 result:[None, None]
+2017-11-20 13:55:59,680 - Skip item: function2
+2017-11-20 13:55:59,680 - function2 result:[None, None]
+2017-11-20 13:56:09,763 - Test item: function3
+2017-11-20 13:56:09,764 - function3 result:[0, 'fun3']
+2017-11-20 13:56:09,764 - Test item: function3
+2017-11-20 13:56:09,766 - function3 result:[0, 'fun3']
+2017-11-20 14:01:15,473 - Administrator login
+2017-11-20 14:01:15,552 - Initialize UI
+2017-11-20 14:01:15,607 - Initialize sequence table
+2017-11-20 14:01:15,696 - Initialize sequence tree
+2017-11-20 14:01:15,697 - Initialize sequence tree
+2017-11-20 14:01:15,801 - ZMQ Server Start, Port: 5555
+2017-11-20 14:01:17,865 - Start test
+2017-11-20 14:01:17,980 - Test item: function1
+2017-11-20 14:01:17,980 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:01:17,980 - Skip item: function2
+2017-11-20 14:01:17,980 - function2 result:[None, None]
+2017-11-20 14:01:17,980 - Test item: function1
+2017-11-20 14:01:17,980 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:01:17,980 - Skip item: function2
+2017-11-20 14:01:17,982 - function2 result:[None, None]
+2017-11-20 14:01:18,481 - Test item: function3
+2017-11-20 14:01:18,481 - function3 result:[0, 'fun3']
+2017-11-20 14:01:18,481 - Test item: function3
+2017-11-20 14:01:18,481 - function3 result:[0, 'fun3']
+2017-11-20 14:01:21,951 - Test item: function4
+2017-11-20 14:01:21,952 - function4 result:[0.5, 'fun4']
+2017-11-20 14:01:21,952 - Test item: function4
+2017-11-20 14:01:21,952 - function4 result:[0.5, 'fun4']
+2017-11-20 14:01:48,513 - Administrator login
+2017-11-20 14:01:48,558 - Initialize UI
+2017-11-20 14:01:48,591 - Initialize sequence table
+2017-11-20 14:01:48,673 - Initialize sequence tree
+2017-11-20 14:01:48,676 - Initialize sequence tree
+2017-11-20 14:01:49,091 - ZMQ Server Start, Port: 5555
+2017-11-20 14:03:43,733 - Administrator login
+2017-11-20 14:03:43,784 - Initialize UI
+2017-11-20 14:03:43,822 - Initialize sequence table
+2017-11-20 14:03:43,944 - Initialize sequence tree
+2017-11-20 14:03:43,947 - Initialize sequence tree
+2017-11-20 14:03:44,099 - ZMQ Server Start, Port: 5555
+2017-11-20 14:03:45,275 - Start test
+2017-11-20 14:03:45,388 - Test item: function1
+2017-11-20 14:03:45,388 - Test item: function1
+2017-11-20 14:03:45,390 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:03:45,390 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:03:45,390 - Skip item: function2
+2017-11-20 14:03:45,391 - function2 result:[None, None]
+2017-11-20 14:03:45,391 - Skip item: function2
+2017-11-20 14:03:45,391 - function2 result:[None, None]
+2017-11-20 14:03:45,891 - Test item: function3
+2017-11-20 14:03:45,891 - Test item: function3
+2017-11-20 14:03:45,891 - function3 result:[0, 'fun3']
+2017-11-20 14:03:45,891 - function3 result:[0, 'fun3']
+2017-11-20 14:03:46,391 - Test item: function4
+2017-11-20 14:03:46,391 - Test item: function4
+2017-11-20 14:03:46,392 - function4 result:[0.5, 'fun4']
+2017-11-20 14:03:46,392 - function4 result:[0.5, 'fun4']
+2017-11-20 14:05:18,393 - Test item: function5
+2017-11-20 14:05:18,394 - function5 result:[0.5, 'fun5']
+2017-11-20 14:05:18,394 - Test item: function5
+2017-11-20 14:05:18,395 - function5 result:[0.5, 'fun5']
+2017-11-20 14:05:22,057 - Administrator login
+2017-11-20 14:05:22,118 - Initialize UI
+2017-11-20 14:05:22,171 - Initialize sequence table
+2017-11-20 14:05:22,284 - Initialize sequence tree
+2017-11-20 14:05:22,289 - Initialize sequence tree
+2017-11-20 14:05:22,576 - ZMQ Server Start, Port: 5555
+2017-11-20 14:05:25,240 - Start test
+2017-11-20 14:05:27,516 - Test item: function1
+2017-11-20 14:05:27,516 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:05:27,516 - Skip item: function2
+2017-11-20 14:05:27,516 - function2 result:[None, None]
+2017-11-20 14:05:27,518 - Test item: function1
+2017-11-20 14:05:27,519 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:05:27,519 - Skip item: function2
+2017-11-20 14:05:27,519 - function2 result:[None, None]
+2017-11-20 14:08:08,680 - Administrator login
+2017-11-20 14:08:08,760 - Initialize UI
+2017-11-20 14:08:08,836 - Initialize sequence table
+2017-11-20 14:08:08,918 - Initialize sequence tree
+2017-11-20 14:08:08,924 - Initialize sequence tree
+2017-11-20 14:08:13,977 - ZMQ Server Start, Port: 5555
+2017-11-20 14:08:17,095 - Start test
+2017-11-20 14:08:17,208 - Test item: function1
+2017-11-20 14:08:17,208 - Test item: function1
+2017-11-20 14:08:17,209 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:08:17,209 - Skip item: function2
+2017-11-20 14:08:17,209 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:08:17,210 - function2 result:[None, None]
+2017-11-20 14:08:17,210 - Skip item: function2
+2017-11-20 14:08:17,210 - function2 result:[None, None]
+2017-11-20 14:08:17,710 - Test item: function3
+2017-11-20 14:08:17,711 - Test item: function3
+2017-11-20 14:08:17,711 - function3 result:[0, 'fun3']
+2017-11-20 14:08:17,712 - function3 result:[0, 'fun3']
+2017-11-20 14:08:18,212 - Test item: function4
+2017-11-20 14:08:18,212 - Test item: function4
+2017-11-20 14:08:18,212 - function4 result:[0.5, 'fun4']
+2017-11-20 14:08:18,214 - function4 result:[0.5, 'fun4']
+2017-11-20 14:08:18,713 - Test item: function5
+2017-11-20 14:08:18,713 - function5 result:[0.5, 'fun5']
+2017-11-20 14:08:18,713 - Test item: function5
+2017-11-20 14:08:18,713 - function5 result:[0.5, 'fun5']
+2017-11-20 14:08:20,151 - Test item: function6
+2017-11-20 14:08:20,151 - function6 result:[0.5, 'fun6']
+2017-11-20 14:08:20,151 - Test item: function6
+2017-11-20 14:08:20,152 - function6 result:[0.5, 'fun6']
+2017-11-20 14:08:54,192 - Administrator login
+2017-11-20 14:08:54,263 - Initialize UI
+2017-11-20 14:08:54,323 - Initialize sequence table
+2017-11-20 14:08:54,417 - Initialize sequence tree
+2017-11-20 14:08:54,421 - Initialize sequence tree
+2017-11-20 14:08:54,571 - ZMQ Server Start, Port: 5555
+2017-11-20 14:08:56,040 - Start test
+2017-11-20 14:16:40,279 - Administrator login
+2017-11-20 14:16:40,342 - Initialize UI
+2017-11-20 14:16:40,396 - Initialize sequence table
+2017-11-20 14:16:40,479 - Initialize sequence tree
+2017-11-20 14:16:40,481 - Initialize sequence tree
+2017-11-20 14:16:40,649 - ZMQ Server Start, Port: 5555
+2017-11-20 14:16:42,079 - Start test
+2017-11-20 14:16:42,193 - Test item: function1
+2017-11-20 14:16:42,193 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:16:42,193 - Skip item: function2
+2017-11-20 14:16:42,195 - Test item: function1
+2017-11-20 14:16:42,195 - function2 result:[None, None]
+2017-11-20 14:16:42,195 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:16:42,196 - Skip item: function2
+2017-11-20 14:16:42,196 - function2 result:[None, None]
+2017-11-20 14:16:42,695 - Test item: function3
+2017-11-20 14:16:42,695 - function3 result:[0, 'fun3']
+2017-11-20 14:16:42,696 - Test item: function3
+2017-11-20 14:16:42,696 - function3 result:[0, 'fun3']
+2017-11-20 14:17:02,806 - Test item: function4
+2017-11-20 14:17:02,809 - function4 result:[0.5, 'fun4']
+2017-11-20 14:17:02,811 - Test item: function4
+2017-11-20 14:17:02,811 - function4 result:[0.5, 'fun4']
+2017-11-20 14:17:27,799 - Administrator login
+2017-11-20 14:17:27,855 - Initialize UI
+2017-11-20 14:17:27,903 - Initialize sequence table
+2017-11-20 14:17:28,030 - Initialize sequence tree
+2017-11-20 14:17:28,033 - Initialize sequence tree
+2017-11-20 14:17:28,102 - ZMQ Server Start, Port: 5555
+2017-11-20 14:17:29,494 - Start test
+2017-11-20 14:17:32,763 - Test item: function1
+2017-11-20 14:17:32,763 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:17:32,763 - Skip item: function2
+2017-11-20 14:17:32,764 - function2 result:[None, None]
+2017-11-20 14:17:32,763 - Test item: function1
+2017-11-20 14:17:32,766 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:17:32,766 - Skip item: function2
+2017-11-20 14:17:32,766 - function2 result:[None, None]
+2017-11-20 14:23:11,703 - Administrator login
+2017-11-20 14:23:11,873 - Initialize UI
+2017-11-20 14:23:11,942 - Initialize sequence table
+2017-11-20 14:23:12,043 - Initialize sequence tree
+2017-11-20 14:23:12,051 - Initialize sequence tree
+2017-11-20 14:23:12,275 - ZMQ Server Start, Port: 5555
+2017-11-20 14:23:14,439 - Start test
+2017-11-20 14:23:14,551 - Test item: function1
+2017-11-20 14:23:14,552 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:23:14,552 - Skip item: function2
+2017-11-20 14:23:14,552 - function2 result:[None, None]
+2017-11-20 14:23:14,552 - Test item: function1
+2017-11-20 14:23:14,552 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:23:14,552 - Skip item: function2
+2017-11-20 14:23:14,552 - function2 result:[None, None]
+2017-11-20 14:23:17,147 - Test item: function3
+2017-11-20 14:23:17,147 - function3 result:[0, 'fun3']
+2017-11-20 14:23:17,148 - Test item: function3
+2017-11-20 14:23:17,148 - function3 result:[0, 'fun3']
+2017-11-20 14:24:59,489 - Administrator login
+2017-11-20 14:24:59,550 - Initialize UI
+2017-11-20 14:24:59,599 - Initialize sequence table
+2017-11-20 14:24:59,686 - Initialize sequence tree
+2017-11-20 14:24:59,687 - Initialize sequence tree
+2017-11-20 14:25:00,039 - ZMQ Server Start, Port: 5555
+2017-11-20 14:25:01,800 - Start test
+2017-11-20 14:25:01,916 - Test item: function1
+2017-11-20 14:25:01,916 - Test item: function1
+2017-11-20 14:25:01,918 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:25:01,918 - Skip item: function2
+2017-11-20 14:25:01,918 - function2 result:[None, None]
+2017-11-20 14:25:01,928 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:25:01,930 - Skip item: function2
+2017-11-20 14:25:01,930 - function2 result:[None, None]
+2017-11-20 14:25:02,417 - Test item: function3
+2017-11-20 14:25:02,419 - function3 result:[0, 'fun3']
+2017-11-20 14:25:02,430 - Test item: function3
+2017-11-20 14:25:02,431 - function3 result:[0, 'fun3']
+2017-11-20 14:25:02,924 - Test item: function4
+2017-11-20 14:25:02,924 - function4 result:[0.5, 'fun4']
+2017-11-20 14:25:02,932 - Test item: function4
+2017-11-20 14:25:02,932 - function4 result:[0.5, 'fun4']
+2017-11-20 14:25:03,430 - Test item: function5
+2017-11-20 14:25:03,436 - function5 result:[0.5, 'fun5']
+2017-11-20 14:25:03,436 - Test item: function5
+2017-11-20 14:25:03,436 - function5 result:[0.5, 'fun5']
+2017-11-20 14:25:03,936 - Test item: function6
+2017-11-20 14:25:03,936 - Test item: function6
+2017-11-20 14:25:03,936 - function6 result:[0.5, 'fun6']
+2017-11-20 14:25:03,937 - function6 result:[0.5, 'fun6']
+2017-11-20 14:25:04,437 - Test item: function7
+2017-11-20 14:25:04,437 - Test item: function7
+2017-11-20 14:25:04,438 - function7 result:[0.5, 'fun7']
+2017-11-20 14:25:04,439 - function7 result:[0.5, 'fun7']
+2017-11-20 14:25:04,944 - Test item: function8
+2017-11-20 14:25:04,944 - function8 result:[0.9, 'fun8']
+2017-11-20 14:25:04,947 - Test item: function8
+2017-11-20 14:25:04,950 - function8 result:[0.9, 'fun8']
+2017-11-20 14:25:05,447 - Test item: function9
+2017-11-20 14:25:05,449 - function9 result:[0.9, 'fun9']
+2017-11-20 14:25:05,449 - Test item: function9
+2017-11-20 14:25:05,450 - function9 result:[0.9, 'fun9']
+2017-11-20 14:25:05,951 - Test item: function9
+2017-11-20 14:25:05,951 - Test item: function9
+2017-11-20 14:25:05,951 - function9 result:[0.9, 'fun9']
+2017-11-20 14:25:05,958 - function9 result:[0.9, 'fun9']
+2017-11-20 14:25:06,452 - Test item: function10
+2017-11-20 14:25:06,457 - function10 result:[0.5, 'fun10']
+2017-11-20 14:25:06,460 - Test item: function10
+2017-11-20 14:25:06,460 - function10 result:[0.5, 'fun10']
+2017-11-20 14:25:06,463 - total time£º 4.60
+2017-11-20 14:25:06,465 - total time£º 4.61
+2017-11-20 14:43:13,078 - Administrator login
+2017-11-20 14:43:13,137 - Initialize UI
+2017-11-20 14:43:13,176 - Initialize sequence table
+2017-11-20 14:43:13,276 - Initialize sequence tree
+2017-11-20 14:43:13,279 - Initialize sequence tree
+2017-11-20 14:43:13,735 - ZMQ Server Start, Port: 5555
+2017-11-20 14:43:14,950 - Start test
+2017-11-20 14:43:15,059 - Test item: function1
+2017-11-20 14:43:15,059 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:43:15,059 - Skip item: function2
+2017-11-20 14:43:15,060 - function2 result:[None, None]
+2017-11-20 14:43:15,560 - Test item: function3
+2017-11-20 14:43:15,560 - function3 result:[0, 'fun3']
+2017-11-20 14:43:16,060 - Test item: function4
+2017-11-20 14:43:16,060 - function4 result:[0.5, 'fun4']
+2017-11-20 14:43:16,560 - Test item: function5
+2017-11-20 14:43:16,560 - function5 result:[0.5, 'fun5']
+2017-11-20 14:43:18,799 - Test item: function6
+2017-11-20 14:43:18,799 - function6 result:[0.5, 'fun6']
+2017-11-20 14:44:22,652 - Administrator login
+2017-11-20 14:44:22,720 - Initialize UI
+2017-11-20 14:44:22,775 - Initialize sequence table
+2017-11-20 14:44:22,875 - Initialize sequence tree
+2017-11-20 14:44:22,878 - Initialize sequence tree
+2017-11-20 14:44:23,087 - ZMQ Server Start, Port: 5555
+2017-11-20 14:44:24,148 - Start test
+2017-11-20 14:44:31,562 - Test item: function1
+2017-11-20 14:44:31,563 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:44:31,563 - Skip item: function2
+2017-11-20 14:44:31,563 - function2 result:[None, None]
+2017-11-20 14:45:20,312 - Administrator login
+2017-11-20 14:45:20,368 - Initialize UI
+2017-11-20 14:45:20,404 - Initialize sequence table
+2017-11-20 14:45:20,532 - Initialize sequence tree
+2017-11-20 14:45:20,537 - Initialize sequence tree
+2017-11-20 14:45:20,843 - ZMQ Server Start, Port: 5555
+2017-11-20 14:45:21,976 - Start test
+2017-11-20 14:45:22,092 - Test item: function1
+2017-11-20 14:45:22,092 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:45:22,095 - Skip item: function2
+2017-11-20 14:45:22,095 - function2 result:[None, None]
+2017-11-20 14:45:22,111 - Test item: function1
+2017-11-20 14:45:22,125 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:45:22,136 - Skip item: function2
+2017-11-20 14:45:22,151 - function2 result:[None, None]
+2017-11-20 14:45:22,595 - Test item: function3
+2017-11-20 14:45:22,596 - function3 result:[0, 'fun3']
+2017-11-20 14:45:22,652 - Test item: function3
+2017-11-20 14:45:22,652 - function3 result:[0, 'fun3']
+2017-11-20 14:45:23,105 - Test item: function4
+2017-11-20 14:45:23,105 - function4 result:[0.5, 'fun4']
+2017-11-20 14:45:23,154 - Test item: function4
+2017-11-20 14:45:23,155 - function4 result:[0.5, 'fun4']
+2017-11-20 14:45:23,609 - Test item: function5
+2017-11-20 14:45:23,609 - function5 result:[0.5, 'fun5']
+2017-11-20 14:45:23,656 - Test item: function5
+2017-11-20 14:45:23,657 - function5 result:[0.5, 'fun5']
+2017-11-20 14:45:24,115 - Test item: function6
+2017-11-20 14:45:24,115 - function6 result:[0.5, 'fun6']
+2017-11-20 14:45:24,159 - Test item: function6
+2017-11-20 14:45:24,160 - function6 result:[0.5, 'fun6']
+2017-11-20 14:45:24,619 - Test item: function7
+2017-11-20 14:45:24,625 - function7 result:[0.5, 'fun7']
+2017-11-20 14:45:24,661 - Test item: function7
+2017-11-20 14:45:24,662 - function7 result:[0.5, 'fun7']
+2017-11-20 14:45:25,127 - Test item: function8
+2017-11-20 14:45:25,127 - function8 result:[0.9, 'fun8']
+2017-11-20 14:45:25,163 - Test item: function8
+2017-11-20 14:45:25,164 - function8 result:[0.9, 'fun8']
+2017-11-20 14:45:25,631 - Test item: function9
+2017-11-20 14:45:25,636 - function9 result:[0.9, 'fun9']
+2017-11-20 14:45:25,665 - Test item: function9
+2017-11-20 14:45:25,667 - function9 result:[0.9, 'fun9']
+2017-11-20 14:45:26,136 - Test item: function9
+2017-11-20 14:45:26,142 - function9 result:[0.9, 'fun9']
+2017-11-20 14:45:26,168 - Test item: function9
+2017-11-20 14:45:26,169 - function9 result:[0.9, 'fun9']
+2017-11-20 14:45:26,641 - Test item: function10
+2017-11-20 14:45:26,648 - function10 result:[0.5, 'fun10']
+2017-11-20 14:45:26,649 - total time£º 4.60
+2017-11-20 14:45:29,207 - Test item: function10
+2017-11-20 14:45:29,207 - function10 result:[0.5, 'fun10']
+2017-11-20 14:45:29,207 - total time£º 7.16
+2017-11-20 14:50:16,057 - Administrator login
+2017-11-20 14:50:16,116 - Initialize UI
+2017-11-20 14:50:16,171 - Initialize sequence table
+2017-11-20 14:50:16,253 - Initialize sequence tree
+2017-11-20 14:50:16,255 - Initialize sequence tree
+2017-11-20 14:50:16,516 - ZMQ Server Start, Port: 5555
+2017-11-20 14:50:18,416 - Start test
+2017-11-20 14:50:18,532 - Test item: function1
+2017-11-20 14:50:18,532 - Test item: function1
+2017-11-20 14:50:18,532 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:50:18,532 - Skip item: function2
+2017-11-20 14:50:18,537 - function2 result:[None, None]
+2017-11-20 14:50:18,537 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:50:18,537 - Skip item: function2
+2017-11-20 14:50:18,537 - function2 result:[None, None]
+2017-11-20 14:50:19,038 - Test item: function3
+2017-11-20 14:50:19,038 - function3 result:[0, 'fun3']
+2017-11-20 14:50:19,043 - Test item: function3
+2017-11-20 14:50:19,044 - function3 result:[0, 'fun3']
+2017-11-20 14:50:19,537 - Test item: function4
+2017-11-20 14:50:19,542 - function4 result:[0.5, 'fun4']
+2017-11-20 14:50:19,544 - Test item: function4
+2017-11-20 14:50:19,544 - function4 result:[0.5, 'fun4']
+2017-11-20 14:50:20,042 - Test item: function5
+2017-11-20 14:50:20,042 - function5 result:[0.5, 'fun5']
+2017-11-20 14:50:20,049 - Test item: function5
+2017-11-20 14:50:20,049 - function5 result:[0.5, 'fun5']
+2017-11-20 14:50:20,542 - Test item: function6
+2017-11-20 14:50:20,542 - function6 result:[0.5, 'fun6']
+2017-11-20 14:50:20,550 - Test item: function6
+2017-11-20 14:50:20,550 - function6 result:[0.5, 'fun6']
+2017-11-20 14:50:21,042 - Test item: function7
+2017-11-20 14:50:21,048 - function7 result:[0.5, 'fun7']
+2017-11-20 14:50:21,052 - Test item: function7
+2017-11-20 14:50:21,054 - function7 result:[0.5, 'fun7']
+2017-11-20 14:50:21,548 - Test item: function8
+2017-11-20 14:50:21,552 - function8 result:[0.9, 'fun8']
+2017-11-20 14:50:21,553 - Test item: function8
+2017-11-20 14:50:21,555 - function8 result:[0.9, 'fun8']
+2017-11-20 14:50:22,052 - Test item: function9
+2017-11-20 14:50:22,057 - function9 result:[0.9, 'fun9']
+2017-11-20 14:50:22,057 - Test item: function9
+2017-11-20 14:50:22,057 - function9 result:[0.9, 'fun9']
+2017-11-20 14:50:22,558 - Test item: function9
+2017-11-20 14:50:22,558 - function9 result:[0.9, 'fun9']
+2017-11-20 14:50:22,561 - Test item: function9
+2017-11-20 14:50:22,562 - function9 result:[0.9, 'fun9']
+2017-11-20 14:50:23,057 - Test item: function10
+2017-11-20 14:50:23,060 - function10 result:[0.5, 'fun10']
+2017-11-20 14:50:23,062 - total time£º 4.63
+2017-11-20 14:50:23,062 - Test item: function10
+2017-11-20 14:50:23,062 - function10 result:[0.5, 'fun10']
+2017-11-20 14:50:23,064 - total time£º 4.60
+2017-11-20 14:54:20,843 - Administrator login
+2017-11-20 14:54:20,915 - Initialize UI
+2017-11-20 14:54:20,970 - Initialize sequence table
+2017-11-20 14:54:21,049 - Initialize sequence tree
+2017-11-20 14:54:21,052 - Initialize sequence tree
+2017-11-20 14:54:21,190 - ZMQ Server Start, Port: 5555
+2017-11-20 14:54:22,961 - Start test
+2017-11-20 14:54:23,075 - Test item: function1
+2017-11-20 14:54:23,075 - Test item: function1
+2017-11-20 14:54:23,075 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:54:23,076 - Skip item: function2
+2017-11-20 14:54:23,076 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:54:23,078 - function2 result:[None, None]
+2017-11-20 14:54:23,083 - Skip item: function2
+2017-11-20 14:54:23,095 - function2 result:[None, None]
+2017-11-20 14:54:23,583 - Test item: function3
+2017-11-20 14:54:23,588 - function3 result:[0, 'fun3']
+2017-11-20 14:54:23,595 - Test item: function3
+2017-11-20 14:54:23,595 - function3 result:[0, 'fun3']
+2017-11-20 14:54:24,088 - Test item: function4
+2017-11-20 14:54:24,089 - function4 result:[0.5, 'fun4']
+2017-11-20 14:54:24,096 - Test item: function4
+2017-11-20 14:54:24,097 - function4 result:[0.5, 'fun4']
+2017-11-20 14:54:24,590 - Test item: function5
+2017-11-20 14:54:24,590 - function5 result:[0.5, 'fun5']
+2017-11-20 14:54:24,598 - Test item: function5
+2017-11-20 14:54:24,599 - function5 result:[0.5, 'fun5']
+2017-11-20 14:54:25,092 - Test item: function6
+2017-11-20 14:54:25,095 - function6 result:[0.5, 'fun6']
+2017-11-20 14:54:25,099 - Test item: function6
+2017-11-20 14:54:25,100 - function6 result:[0.5, 'fun6']
+2017-11-20 14:54:25,595 - Test item: function7
+2017-11-20 14:54:25,598 - function7 result:[0.5, 'fun7']
+2017-11-20 14:54:25,601 - Test item: function7
+2017-11-20 14:54:25,601 - function7 result:[0.5, 'fun7']
+2017-11-20 14:54:26,098 - Test item: function8
+2017-11-20 14:54:26,099 - function8 result:[0.9, 'fun8']
+2017-11-20 14:54:26,104 - Test item: function8
+2017-11-20 14:54:26,105 - function8 result:[0.9, 'fun8']
+2017-11-20 14:54:26,601 - Test item: function9
+2017-11-20 14:54:26,605 - function9 result:[0.9, 'fun9']
+2017-11-20 14:54:26,606 - Test item: function9
+2017-11-20 14:54:26,608 - function9 result:[0.9, 'fun9']
+2017-11-20 14:54:27,105 - Test item: function9
+2017-11-20 14:54:27,108 - function9 result:[0.9, 'fun9']
+2017-11-20 14:54:27,108 - Test item: function9
+2017-11-20 14:54:27,110 - function9 result:[0.9, 'fun9']
+2017-11-20 14:54:27,608 - Test item: function10
+2017-11-20 14:54:27,611 - function10 result:[0.5, 'fun10']
+2017-11-20 14:54:27,611 - Test item: function10
+2017-11-20 14:54:27,611 - function10 result:[0.5, 'fun10']
+2017-11-20 14:54:27,614 - total time£º 4.61
+2017-11-20 14:54:27,615 - total time£º 4.60
+2017-11-20 14:57:48,286 - Administrator login
+2017-11-20 14:57:48,355 - Initialize UI
+2017-11-20 14:57:48,404 - Initialize sequence table
+2017-11-20 14:57:48,489 - Initialize sequence tree
+2017-11-20 14:57:48,491 - Initialize sequence tree
+2017-11-20 14:57:48,689 - ZMQ Server Start, Port: 5555
+2017-11-20 14:57:50,244 - Start test
+2017-11-20 14:57:50,372 - Test item: function1
+2017-11-20 14:57:50,372 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:57:50,372 - Skip item: function2
+2017-11-20 14:57:50,375 - Test item: function1
+2017-11-20 14:57:50,376 - function2 result:[None, None]
+2017-11-20 14:57:50,376 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:57:50,376 - Skip item: function2
+2017-11-20 14:57:50,376 - function2 result:[None, None]
+2017-11-20 14:57:50,876 - Test item: function3
+2017-11-20 14:57:50,876 - function3 result:[0, 'fun3']
+2017-11-20 14:57:50,881 - Test item: function3
+2017-11-20 14:57:50,881 - function3 result:[0, 'fun3']
+2017-11-20 14:57:51,376 - Test item: function4
+2017-11-20 14:57:51,377 - function4 result:[0.5, 'fun4']
+2017-11-20 14:57:51,382 - Test item: function4
+2017-11-20 14:57:51,382 - function4 result:[0.5, 'fun4']
+2017-11-20 14:57:51,881 - Test item: function5
+2017-11-20 14:57:51,881 - function5 result:[0.5, 'fun5']
+2017-11-20 14:57:51,884 - Test item: function5
+2017-11-20 14:57:51,884 - function5 result:[0.5, 'fun5']
+2017-11-20 14:57:52,385 - Test item: function6
+2017-11-20 14:57:52,385 - Test item: function6
+2017-11-20 14:57:52,388 - function6 result:[0.5, 'fun6']
+2017-11-20 14:57:52,391 - function6 result:[0.5, 'fun6']
+2017-11-20 14:57:52,894 - Test item: function7
+2017-11-20 14:57:52,894 - function7 result:[0.5, 'fun7']
+2017-11-20 14:57:52,904 - Test item: function7
+2017-11-20 14:57:52,904 - function7 result:[0.5, 'fun7']
+2017-11-20 14:57:53,393 - Test item: function8
+2017-11-20 14:57:53,394 - function8 result:[0.9, 'fun8']
+2017-11-20 14:57:53,404 - Test item: function8
+2017-11-20 14:57:53,404 - function8 result:[0.9, 'fun8']
+2017-11-20 14:57:53,904 - Test item: function9
+2017-11-20 14:57:53,907 - function9 result:[0.9, 'fun9']
+2017-11-20 14:57:53,913 - Test item: function9
+2017-11-20 14:57:53,913 - function9 result:[0.9, 'fun9']
+2017-11-20 14:57:54,407 - Test item: function9
+2017-11-20 14:57:54,414 - function9 result:[0.9, 'fun9']
+2017-11-20 14:57:54,414 - Test item: function9
+2017-11-20 14:57:54,414 - function9 result:[0.9, 'fun9']
+2017-11-20 14:57:54,913 - Test item: function10
+2017-11-20 14:57:54,913 - function10 result:[0.5, 'fun10']
+2017-11-20 14:57:54,920 - total time£º 4.61
+2017-11-20 14:57:54,921 - Test item: function10
+2017-11-20 14:57:54,921 - function10 result:[0.5, 'fun10']
+2017-11-20 14:57:54,924 - total time£º 4.63
+2017-11-20 14:58:35,131 - Administrator login
+2017-11-20 14:58:35,196 - Initialize UI
+2017-11-20 14:58:35,299 - Initialize sequence table
+2017-11-20 14:58:35,417 - Initialize sequence tree
+2017-11-20 14:58:35,422 - Initialize sequence tree
+2017-11-20 14:58:35,521 - ZMQ Server Start, Port: 5555
+2017-11-20 14:58:37,217 - Start test
+2017-11-20 14:58:37,332 - Test item: function1
+2017-11-20 14:58:37,332 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:58:37,332 - Skip item: function2
+2017-11-20 14:58:37,332 - function2 result:[None, None]
+2017-11-20 14:58:37,345 - Test item: function1
+2017-11-20 14:58:37,345 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:58:37,345 - Skip item: function2
+2017-11-20 14:58:37,355 - function2 result:[None, None]
+2017-11-20 14:58:37,835 - Test item: function3
+2017-11-20 14:58:37,835 - function3 result:[0, 'fun3']
+2017-11-20 14:58:37,855 - Test item: function3
+2017-11-20 14:58:37,855 - function3 result:[0, 'fun3']
+2017-11-20 14:58:38,335 - Test item: function4
+2017-11-20 14:58:38,335 - function4 result:[0.5, 'fun4']
+2017-11-20 14:58:38,358 - Test item: function4
+2017-11-20 14:58:38,358 - function4 result:[0.5, 'fun4']
+2017-11-20 14:58:38,835 - Test item: function5
+2017-11-20 14:58:38,835 - function5 result:[0.5, 'fun5']
+2017-11-20 14:58:38,860 - Test item: function5
+2017-11-20 14:58:38,862 - function5 result:[0.5, 'fun5']
+2017-11-20 14:58:39,336 - Test item: function6
+2017-11-20 14:58:39,336 - function6 result:[0.5, 'fun6']
+2017-11-20 14:58:39,365 - Test item: function6
+2017-11-20 14:58:39,367 - function6 result:[0.5, 'fun6']
+2017-11-20 14:58:39,848 - Test item: function7
+2017-11-20 14:58:39,848 - function7 result:[0.5, 'fun7']
+2017-11-20 14:58:39,873 - Test item: function7
+2017-11-20 14:58:39,873 - function7 result:[0.5, 'fun7']
+2017-11-20 14:58:40,348 - Test item: function8
+2017-11-20 14:58:40,348 - function8 result:[0.9, 'fun8']
+2017-11-20 14:58:40,375 - Test item: function8
+2017-11-20 14:58:40,375 - function8 result:[0.9, 'fun8']
+2017-11-20 14:58:40,849 - Test item: function9
+2017-11-20 14:58:40,851 - function9 result:[0.9, 'fun9']
+2017-11-20 14:58:40,880 - Test item: function9
+2017-11-20 14:58:40,881 - function9 result:[0.9, 'fun9']
+2017-11-20 14:58:41,351 - Test item: function9
+2017-11-20 14:58:41,351 - function9 result:[0.9, 'fun9']
+2017-11-20 14:58:41,381 - Test item: function9
+2017-11-20 14:58:41,381 - function9 result:[0.9, 'fun9']
+2017-11-20 14:58:41,855 - Test item: function10
+2017-11-20 14:58:41,855 - function10 result:[0.5, 'fun10']
+2017-11-20 14:58:41,862 - total time£º 4.60
+2017-11-20 14:58:53,811 - Test item: function10
+2017-11-20 14:58:53,812 - function10 result:[0.5, 'fun10']
+2017-11-20 14:58:53,814 - total time£º 16.56
+2017-11-20 14:59:06,454 - Administrator login
+2017-11-20 14:59:06,519 - Initialize UI
+2017-11-20 14:59:06,572 - Initialize sequence table
+2017-11-20 14:59:06,671 - Initialize sequence tree
+2017-11-20 14:59:06,672 - Initialize sequence tree
+2017-11-20 14:59:11,712 - ZMQ Server Start, Port: 5555
+2017-11-20 14:59:13,852 - Start test
+2017-11-20 14:59:13,967 - Test item: function1
+2017-11-20 14:59:13,967 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:59:13,967 - Skip item: function2
+2017-11-20 14:59:13,970 - function2 result:[None, None]
+2017-11-20 14:59:13,971 - Test item: function1
+2017-11-20 14:59:13,971 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 14:59:13,971 - Skip item: function2
+2017-11-20 14:59:13,973 - function2 result:[None, None]
+2017-11-20 14:59:14,470 - Test item: function3
+2017-11-20 14:59:14,470 - function3 result:[0, 'fun3']
+2017-11-20 14:59:14,475 - Test item: function3
+2017-11-20 14:59:14,476 - function3 result:[0, 'fun3']
+2017-11-20 14:59:14,970 - Test item: function4
+2017-11-20 14:59:14,970 - function4 result:[0.5, 'fun4']
+2017-11-20 14:59:14,976 - Test item: function4
+2017-11-20 14:59:14,976 - function4 result:[0.5, 'fun4']
+2017-11-20 14:59:15,475 - Test item: function5
+2017-11-20 14:59:15,479 - function5 result:[0.5, 'fun5']
+2017-11-20 14:59:15,479 - Test item: function5
+2017-11-20 14:59:15,479 - function5 result:[0.5, 'fun5']
+2017-11-20 14:59:15,982 - Test item: function6
+2017-11-20 14:59:15,982 - function6 result:[0.5, 'fun6']
+2017-11-20 14:59:16,041 - Test item: function6
+2017-11-20 14:59:16,044 - function6 result:[0.5, 'fun6']
+2017-11-20 14:59:16,483 - Test item: function7
+2017-11-20 14:59:16,488 - function7 result:[0.5, 'fun7']
+2017-11-20 14:59:16,545 - Test item: function7
+2017-11-20 14:59:16,548 - function7 result:[0.5, 'fun7']
+2017-11-20 14:59:16,988 - Test item: function8
+2017-11-20 14:59:16,990 - function8 result:[0.9, 'fun8']
+2017-11-20 14:59:17,048 - Test item: function8
+2017-11-20 14:59:17,048 - function8 result:[0.9, 'fun8']
+2017-11-20 14:59:17,489 - Test item: function9
+2017-11-20 14:59:17,496 - function9 result:[0.9, 'fun9']
+2017-11-20 14:59:17,549 - Test item: function9
+2017-11-20 14:59:17,549 - function9 result:[0.9, 'fun9']
+2017-11-20 14:59:17,996 - Test item: function9
+2017-11-20 14:59:18,004 - function9 result:[0.9, 'fun9']
+2017-11-20 14:59:18,049 - Test item: function9
+2017-11-20 14:59:18,049 - function9 result:[0.9, 'fun9']
+2017-11-20 14:59:18,504 - Test item: function10
+2017-11-20 14:59:18,513 - function10 result:[0.5, 'fun10']
+2017-11-20 14:59:18,515 - total time£º 4.60
+2017-11-20 14:59:28,671 - Test item: function10
+2017-11-20 14:59:28,671 - function10 result:[0.5, 'fun10']
+2017-11-20 14:59:28,671 - total time£º 14.78
+2017-11-20 15:00:34,307 - Administrator login
+2017-11-20 15:00:34,377 - Initialize UI
+2017-11-20 15:00:34,431 - Initialize sequence table
+2017-11-20 15:00:34,548 - Initialize sequence tree
+2017-11-20 15:00:34,555 - Initialize sequence tree
+2017-11-20 15:00:34,634 - ZMQ Server Start, Port: 5555
+2017-11-20 15:00:39,537 - Start test
+2017-11-20 15:00:39,651 - Test item: function1
+2017-11-20 15:00:39,651 - Test item: function1
+2017-11-20 15:00:39,652 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 15:00:39,652 - Skip item: function2
+2017-11-20 15:00:39,652 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 15:00:39,654 - function2 result:[None, None]
+2017-11-20 15:00:39,654 - Skip item: function2
+2017-11-20 15:00:39,668 - function2 result:[None, None]
+2017-11-20 15:00:40,159 - Test item: function3
+2017-11-20 15:00:40,161 - function3 result:[0, 'fun3']
+2017-11-20 15:00:40,168 - Test item: function3
+2017-11-20 15:00:40,171 - function3 result:[0, 'fun3']
+2017-11-20 15:00:40,663 - Test item: function4
+2017-11-20 15:00:40,667 - function4 result:[0.5, 'fun4']
+2017-11-20 15:00:40,671 - Test item: function4
+2017-11-20 15:00:40,671 - function4 result:[0.5, 'fun4']
+2017-11-20 15:00:41,167 - Test item: function5
+2017-11-20 15:00:41,167 - function5 result:[0.5, 'fun5']
+2017-11-20 15:00:41,177 - Test item: function5
+2017-11-20 15:00:41,180 - function5 result:[0.5, 'fun5']
+2017-11-20 15:00:41,667 - Test item: function6
+2017-11-20 15:00:41,667 - function6 result:[0.5, 'fun6']
+2017-11-20 15:00:41,730 - Test item: function6
+2017-11-20 15:00:41,730 - function6 result:[0.5, 'fun6']
+2017-11-20 15:00:42,167 - Test item: function7
+2017-11-20 15:00:42,167 - function7 result:[0.5, 'fun7']
+2017-11-20 15:00:42,230 - Test item: function7
+2017-11-20 15:00:42,230 - function7 result:[0.5, 'fun7']
+2017-11-20 15:00:42,667 - Test item: function8
+2017-11-20 15:00:42,670 - function8 result:[0.9, 'fun8']
+2017-11-20 15:00:42,730 - Test item: function8
+2017-11-20 15:00:42,732 - function8 result:[0.9, 'fun8']
+2017-11-20 15:00:43,171 - Test item: function9
+2017-11-20 15:00:43,174 - function9 result:[0.9, 'fun9']
+2017-11-20 15:00:43,233 - Test item: function9
+2017-11-20 15:00:43,233 - function9 result:[0.9, 'fun9']
+2017-11-20 15:00:43,673 - Test item: function9
+2017-11-20 15:00:43,673 - function9 result:[0.9, 'fun9']
+2017-11-20 15:00:43,735 - Test item: function9
+2017-11-20 15:00:43,736 - function9 result:[0.9, 'fun9']
+2017-11-20 15:00:44,174 - Test item: function10
+2017-11-20 15:00:44,176 - function10 result:[0.5, 'fun10']
+2017-11-20 15:00:44,180 - total time£º 4.60
+2017-11-20 15:00:52,921 - Test item: function10
+2017-11-20 15:00:52,921 - function10 result:[0.5, 'fun10']
+2017-11-20 15:00:52,921 - total time£º 13.34
+2017-11-20 15:01:22,452 - Administrator login
+2017-11-20 15:01:22,518 - Initialize UI
+2017-11-20 15:01:22,571 - Initialize sequence table
+2017-11-20 15:01:22,659 - Initialize sequence tree
+2017-11-20 15:01:22,664 - Initialize sequence tree
+2017-11-20 15:01:22,811 - ZMQ Server Start, Port: 5555
+2017-11-20 15:01:24,075 - Start test
+2017-11-20 15:01:24,190 - Test item: function1
+2017-11-20 15:01:24,197 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 15:01:24,199 - Skip item: function2
+2017-11-20 15:01:24,204 - function2 result:[None, None]
+2017-11-20 15:01:24,208 - Test item: function1
+2017-11-20 15:01:24,217 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 15:01:24,220 - Skip item: function2
+2017-11-20 15:01:24,243 - function2 result:[None, None]
+2017-11-20 15:01:24,707 - Test item: function3
+2017-11-20 15:01:24,711 - function3 result:[0, 'fun3']
+2017-11-20 15:01:24,747 - Test item: function3
+2017-11-20 15:01:24,751 - function3 result:[0, 'fun3']
+2017-11-20 15:01:25,212 - Test item: function4
+2017-11-20 15:01:25,216 - function4 result:[0.5, 'fun4']
+2017-11-20 15:01:25,252 - Test item: function4
+2017-11-20 15:01:25,252 - function4 result:[0.5, 'fun4']
+2017-11-20 15:01:25,716 - Test item: function5
+2017-11-20 15:01:25,716 - function5 result:[0.5, 'fun5']
+2017-11-20 15:01:25,752 - Test item: function5
+2017-11-20 15:01:25,752 - function5 result:[0.5, 'fun5']
+2017-11-20 15:01:26,216 - Test item: function6
+2017-11-20 15:01:26,217 - function6 result:[0.5, 'fun6']
+2017-11-20 15:01:26,252 - Test item: function6
+2017-11-20 15:01:26,254 - function6 result:[0.5, 'fun6']
+2017-11-20 15:01:26,717 - Test item: function7
+2017-11-20 15:01:26,720 - function7 result:[0.5, 'fun7']
+2017-11-20 15:01:26,756 - Test item: function7
+2017-11-20 15:01:26,756 - function7 result:[0.5, 'fun7']
+2017-11-20 15:01:27,220 - Test item: function8
+2017-11-20 15:01:27,222 - function8 result:[0.9, 'fun8']
+2017-11-20 15:01:27,256 - Test item: function8
+2017-11-20 15:01:27,256 - function8 result:[0.9, 'fun8']
+2017-11-20 15:01:27,723 - Test item: function9
+2017-11-20 15:01:27,726 - function9 result:[0.9, 'fun9']
+2017-11-20 15:01:27,756 - Test item: function9
+2017-11-20 15:01:27,759 - function9 result:[0.9, 'fun9']
+2017-11-20 15:01:28,226 - Test item: function9
+2017-11-20 15:01:28,226 - function9 result:[0.9, 'fun9']
+2017-11-20 15:01:28,263 - Test item: function9
+2017-11-20 15:01:28,265 - function9 result:[0.9, 'fun9']
+2017-11-20 15:01:28,726 - Test item: function10
+2017-11-20 15:01:28,729 - function10 result:[0.5, 'fun10']
+2017-11-20 15:01:28,730 - total time£º 4.60
+2017-11-20 15:01:28,767 - Test item: function10
+2017-11-20 15:01:28,772 - function10 result:[0.5, 'fun10']
+2017-11-20 15:01:28,774 - total time£º 4.62
+2017-11-20 15:14:35,553 - Administrator login
+2017-11-20 15:14:35,628 - Initialize UI
+2017-11-20 15:14:35,736 - Initialize sequence table
+2017-11-20 15:14:35,832 - Initialize sequence tree
+2017-11-20 15:14:35,835 - Initialize sequence tree
+2017-11-20 15:14:35,940 - ZMQ Server Start, Port: 5555
+2017-11-20 15:14:37,456 - Start test
+2017-11-20 15:14:37,576 - Test item: function1
+2017-11-20 15:14:37,576 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 15:14:37,577 - Skip item: function2
+2017-11-20 15:14:37,577 - function2 result:[None, None]
+2017-11-20 15:14:37,595 - Test item: function1
+2017-11-20 15:14:37,599 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 15:14:37,600 - Skip item: function2
+2017-11-20 15:14:37,609 - function2 result:[None, None]
+2017-11-20 15:14:38,078 - Test item: function3
+2017-11-20 15:14:38,078 - function3 result:[0, 'fun3']
+2017-11-20 15:14:38,110 - Test item: function3
+2017-11-20 15:14:38,110 - function3 result:[0, 'fun3']
+2017-11-20 15:14:38,585 - Test item: function4
+2017-11-20 15:14:38,585 - function4 result:[0.5, 'fun4']
+2017-11-20 15:14:38,609 - Test item: function4
+2017-11-20 15:14:38,609 - function4 result:[0.5, 'fun4']
+2017-11-20 15:14:39,091 - Test item: function5
+2017-11-20 15:14:39,091 - function5 result:[0.5, 'fun5']
+2017-11-20 15:14:39,111 - Test item: function5
+2017-11-20 15:14:39,112 - function5 result:[0.5, 'fun5']
+2017-11-20 15:14:39,591 - Test item: function6
+2017-11-20 15:14:39,593 - function6 result:[0.5, 'fun6']
+2017-11-20 15:14:39,615 - Test item: function6
+2017-11-20 15:14:39,615 - function6 result:[0.5, 'fun6']
+2017-11-20 15:14:40,094 - Test item: function7
+2017-11-20 15:14:40,094 - function7 result:[0.5, 'fun7']
+2017-11-20 15:14:40,115 - Test item: function7
+2017-11-20 15:14:40,115 - function7 result:[0.5, 'fun7']
+2017-11-20 15:14:40,593 - Test item: function8
+2017-11-20 15:14:40,595 - function8 result:[0.9, 'fun8']
+2017-11-20 15:14:40,617 - Test item: function8
+2017-11-20 15:14:40,618 - function8 result:[0.9, 'fun8']
+2017-11-20 15:14:41,095 - Test item: function9
+2017-11-20 15:14:41,098 - function9 result:[0.9, 'fun9']
+2017-11-20 15:14:41,119 - Test item: function9
+2017-11-20 15:14:41,121 - function9 result:[0.9, 'fun9']
+2017-11-20 15:14:41,598 - Test item: function9
+2017-11-20 15:14:41,604 - function9 result:[0.9, 'fun9']
+2017-11-20 15:14:41,625 - Test item: function9
+2017-11-20 15:14:41,625 - function9 result:[0.9, 'fun9']
+2017-11-20 15:14:42,105 - Test item: function10
+2017-11-20 15:14:42,107 - function10 result:[0.5, 'fun10']
+2017-11-20 15:14:42,111 - total time£º 4.60
+2017-11-20 15:14:42,128 - Test item: function10
+2017-11-20 15:14:42,128 - function10 result:[0.5, 'fun10']
+2017-11-20 15:14:42,129 - total time£º 4.62
+2017-11-20 15:23:22,735 - Administrator login
+2017-11-20 15:23:22,792 - Initialize UI
+2017-11-20 15:23:22,841 - Initialize sequence table
+2017-11-20 15:23:22,943 - Initialize sequence tree
+2017-11-20 15:23:22,944 - Initialize sequence tree
+2017-11-20 15:23:23,043 - ZMQ Server Start, Port: 5555
+2017-11-20 15:23:24,735 - Start test
+2017-11-20 15:23:24,854 - Test item: function1
+2017-11-20 15:23:24,854 - Test item: function1
+2017-11-20 15:23:24,855 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 15:23:24,855 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 15:23:24,855 - Skip item: function2
+2017-11-20 15:23:24,859 - Skip item: function2
+2017-11-20 15:23:24,859 - function2 result:[None, None]
+2017-11-20 15:23:24,859 - function2 result:[None, None]
+2017-11-20 15:23:25,360 - Test item: function3
+2017-11-20 15:23:25,360 - Test item: function3
+2017-11-20 15:23:25,361 - function3 result:[0, 'fun3']
+2017-11-20 15:23:25,361 - function3 result:[0, 'fun3']
+2017-11-20 15:23:25,868 - Test item: function4
+2017-11-20 15:23:25,868 - function4 result:[0.5, 'fun4']
+2017-11-20 15:23:25,873 - Test item: function4
+2017-11-20 15:23:25,876 - function4 result:[0.5, 'fun4']
+2017-11-20 15:23:26,372 - Test item: function5
+2017-11-20 15:23:26,377 - function5 result:[0.5, 'fun5']
+2017-11-20 15:23:26,377 - Test item: function5
+2017-11-20 15:23:26,377 - function5 result:[0.5, 'fun5']
+2017-11-20 15:23:26,878 - Test item: function6
+2017-11-20 15:23:26,878 - function6 result:[0.5, 'fun6']
+2017-11-20 15:23:26,884 - Test item: function6
+2017-11-20 15:23:26,884 - function6 result:[0.5, 'fun6']
+2017-11-20 15:23:27,377 - Test item: function7
+2017-11-20 15:23:27,377 - function7 result:[0.5, 'fun7']
+2017-11-20 15:23:27,385 - Test item: function7
+2017-11-20 15:23:27,388 - function7 result:[0.5, 'fun7']
+2017-11-20 15:23:27,878 - Test item: function8
+2017-11-20 15:23:27,883 - function8 result:[0.9, 'fun8']
+2017-11-20 15:23:27,888 - Test item: function8
+2017-11-20 15:23:27,888 - function8 result:[0.9, 'fun8']
+2017-11-20 15:23:28,383 - Test item: function9
+2017-11-20 15:23:28,388 - function9 result:[0.9, 'fun9']
+2017-11-20 15:23:28,390 - Test item: function9
+2017-11-20 15:23:28,390 - function9 result:[0.9, 'fun9']
+2017-11-20 15:23:28,888 - Test item: function9
+2017-11-20 15:23:28,888 - function9 result:[0.9, 'fun9']
+2017-11-20 15:23:28,894 - Test item: function9
+2017-11-20 15:23:28,895 - function9 result:[0.9, 'fun9']
+2017-11-20 15:23:29,392 - Test item: function10
+2017-11-20 15:23:29,399 - function10 result:[0.5, 'fun10']
+2017-11-20 15:23:29,400 - total time£º 4.60
+2017-11-20 15:23:29,404 - Test item: function10
+2017-11-20 15:23:29,406 - function10 result:[0.5, 'fun10']
+2017-11-20 15:23:29,409 - total time£º 4.62
+2017-11-20 15:24:07,970 - Administrator login
+2017-11-20 15:24:08,039 - Initialize UI
+2017-11-20 15:24:08,095 - Initialize sequence table
+2017-11-20 15:24:08,182 - Initialize sequence tree
+2017-11-20 15:24:08,191 - Initialize sequence tree
+2017-11-20 15:24:08,296 - ZMQ Server Start, Port: 5555
+2017-11-20 15:24:13,161 - Start test
+2017-11-20 15:24:13,276 - Test item: function1
+2017-11-20 15:24:13,276 - Test item: function1
+2017-11-20 15:24:13,276 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 15:24:13,276 - Skip item: function2
+2017-11-20 15:24:13,276 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 15:24:13,281 - function2 result:[None, None]
+2017-11-20 15:24:13,282 - Skip item: function2
+2017-11-20 15:24:13,282 - function2 result:[None, None]
+2017-11-20 15:24:13,782 - Test item: function3
+2017-11-20 15:24:13,782 - function3 result:[0, 'fun3']
+2017-11-20 15:24:13,785 - Test item: function3
+2017-11-20 15:24:13,787 - function3 result:[0, 'fun3']
+2017-11-20 15:24:14,287 - Test item: function4
+2017-11-20 15:24:14,288 - function4 result:[0.5, 'fun4']
+2017-11-20 15:24:14,292 - Test item: function4
+2017-11-20 15:24:14,292 - function4 result:[0.5, 'fun4']
+2017-11-20 15:24:14,792 - Test item: function5
+2017-11-20 15:24:14,792 - function5 result:[0.5, 'fun5']
+2017-11-20 15:24:14,798 - Test item: function5
+2017-11-20 15:24:14,798 - function5 result:[0.5, 'fun5']
+2017-11-20 15:24:15,296 - Test item: function6
+2017-11-20 15:24:15,296 - function6 result:[0.5, 'fun6']
+2017-11-20 15:24:15,302 - Test item: function6
+2017-11-20 15:24:15,303 - function6 result:[0.5, 'fun6']
+2017-11-20 15:24:15,796 - Test item: function7
+2017-11-20 15:24:15,798 - function7 result:[0.5, 'fun7']
+2017-11-20 15:24:15,803 - Test item: function7
+2017-11-20 15:24:15,803 - function7 result:[0.5, 'fun7']
+2017-11-20 15:24:16,302 - Test item: function8
+2017-11-20 15:24:16,307 - function8 result:[0.9, 'fun8']
+2017-11-20 15:24:16,307 - Test item: function8
+2017-11-20 15:24:16,307 - function8 result:[0.9, 'fun8']
+2017-11-20 15:24:16,807 - Test item: function9
+2017-11-20 15:24:16,807 - function9 result:[0.9, 'fun9']
+2017-11-20 15:24:16,812 - Test item: function9
+2017-11-20 15:24:16,812 - function9 result:[0.9, 'fun9']
+2017-11-20 15:24:17,312 - Test item: function9
+2017-11-20 15:24:17,312 - Test item: function9
+2017-11-20 15:24:17,312 - function9 result:[0.9, 'fun9']
+2017-11-20 15:24:17,318 - function9 result:[0.9, 'fun9']
+2017-11-20 15:24:17,817 - Test item: function10
+2017-11-20 15:24:17,817 - function10 result:[0.5, 'fun10']
+2017-11-20 15:24:17,822 - Test item: function10
+2017-11-20 15:24:17,825 - function10 result:[0.5, 'fun10']
+2017-11-20 15:24:17,827 - total time£º 4.64
+2017-11-20 15:24:17,828 - total time£º 4.60
+2017-11-20 15:28:52,267 - Administrator login
+2017-11-20 15:28:52,335 - Initialize UI
+2017-11-20 15:28:52,388 - Initialize sequence table
+2017-11-20 15:28:52,470 - Initialize sequence tree
+2017-11-20 15:28:52,471 - Initialize sequence tree
+2017-11-20 15:28:52,667 - ZMQ Server Start, Port: 5555
+2017-11-20 15:28:54,723 - Start test
+2017-11-20 15:28:54,839 - Test item: function1
+2017-11-20 15:28:54,839 - Test item: function1
+2017-11-20 15:28:54,840 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 15:28:54,841 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 15:28:54,843 - Skip item: function2
+2017-11-20 15:28:54,845 - Skip item: function2
+2017-11-20 15:28:54,846 - function2 result:[None, None]
+2017-11-20 15:28:54,847 - function2 result:[None, None]
+2017-11-20 15:28:55,345 - Test item: function3
+2017-11-20 15:28:55,347 - function3 result:[0, 'fun3']
+2017-11-20 15:28:55,347 - Test item: function3
+2017-11-20 15:28:55,347 - function3 result:[0, 'fun3']
+2017-11-20 15:28:55,847 - Test item: function4
+2017-11-20 15:28:55,848 - function4 result:[0.5, 'fun4']
+2017-11-20 15:28:55,851 - Test item: function4
+2017-11-20 15:28:55,851 - function4 result:[0.5, 'fun4']
+2017-11-20 15:28:56,351 - Test item: function5
+2017-11-20 15:28:56,351 - function5 result:[0.5, 'fun5']
+2017-11-20 15:28:56,355 - Test item: function5
+2017-11-20 15:28:56,355 - function5 result:[0.5, 'fun5']
+2017-11-20 15:28:56,851 - Test item: function6
+2017-11-20 15:28:56,851 - function6 result:[0.5, 'fun6']
+2017-11-20 15:28:56,855 - Test item: function6
+2017-11-20 15:28:56,855 - function6 result:[0.5, 'fun6']
+2017-11-20 15:28:57,355 - Test item: function7
+2017-11-20 15:28:57,358 - function7 result:[0.5, 'fun7']
+2017-11-20 15:28:57,358 - Test item: function7
+2017-11-20 15:28:57,358 - function7 result:[0.5, 'fun7']
+2017-11-20 15:28:57,857 - Test item: function8
+2017-11-20 15:28:57,858 - function8 result:[0.9, 'fun8']
+2017-11-20 15:28:57,858 - Test item: function8
+2017-11-20 15:28:57,858 - function8 result:[0.9, 'fun8']
+2017-11-20 15:28:58,358 - Test item: function9
+2017-11-20 15:28:58,359 - function9 result:[0.9, 'fun9']
+2017-11-20 15:28:58,365 - Test item: function9
+2017-11-20 15:28:58,365 - function9 result:[0.9, 'fun9']
+2017-11-20 15:28:58,865 - Test item: function9
+2017-11-20 15:28:58,865 - Test item: function9
+2017-11-20 15:28:58,865 - function9 result:[0.9, 'fun9']
+2017-11-20 15:28:58,871 - function9 result:[0.9, 'fun9']
+2017-11-20 15:28:59,371 - Test item: function10
+2017-11-20 15:28:59,374 - Test item: function10
+2017-11-20 15:28:59,375 - function10 result:[0.5, 'fun10']
+2017-11-20 15:28:59,375 - function10 result:[0.5, 'fun10']
+2017-11-20 15:28:59,377 - total time£º 4.60
+2017-11-20 15:28:59,380 - total time£º 4.60
+2017-11-20 15:29:20,808 - Administrator login
+2017-11-20 15:29:20,888 - Initialize UI
+2017-11-20 15:29:20,939 - Initialize sequence table
+2017-11-20 15:29:21,013 - Initialize sequence tree
+2017-11-20 15:29:21,015 - Initialize sequence tree
+2017-11-20 15:29:21,184 - ZMQ Server Start, Port: 5555
+2017-11-20 15:29:23,358 - Start test
+2017-11-20 15:29:23,473 - Test item: function1
+2017-11-20 15:29:23,473 - Test item: function1
+2017-11-20 15:29:23,473 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 15:29:23,475 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 15:29:23,475 - Skip item: function2
+2017-11-20 15:29:23,475 - function2 result:[None, None]
+2017-11-20 15:29:23,475 - Skip item: function2
+2017-11-20 15:29:23,476 - function2 result:[None, None]
+2017-11-20 15:29:23,976 - Test item: function3
+2017-11-20 15:29:23,976 - Test item: function3
+2017-11-20 15:29:23,976 - function3 result:[0.1, 'fun3']
+2017-11-20 15:29:23,976 - function3 result:[0, 'fun3']
+2017-11-20 15:29:24,486 - Test item: function4
+2017-11-20 15:29:24,486 - function4 result:[0.5, 'fun4']
+2017-11-20 15:29:24,486 - Test item: function4
+2017-11-20 15:29:24,492 - function4 result:[0.5, 'fun4']
+2017-11-20 15:29:24,992 - Test item: function5
+2017-11-20 15:29:24,992 - function5 result:[0.5, 'fun5']
+2017-11-20 15:29:24,996 - Test item: function5
+2017-11-20 15:29:24,998 - function5 result:[0.5, 'fun5']
+2017-11-20 15:29:25,496 - Test item: function6
+2017-11-20 15:29:25,496 - function6 result:[0.5, 'fun6']
+2017-11-20 15:29:25,503 - Test item: function6
+2017-11-20 15:29:25,504 - function6 result:[0.5, 'fun6']
+2017-11-20 15:29:25,996 - Test item: function7
+2017-11-20 15:29:26,001 - function7 result:[0.5, 'fun7']
+2017-11-20 15:29:26,004 - Test item: function7
+2017-11-20 15:29:26,004 - function7 result:[0.5, 'fun7']
+2017-11-20 15:29:26,502 - Test item: function8
+2017-11-20 15:29:26,503 - function8 result:[0.9, 'fun8']
+2017-11-20 15:29:26,507 - Test item: function8
+2017-11-20 15:29:26,513 - function8 result:[0.9, 'fun8']
+2017-11-20 15:29:27,003 - Test item: function9
+2017-11-20 15:29:27,003 - function9 result:[0.9, 'fun9']
+2017-11-20 15:29:27,015 - Test item: function9
+2017-11-20 15:29:27,016 - function9 result:[0.9, 'fun9']
+2017-11-20 15:29:27,507 - Test item: function9
+2017-11-20 15:29:27,513 - function9 result:[0.9, 'fun9']
+2017-11-20 15:29:27,518 - Test item: function9
+2017-11-20 15:29:27,519 - function9 result:[0.9, 'fun9']
+2017-11-20 15:29:28,014 - Test item: function10
+2017-11-20 15:29:28,015 - function10 result:[0.5, 'fun10']
+2017-11-20 15:29:28,020 - Test item: function10
+2017-11-20 15:29:28,022 - total time£º 4.60
+2017-11-20 15:29:28,023 - function10 result:[0.5, 'fun10']
+2017-11-20 15:29:28,026 - total time£º 4.63
+2017-11-20 15:29:58,598 - Administrator login
+2017-11-20 15:29:58,667 - Initialize UI
+2017-11-20 15:29:58,705 - Initialize sequence table
+2017-11-20 15:29:58,884 - Initialize sequence tree
+2017-11-20 15:29:58,888 - Initialize sequence tree
+2017-11-20 15:29:59,276 - ZMQ Server Start, Port: 5555
+2017-11-20 15:30:00,540 - Start test
+2017-11-20 15:30:00,657 - Test item: function1
+2017-11-20 15:30:00,657 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 15:30:00,657 - Skip item: function2
+2017-11-20 15:30:00,663 - Test item: function1
+2017-11-20 15:30:00,671 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 15:30:00,684 - Skip item: function2
+2017-11-20 15:30:00,689 - function2 result:[None, None]
+2017-11-20 15:30:00,705 - function2 result:[None, None]
+2017-11-20 15:30:01,207 - Test item: function3
+2017-11-20 15:30:01,207 - function3 result:[0, 'fun3']
+2017-11-20 15:30:01,710 - Test item: function4
+2017-11-20 15:30:01,713 - function4 result:[0.5, 'fun4']
+2017-11-20 15:30:02,214 - Test item: function5
+2017-11-20 15:30:02,216 - function5 result:[0.5, 'fun5']
+2017-11-20 15:30:02,690 - Test item: function3
+2017-11-20 15:30:02,697 - function3 result:[0.1, 'fun3']
+2017-11-20 15:30:02,717 - Test item: function6
+2017-11-20 15:30:02,720 - function6 result:[0.5, 'fun6']
+2017-11-20 15:30:03,199 - Test item: function4
+2017-11-20 15:30:03,199 - function4 result:[0.5, 'fun4']
+2017-11-20 15:30:03,224 - Test item: function7
+2017-11-20 15:30:03,227 - function7 result:[0.5, 'fun7']
+2017-11-20 15:30:03,699 - Test item: function5
+2017-11-20 15:30:03,703 - function5 result:[0.5, 'fun5']
+2017-11-20 15:30:03,728 - Test item: function8
+2017-11-20 15:30:03,729 - function8 result:[0.9, 'fun8']
+2017-11-20 15:30:04,203 - Test item: function6
+2017-11-20 15:30:04,204 - function6 result:[0.5, 'fun6']
+2017-11-20 15:30:04,230 - Test item: function9
+2017-11-20 15:30:04,236 - function9 result:[0.9, 'fun9']
+2017-11-20 15:30:04,708 - Test item: function7
+2017-11-20 15:30:04,708 - function7 result:[0.5, 'fun7']
+2017-11-20 15:30:04,736 - Test item: function9
+2017-11-20 15:30:04,736 - function9 result:[0.9, 'fun9']
+2017-11-20 15:30:05,214 - Test item: function8
+2017-11-20 15:30:05,219 - function8 result:[0.9, 'fun8']
+2017-11-20 15:30:05,240 - Test item: function10
+2017-11-20 15:30:05,243 - function10 result:[0.5, 'fun10']
+2017-11-20 15:30:05,243 - total time£º 4.61
+2017-11-20 15:30:05,719 - Test item: function9
+2017-11-20 15:30:05,720 - function9 result:[0.9, 'fun9']
+2017-11-20 15:30:06,223 - Test item: function9
+2017-11-20 15:30:06,228 - function9 result:[0.9, 'fun9']
+2017-11-20 15:30:06,728 - Test item: function10
+2017-11-20 15:30:06,735 - function10 result:[0.5, 'fun10']
+2017-11-20 15:30:06,736 - total time£º 6.11
+2017-11-20 15:42:44,134 - Administrator login
+2017-11-20 15:42:44,199 - Initialize UI
+2017-11-20 15:42:44,259 - Initialize sequence table
+2017-11-20 15:42:44,358 - Initialize sequence tree
+2017-11-20 15:42:44,363 - Initialize sequence tree
+2017-11-20 15:42:44,513 - ZMQ Server Start, Port: 5555
+2017-11-20 15:42:46,228 - Start test
+2017-11-20 15:42:46,353 - Test item: function1
+2017-11-20 15:42:46,353 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 15:42:46,353 - Skip item: function2
+2017-11-20 15:42:46,355 - function2 result:[None, None]
+2017-11-20 15:42:46,366 - Test item: function1
+2017-11-20 15:42:46,367 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 15:42:46,367 - Skip item: function2
+2017-11-20 15:42:46,368 - function2 result:[None, None]
+2017-11-20 15:42:46,868 - Test item: function3
+2017-11-20 15:42:46,872 - function3 result:[0, 'fun3']
+2017-11-20 15:42:47,372 - Test item: function4
+2017-11-20 15:42:47,372 - function4 result:[0.5, 'fun4']
+2017-11-20 15:42:47,872 - Test item: function5
+2017-11-20 15:42:47,872 - function5 result:[0.5, 'fun5']
+2017-11-20 15:42:48,368 - Test item: function3
+2017-11-20 15:42:48,374 - Test item: function6
+2017-11-20 15:42:48,375 - function6 result:[0.5, 'fun6']
+2017-11-20 15:42:48,375 - function3 result:[0.1, 'fun3']
+2017-11-20 15:42:48,875 - Test item: function7
+2017-11-20 15:42:48,876 - Test item: function4
+2017-11-20 15:42:48,876 - function4 result:[0.5, 'fun4']
+2017-11-20 15:42:48,878 - function7 result:[0.5, 'fun7']
+2017-11-20 15:42:49,376 - Test item: function5
+2017-11-20 15:42:49,384 - function5 result:[0.5, 'fun5']
+2017-11-20 15:42:49,388 - Test item: function8
+2017-11-20 15:42:49,391 - function8 result:[0.9, 'fun8']
+2017-11-20 15:42:49,884 - Test item: function6
+2017-11-20 15:42:49,884 - function6 result:[0.5, 'fun6']
+2017-11-20 15:42:49,901 - Test item: function9
+2017-11-20 15:42:49,902 - function9 result:[0.9, 'fun9']
+2017-11-20 15:42:50,385 - Test item: function7
+2017-11-20 15:42:50,391 - function7 result:[0.5, 'fun7']
+2017-11-20 15:42:50,403 - Test item: function9
+2017-11-20 15:42:50,404 - function9 result:[0.9, 'fun9']
+2017-11-20 15:42:50,892 - Test item: function8
+2017-11-20 15:42:50,900 - function8 result:[0.9, 'fun8']
+2017-11-20 15:42:50,910 - Test item: function10
+2017-11-20 15:42:50,910 - function10 result:[0.5, 'fun10']
+2017-11-20 15:42:50,915 - total time£º 4.61
+2017-11-20 15:42:51,400 - Test item: function9
+2017-11-20 15:42:51,400 - function9 result:[0.9, 'fun9']
+2017-11-20 15:42:51,900 - Test item: function9
+2017-11-20 15:42:51,905 - function9 result:[0.9, 'fun9']
+2017-11-20 15:42:52,407 - Test item: function10
+2017-11-20 15:42:52,407 - function10 result:[0.5, 'fun10']
+2017-11-20 15:42:52,414 - total time£º 6.10
+2017-11-20 15:54:48,758 - Enable step test
+2017-11-20 15:54:49,914 - Start test
+2017-11-20 15:54:50,029 - Test item: function1
+2017-11-20 15:54:50,029 - Test item: function1
+2017-11-20 15:54:50,032 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 15:54:50,035 - Skip item: function2
+2017-11-20 15:54:50,035 - function2 result:[None, None]
+2017-11-20 15:54:52,035 - Test item: function3
+2017-11-20 15:54:52,035 - function3 result:[0.1, 'fun3']
+2017-11-20 15:54:52,540 - Test item: function4
+2017-11-20 15:54:52,540 - function4 result:[0.5, 'fun4']
+2017-11-20 15:54:53,047 - Test item: function5
+2017-11-20 15:54:53,048 - function5 result:[0.5, 'fun5']
+2017-11-20 15:54:53,552 - Test item: function6
+2017-11-20 15:54:53,558 - function6 result:[0.5, 'fun6']
+2017-11-20 15:54:54,059 - Test item: function7
+2017-11-20 15:54:54,059 - function7 result:[0.5, 'fun7']
+2017-11-20 15:54:54,204 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 15:54:54,204 - Skip item: function2
+2017-11-20 15:54:54,204 - function2 result:[None, None]
+2017-11-20 15:54:54,566 - Test item: function8
+2017-11-20 15:54:54,572 - function8 result:[0.9, 'fun8']
+2017-11-20 15:54:54,704 - Test item: function3
+2017-11-20 15:54:55,072 - Test item: function9
+2017-11-20 15:54:55,072 - function9 result:[0.9, 'fun9']
+2017-11-20 15:54:55,484 - function3 result:[0, 'fun3']
+2017-11-20 15:54:55,572 - Test item: function9
+2017-11-20 15:54:55,572 - function9 result:[0.9, 'fun9']
+2017-11-20 15:54:55,984 - Test item: function4
+2017-11-20 15:54:56,072 - Test item: function10
+2017-11-20 15:54:56,073 - function10 result:[0.5, 'fun10']
+2017-11-20 15:54:56,080 - total time£º 6.10
+2017-11-20 15:54:57,107 - Disable step test
+2017-11-20 15:54:57,125 - function4 result:[0.5, 'fun4']
+2017-11-20 15:54:57,625 - Test item: function5
+2017-11-20 15:54:57,625 - function5 result:[0.5, 'fun5']
+2017-11-20 15:54:58,128 - Test item: function6
+2017-11-20 15:54:58,131 - function6 result:[0.5, 'fun6']
+2017-11-20 15:54:58,631 - Test item: function7
+2017-11-20 15:54:58,632 - function7 result:[0.5, 'fun7']
+2017-11-20 15:54:59,134 - Test item: function8
+2017-11-20 15:54:59,135 - function8 result:[0.9, 'fun8']
+2017-11-20 15:54:59,640 - Test item: function9
+2017-11-20 15:54:59,640 - function9 result:[0.9, 'fun9']
+2017-11-20 15:55:00,141 - Test item: function9
+2017-11-20 15:55:00,144 - function9 result:[0.9, 'fun9']
+2017-11-20 15:55:00,644 - Test item: function10
+2017-11-20 15:55:00,644 - function10 result:[0.5, 'fun10']
+2017-11-20 15:55:00,648 - total time£º 4.60
+2017-11-20 15:56:45,759 - Administrator login
+2017-11-20 15:56:45,825 - Initialize UI
+2017-11-20 15:56:45,870 - Initialize sequence table
+2017-11-20 15:56:45,973 - Initialize sequence tree
+2017-11-20 15:56:45,979 - Initialize sequence tree
+2017-11-20 15:56:46,160 - ZMQ Server Start, Port: 5555
+2017-11-20 15:56:48,838 - Start test
+2017-11-20 15:56:48,952 - Test item: function1
+2017-11-20 15:56:48,952 - Test item: function1
+2017-11-20 15:56:48,955 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 15:56:48,956 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 15:56:48,960 - Skip item: function2
+2017-11-20 15:56:48,960 - function2 result:[None, None]
+2017-11-20 15:56:48,960 - Skip item: function2
+2017-11-20 15:56:48,960 - function2 result:[None, None]
+2017-11-20 15:56:49,460 - Test item: function3
+2017-11-20 15:56:49,460 - function3 result:[0, 'fun3']
+2017-11-20 15:56:49,960 - Test item: function4
+2017-11-20 15:56:49,960 - function4 result:[0.5, 'fun4']
+2017-11-20 15:56:50,460 - Test item: function5
+2017-11-20 15:56:50,464 - function5 result:[0.5, 'fun5']
+2017-11-20 15:56:50,960 - Test item: function3
+2017-11-20 15:56:50,967 - function3 result:[0.1, 'fun3']
+2017-11-20 15:56:50,967 - Test item: function6
+2017-11-20 15:56:50,967 - function6 result:[0.5, 'fun6']
+2017-11-20 15:56:51,467 - Test item: function4
+2017-11-20 15:56:51,467 - function4 result:[0.5, 'fun4']
+2017-11-20 15:56:51,473 - Test item: function7
+2017-11-20 15:56:51,478 - function7 result:[0.5, 'fun7']
+2017-11-20 15:56:51,971 - Test item: function5
+2017-11-20 15:56:51,976 - function5 result:[0.5, 'fun5']
+2017-11-20 15:56:51,979 - Test item: function8
+2017-11-20 15:56:51,979 - function8 result:[0.9, 'fun8']
+2017-11-20 15:56:52,476 - Test item: function6
+2017-11-20 15:56:52,481 - function6 result:[0.5, 'fun6']
+2017-11-20 15:56:52,481 - Test item: function9
+2017-11-20 15:56:52,483 - function9 result:[0.9, 'fun9']
+2017-11-20 15:56:52,983 - Test item: function9
+2017-11-20 15:56:52,983 - Test item: function7
+2017-11-20 15:56:52,983 - function9 result:[0.9, 'fun9']
+2017-11-20 15:56:52,986 - function7 result:[0.5, 'fun7']
+2017-11-20 15:56:53,486 - Test item: function10
+2017-11-20 15:56:53,486 - Test item: function8
+2017-11-20 15:56:53,486 - function8 result:[0.9, 'fun8']
+2017-11-20 15:56:53,493 - function10 result:[0.5, 'fun10']
+2017-11-20 15:56:53,500 - total time£º 4.61
+2017-11-20 15:56:53,993 - Test item: function9
+2017-11-20 15:56:53,998 - function9 result:[0.9, 'fun9']
+2017-11-20 15:56:54,497 - Test item: function9
+2017-11-20 15:56:54,503 - function9 result:[0.9, 'fun9']
+2017-11-20 15:56:55,003 - Test item: function10
+2017-11-20 15:56:55,007 - function10 result:[0.5, 'fun10']
+2017-11-20 15:56:55,008 - total time£º 6.10
+2017-11-20 16:25:35,134 - Administrator login
+2017-11-20 16:25:35,203 - Initialize UI
+2017-11-20 16:25:35,254 - Initialize sequence table
+2017-11-20 16:25:35,334 - Initialize sequence tree
+2017-11-20 16:25:35,334 - Initialize sequence tree
+2017-11-20 16:25:35,483 - ZMQ Server Start, Port: 5555
+2017-11-20 16:25:36,713 - Start test
+2017-11-20 16:27:04,353 - Administrator login
+2017-11-20 16:27:04,424 - Initialize UI
+2017-11-20 16:27:04,473 - Initialize sequence table
+2017-11-20 16:27:04,534 - Initialize sequence tree
+2017-11-20 16:27:04,543 - Initialize sequence tree
+2017-11-20 16:27:04,723 - ZMQ Server Start, Port: 5555
+2017-11-20 16:27:06,323 - Start test
+2017-11-20 16:27:06,454 - Test item: function1
+2017-11-20 16:27:06,454 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 16:27:06,454 - Skip item: function2
+2017-11-20 16:27:06,454 - function2 result:[None, None]
+2017-11-20 16:27:06,463 - Test item: function1
+2017-11-20 16:27:06,463 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 16:27:06,463 - Skip item: function2
+2017-11-20 16:27:06,463 - function2 result:[None, None]
+2017-11-20 16:27:06,953 - Test item: function3
+2017-11-20 16:27:06,953 - function3 result:[0, 'fun3']
+2017-11-20 16:27:07,454 - Test item: function4
+2017-11-20 16:27:07,454 - function4 result:[0.5, 'fun4']
+2017-11-20 16:27:07,953 - Test item: function5
+2017-11-20 16:27:07,953 - function5 result:[0.5, 'fun5']
+2017-11-20 16:27:08,454 - Test item: function6
+2017-11-20 16:27:08,454 - function6 result:[0.5, 'fun6']
+2017-11-20 16:27:08,473 - Test item: function3
+2017-11-20 16:27:08,473 - function3 result:[0.1, 'fun3']
+2017-11-20 16:27:08,953 - Test item: function7
+2017-11-20 16:27:08,953 - function7 result:[0.5, 'fun7']
+2017-11-20 16:27:08,974 - Test item: function4
+2017-11-20 16:27:08,974 - function4 result:[0.5, 'fun4']
+2017-11-20 16:27:09,454 - Test item: function8
+2017-11-20 16:27:09,454 - function8 result:[0.9, 'fun8']
+2017-11-20 16:27:09,473 - Test item: function5
+2017-11-20 16:27:09,473 - function5 result:[0.5, 'fun5']
+2017-11-20 16:27:09,953 - Test item: function9
+2017-11-20 16:27:09,953 - function9 result:[0.9, 'fun9']
+2017-11-20 16:27:09,974 - Test item: function6
+2017-11-20 16:27:09,974 - function6 result:[0.5, 'fun6']
+2017-11-20 16:27:10,454 - Test item: function9
+2017-11-20 16:27:10,454 - function9 result:[0.9, 'fun9']
+2017-11-20 16:27:10,473 - Test item: function7
+2017-11-20 16:27:10,473 - function7 result:[0.5, 'fun7']
+2017-11-20 16:27:10,953 - Test item: function10
+2017-11-20 16:27:10,953 - function10 result:[0.5, 'fun10']
+2017-11-20 16:27:10,953 - total time£º 4.60
+2017-11-20 16:27:10,974 - Test item: function8
+2017-11-20 16:27:10,974 - function8 result:[0.9, 'fun8']
+2017-11-20 16:27:11,473 - Test item: function9
+2017-11-20 16:27:11,473 - function9 result:[0.9, 'fun9']
+2017-11-20 16:27:11,974 - Test item: function9
+2017-11-20 16:27:11,974 - function9 result:[0.9, 'fun9']
+2017-11-20 16:27:12,473 - Test item: function10
+2017-11-20 16:27:12,473 - function10 result:[0.5, 'fun10']
+2017-11-20 16:27:12,473 - total time£º 6.10
+2017-11-20 16:28:11,891 - Administrator login
+2017-11-20 16:28:11,957 - Initialize UI
+2017-11-20 16:28:12,019 - Initialize sequence table
+2017-11-20 16:28:12,102 - Initialize sequence tree
+2017-11-20 16:28:12,105 - Initialize sequence tree
+2017-11-20 16:28:12,240 - ZMQ Server Start, Port: 5555
+2017-11-20 16:28:14,019 - Start test
+2017-11-20 16:28:14,199 - Test item: function1
+2017-11-20 16:28:14,200 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 16:28:14,200 - Skip item: function2
+2017-11-20 16:28:14,201 - function2 result:[None, None]
+2017-11-20 16:28:14,224 - Test item: function1
+2017-11-20 16:28:14,243 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 16:28:14,246 - Skip item: function2
+2017-11-20 16:28:14,266 - function2 result:[None, None]
+2017-11-20 16:28:14,702 - Test item: function3
+2017-11-20 16:28:14,702 - function3 result:[0, 'fun3']
+2017-11-20 16:28:15,201 - Test item: function4
+2017-11-20 16:28:15,201 - function4 result:[0.5, 'fun4']
+2017-11-20 16:28:15,702 - Test item: function5
+2017-11-20 16:28:15,704 - function5 result:[0.5, 'fun5']
+2017-11-20 16:28:16,212 - Test item: function6
+2017-11-20 16:28:16,217 - function6 result:[0.5, 'fun6']
+2017-11-20 16:28:16,269 - Test item: function3
+2017-11-20 16:28:16,270 - function3 result:[0.1, 'fun3']
+2017-11-20 16:28:16,717 - Test item: function7
+2017-11-20 16:28:16,720 - function7 result:[0.5, 'fun7']
+2017-11-20 16:28:16,776 - Test item: function4
+2017-11-20 16:28:16,780 - function4 result:[0.5, 'fun4']
+2017-11-20 16:28:17,227 - Test item: function8
+2017-11-20 16:28:17,232 - function8 result:[0.9, 'fun8']
+2017-11-20 16:28:17,283 - Test item: function5
+2017-11-20 16:28:17,291 - function5 result:[0.5, 'fun5']
+2017-11-20 16:28:17,733 - Test item: function9
+2017-11-20 16:28:17,739 - function9 result:[0.9, 'fun9']
+2017-11-20 16:28:17,792 - Test item: function6
+2017-11-20 16:28:17,793 - function6 result:[0.5, 'fun6']
+2017-11-20 16:28:18,240 - Test item: function9
+2017-11-20 16:28:18,241 - function9 result:[0.9, 'fun9']
+2017-11-20 16:28:18,299 - Test item: function7
+2017-11-20 16:28:18,299 - function7 result:[0.5, 'fun7']
+2017-11-20 16:28:18,744 - Test item: function10
+2017-11-20 16:28:18,748 - function10 result:[0.5, 'fun10']
+2017-11-20 16:28:18,750 - total time£º 4.60
+2017-11-20 16:28:18,809 - Test item: function8
+2017-11-20 16:28:18,815 - function8 result:[0.9, 'fun8']
+2017-11-20 16:28:19,319 - Test item: function9
+2017-11-20 16:28:19,322 - function9 result:[0.9, 'fun9']
+2017-11-20 16:28:19,822 - Test item: function9
+2017-11-20 16:28:19,823 - function9 result:[0.9, 'fun9']
+2017-11-20 16:28:20,328 - Test item: function10
+2017-11-20 16:28:20,328 - function10 result:[0.5, 'fun10']
+2017-11-20 16:28:20,332 - total time£º 6.12
+2017-11-20 16:30:33,681 - Administrator login
+2017-11-20 16:30:33,748 - Initialize UI
+2017-11-20 16:30:33,792 - Initialize sequence table
+2017-11-20 16:30:33,875 - Initialize sequence tree
+2017-11-20 16:30:33,878 - Initialize sequence tree
+2017-11-20 16:30:34,003 - ZMQ Server Start, Port: 5555
+2017-11-20 16:30:36,624 - Start test
+2017-11-20 16:30:36,743 - Test item: function1
+2017-11-20 16:30:36,743 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 16:30:36,745 - Skip item: function2
+2017-11-20 16:30:36,745 - function2 result:[None, None]
+2017-11-20 16:30:36,759 - Test item: function1
+2017-11-20 16:30:36,759 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 16:30:36,759 - Skip item: function2
+2017-11-20 16:30:36,759 - function2 result:[None, None]
+2017-11-20 16:30:37,246 - Test item: function3
+2017-11-20 16:30:37,246 - function3 result:[0, 'fun3']
+2017-11-20 16:30:37,753 - Test item: function4
+2017-11-20 16:30:37,758 - function4 result:[0.5, 'fun4']
+2017-11-20 16:30:38,257 - Test item: function5
+2017-11-20 16:30:38,259 - function5 result:[0.5, 'fun5']
+2017-11-20 16:30:38,759 - Test item: function6
+2017-11-20 16:30:38,763 - function6 result:[0.5, 'fun6']
+2017-11-20 16:30:38,763 - Test item: function3
+2017-11-20 16:30:38,763 - function3 result:[0.1, 'fun3']
+2017-11-20 16:30:39,263 - Test item: function7
+2017-11-20 16:30:39,263 - Test item: function4
+2017-11-20 16:30:39,263 - function4 result:[0.5, 'fun4']
+2017-11-20 16:30:39,267 - function7 result:[0.5, 'fun7']
+2017-11-20 16:30:39,763 - Test item: function5
+2017-11-20 16:30:39,767 - function5 result:[0.5, 'fun5']
+2017-11-20 16:30:39,776 - Test item: function8
+2017-11-20 16:30:39,776 - function8 result:[0.9, 'fun8']
+2017-11-20 16:30:40,267 - Test item: function6
+2017-11-20 16:30:40,269 - function6 result:[0.5, 'fun6']
+2017-11-20 16:30:40,276 - Test item: function9
+2017-11-20 16:30:40,280 - function9 result:[0.9, 'fun9']
+2017-11-20 16:30:40,772 - Test item: function7
+2017-11-20 16:30:40,776 - function7 result:[0.5, 'fun7']
+2017-11-20 16:30:40,782 - Test item: function9
+2017-11-20 16:30:40,785 - function9 result:[0.9, 'fun9']
+2017-11-20 16:30:41,276 - Test item: function8
+2017-11-20 16:30:41,280 - function8 result:[0.9, 'fun8']
+2017-11-20 16:30:41,286 - Test item: function10
+2017-11-20 16:30:41,286 - function10 result:[0.5, 'fun10']
+2017-11-20 16:30:41,288 - total time£º 4.60
+2017-11-20 16:30:41,780 - Test item: function9
+2017-11-20 16:30:41,784 - function9 result:[0.9, 'fun9']
+2017-11-20 16:30:42,284 - Test item: function9
+2017-11-20 16:30:42,286 - function9 result:[0.9, 'fun9']
+2017-11-20 16:30:42,791 - Test item: function10
+2017-11-20 16:30:42,795 - function10 result:[0.5, 'fun10']
+2017-11-20 16:30:42,796 - total time£º 6.10
+2017-11-20 16:32:47,475 - Administrator login
+2017-11-20 16:32:47,543 - Initialize UI
+2017-11-20 16:32:47,606 - Initialize sequence table
+2017-11-20 16:32:47,711 - Initialize sequence tree
+2017-11-20 16:32:47,713 - Initialize sequence tree
+2017-11-20 16:32:47,851 - ZMQ Server Start, Port: 5555
+2017-11-20 16:32:49,578 - Start test
+2017-11-20 16:32:49,697 - Test item: function1
+2017-11-20 16:32:49,697 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 16:32:49,697 - Skip item: function2
+2017-11-20 16:32:49,697 - function2 result:[None, None]
+2017-11-20 16:32:49,711 - Test item: function1
+2017-11-20 16:32:49,712 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 16:32:49,712 - Skip item: function2
+2017-11-20 16:32:49,712 - function2 result:[None, None]
+2017-11-20 16:32:50,210 - Test item: function3
+2017-11-20 16:32:50,210 - function3 result:[0, 'fun3']
+2017-11-20 16:32:50,712 - Test item: function4
+2017-11-20 16:32:50,718 - function4 result:[0.5, 'fun4']
+2017-11-20 16:32:51,217 - Test item: function5
+2017-11-20 16:32:51,217 - function5 result:[0.5, 'fun5']
+2017-11-20 16:32:51,713 - Test item: function3
+2017-11-20 16:32:51,715 - function3 result:[0.1, 'fun3']
+2017-11-20 16:32:51,719 - Test item: function6
+2017-11-20 16:32:51,719 - function6 result:[0.5, 'fun6']
+2017-11-20 16:32:52,220 - Test item: function7
+2017-11-20 16:32:52,220 - function7 result:[0.5, 'fun7']
+2017-11-20 16:32:52,224 - Test item: function4
+2017-11-20 16:32:52,225 - function4 result:[0.5, 'fun4']
+2017-11-20 16:32:52,720 - Test item: function8
+2017-11-20 16:32:52,720 - function8 result:[0.9, 'fun8']
+2017-11-20 16:32:52,726 - Test item: function5
+2017-11-20 16:32:52,726 - function5 result:[0.5, 'fun5']
+2017-11-20 16:32:53,224 - Test item: function9
+2017-11-20 16:32:53,225 - function9 result:[0.9, 'fun9']
+2017-11-20 16:32:53,225 - Test item: function6
+2017-11-20 16:32:53,225 - function6 result:[0.5, 'fun6']
+2017-11-20 16:32:53,726 - Test item: function7
+2017-11-20 16:32:53,726 - Test item: function9
+2017-11-20 16:32:53,729 - function9 result:[0.9, 'fun9']
+2017-11-20 16:32:53,726 - function7 result:[0.5, 'fun7']
+2017-11-20 16:32:54,230 - Test item: function10
+2017-11-20 16:32:54,230 - Test item: function8
+2017-11-20 16:32:54,233 - function8 result:[0.9, 'fun8']
+2017-11-20 16:32:54,233 - function10 result:[0.5, 'fun10']
+2017-11-20 16:32:54,239 - total time£º 4.60
+2017-11-20 16:32:54,735 - Test item: function9
+2017-11-20 16:32:54,739 - function9 result:[0.9, 'fun9']
+2017-11-20 16:32:55,239 - Test item: function9
+2017-11-20 16:32:55,240 - function9 result:[0.9, 'fun9']
+2017-11-20 16:32:55,740 - Test item: function10
+2017-11-20 16:32:55,740 - function10 result:[0.5, 'fun10']
+2017-11-20 16:32:55,744 - total time£º 6.12
+2017-11-20 17:04:31,451 - Administrator login
+2017-11-20 17:04:31,519 - Initialize UI
+2017-11-20 17:04:31,634 - Initialize sequence table
+2017-11-20 17:04:31,733 - Initialize sequence tree
+2017-11-20 17:04:31,735 - Initialize sequence tree
+2017-11-20 17:04:31,845 - ZMQ Server Start, Port: 5555
+2017-11-20 17:04:36,671 - Start test
+2017-11-20 17:04:36,799 - Test item: function1
+2017-11-20 17:04:36,799 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 17:04:36,801 - Skip item: function2
+2017-11-20 17:04:36,801 - function2 result:[None, None]
+2017-11-20 17:04:36,812 - Test item: function1
+2017-11-20 17:04:36,812 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 17:04:36,812 - Skip item: function2
+2017-11-20 17:04:36,817 - function2 result:[None, None]
+2017-11-20 17:04:37,302 - Test item: function3
+2017-11-20 17:04:37,302 - function3 result:[0, 'fun3']
+2017-11-20 17:04:37,803 - Test item: function4
+2017-11-20 17:04:37,809 - function4 result:[0.5, 'fun4']
+2017-11-20 17:04:38,312 - Test item: function5
+2017-11-20 17:04:38,313 - function5 result:[0.5, 'fun5']
+2017-11-20 17:04:38,814 - Test item: function6
+2017-11-20 17:04:38,814 - function6 result:[0.5, 'fun6']
+2017-11-20 17:04:38,819 - Test item: function3
+2017-11-20 17:04:38,819 - function3 result:[0.1, 'fun3']
+2017-11-20 17:04:39,315 - Test item: function7
+2017-11-20 17:04:39,319 - Test item: function4
+2017-11-20 17:04:39,320 - function4 result:[0.5, 'fun4']
+2017-11-20 17:04:39,332 - function7 result:[0.5, 'fun7']
+2017-11-20 17:04:39,827 - Test item: function5
+2017-11-20 17:04:39,831 - function5 result:[0.5, 'fun5']
+2017-11-20 17:04:39,835 - Test item: function8
+2017-11-20 17:04:39,838 - function8 result:[0.9, 'fun8']
+2017-11-20 17:04:40,332 - Test item: function6
+2017-11-20 17:04:40,335 - function6 result:[0.5, 'fun6']
+2017-11-20 17:04:40,339 - Test item: function9
+2017-11-20 17:04:40,339 - function9 result:[0.9, 'fun9']
+2017-11-20 17:04:40,835 - Test item: function7
+2017-11-20 17:04:40,836 - function7 result:[0.5, 'fun7']
+2017-11-20 17:04:40,840 - Test item: function9
+2017-11-20 17:04:40,840 - function9 result:[0.9, 'fun9']
+2017-11-20 17:04:41,339 - Test item: function8
+2017-11-20 17:04:41,345 - Test item: function10
+2017-11-20 17:04:41,351 - function10 result:[0.5, 'fun10']
+2017-11-20 17:04:41,351 - total time£º 4.61
+2017-11-20 17:04:41,360 - function8 result:[0.9, 'fun8']
+2017-11-20 17:04:41,864 - Test item: function9
+2017-11-20 17:04:41,865 - function9 result:[0.9, 'fun9']
+2017-11-20 17:04:42,365 - Test item: function9
+2017-11-20 17:04:42,368 - function9 result:[0.9, 'fun9']
+2017-11-20 17:04:42,868 - Test item: function10
+2017-11-20 17:04:42,872 - function10 result:[0.5, 'fun10']
+2017-11-20 17:04:42,873 - total time£º 6.12
+2017-11-20 17:16:15,191 - Administrator login
+2017-11-20 17:16:15,299 - Initialize UI
+2017-11-20 17:16:15,368 - Initialize sequence table
+2017-11-20 17:16:15,500 - Initialize sequence tree
+2017-11-20 17:16:15,503 - Initialize sequence tree
+2017-11-20 17:16:15,769 - ZMQ Server Start, Port: 5555
+2017-11-20 17:16:17,463 - Start test
+2017-11-20 17:16:17,580 - Test item: function1
+2017-11-20 17:16:17,583 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 17:16:17,583 - Skip item: function2
+2017-11-20 17:16:17,583 - function2 result:[None, None]
+2017-11-20 17:16:17,609 - Test item: function1
+2017-11-20 17:16:17,609 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 17:16:17,609 - Skip item: function2
+2017-11-20 17:16:17,612 - function2 result:[None, None]
+2017-11-20 17:16:18,083 - Test item: function3
+2017-11-20 17:16:18,088 - function3 result:[0, 'fun3']
+2017-11-20 17:16:18,588 - Test item: function4
+2017-11-20 17:16:18,593 - function4 result:[0.5, 'fun4']
+2017-11-20 17:16:19,094 - Test item: function5
+2017-11-20 17:16:19,094 - function5 result:[0.5, 'fun5']
+2017-11-20 17:16:19,593 - Test item: function6
+2017-11-20 17:16:19,598 - function6 result:[0.5, 'fun6']
+2017-11-20 17:16:19,614 - Test item: function3
+2017-11-20 17:16:19,614 - function3 result:[0.1, 'fun3']
+2017-11-20 17:16:20,098 - Test item: function7
+2017-11-20 17:16:20,098 - function7 result:[0.5, 'fun7']
+2017-11-20 17:16:20,113 - Test item: function4
+2017-11-20 17:16:20,121 - function4 result:[0.5, 'fun4']
+2017-11-20 17:16:20,598 - Test item: function8
+2017-11-20 17:16:20,598 - function8 result:[0.9, 'fun8']
+2017-11-20 17:16:20,622 - Test item: function5
+2017-11-20 17:16:20,623 - function5 result:[0.5, 'fun5']
+2017-11-20 17:16:21,098 - Test item: function9
+2017-11-20 17:16:21,104 - function9 result:[0.9, 'fun9']
+2017-11-20 17:16:21,128 - Test item: function6
+2017-11-20 17:16:21,128 - function6 result:[0.5, 'fun6']
+2017-11-20 17:16:21,604 - Test item: function9
+2017-11-20 17:16:21,608 - function9 result:[0.9, 'fun9']
+2017-11-20 17:16:21,628 - Test item: function7
+2017-11-20 17:16:21,631 - function7 result:[0.5, 'fun7']
+2017-11-20 17:16:22,110 - Test item: function10
+2017-11-20 17:16:22,110 - function10 result:[0.5, 'fun10']
+2017-11-20 17:16:22,115 - total time£º 4.60
+2017-11-20 17:16:22,134 - Test item: function8
+2017-11-20 17:16:22,134 - function8 result:[0.9, 'fun8']
+2017-11-20 17:16:22,634 - Test item: function9
+2017-11-20 17:16:22,634 - function9 result:[0.9, 'fun9']
+2017-11-20 17:16:23,139 - Test item: function9
+2017-11-20 17:16:23,139 - function9 result:[0.9, 'fun9']
+2017-11-20 17:16:23,639 - Test item: function10
+2017-11-20 17:16:23,643 - function10 result:[0.5, 'fun10']
+2017-11-20 17:16:23,644 - total time£º 6.10
+2017-11-20 17:16:29,759 - Start test
+2017-11-20 17:16:29,878 - Test item: function1
+2017-11-20 17:16:29,878 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 17:16:29,881 - Test item: function1
+2017-11-20 17:16:29,883 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 17:16:29,883 - Skip item: function2
+2017-11-20 17:16:29,881 - Skip item: function2
+2017-11-20 17:16:29,884 - function2 result:[None, None]
+2017-11-20 17:16:29,886 - function2 result:[None, None]
+2017-11-20 17:16:30,385 - Test item: function3
+2017-11-20 17:16:30,390 - function3 result:[0, 'fun3']
+2017-11-20 17:16:30,891 - Test item: function4
+2017-11-20 17:16:30,891 - function4 result:[0.5, 'fun4']
+2017-11-20 17:16:31,395 - Test item: function5
+2017-11-20 17:16:31,401 - function5 result:[0.5, 'fun5']
+2017-11-20 17:16:31,886 - Test item: function3
+2017-11-20 17:16:31,886 - function3 result:[0.1, 'fun3']
+2017-11-20 17:16:31,902 - Test item: function6
+2017-11-20 17:16:31,902 - function6 result:[0.5, 'fun6']
+2017-11-20 17:16:32,390 - Test item: function4
+2017-11-20 17:16:32,390 - function4 result:[0.5, 'fun4']
+2017-11-20 17:16:32,401 - Test item: function7
+2017-11-20 17:16:32,407 - function7 result:[0.5, 'fun7']
+2017-11-20 17:16:32,889 - Test item: function5
+2017-11-20 17:16:32,889 - function5 result:[0.5, 'fun5']
+2017-11-20 17:16:32,908 - Test item: function8
+2017-11-20 17:16:32,908 - function8 result:[0.9, 'fun8']
+2017-11-20 17:16:33,390 - Test item: function6
+2017-11-20 17:16:33,393 - function6 result:[0.5, 'fun6']
+2017-11-20 17:16:33,408 - Test item: function9
+2017-11-20 17:16:33,409 - function9 result:[0.9, 'fun9']
+2017-11-20 17:16:33,895 - Test item: function7
+2017-11-20 17:16:33,900 - function7 result:[0.5, 'fun7']
+2017-11-20 17:16:33,914 - Test item: function9
+2017-11-20 17:16:33,919 - function9 result:[0.9, 'fun9']
+2017-11-20 17:16:34,401 - Test item: function8
+2017-11-20 17:16:34,401 - function8 result:[0.9, 'fun8']
+2017-11-20 17:16:34,420 - Test item: function10
+2017-11-20 17:16:34,424 - function10 result:[0.5, 'fun10']
+2017-11-20 17:16:34,424 - total time£º 4.60
+2017-11-20 17:16:34,901 - Test item: function9
+2017-11-20 17:16:34,905 - function9 result:[0.9, 'fun9']
+2017-11-20 17:16:35,406 - Test item: function9
+2017-11-20 17:16:35,406 - function9 result:[0.9, 'fun9']
+2017-11-20 17:16:35,905 - Test item: function10
+2017-11-20 17:16:35,910 - function10 result:[0.5, 'fun10']
+2017-11-20 17:16:35,911 - total time£º 6.10
+2017-11-20 17:32:01,767 - Administrator login
+2017-11-20 17:32:01,840 - Initialize UI
+2017-11-20 17:32:01,896 - Initialize sequence table
+2017-11-20 17:32:01,998 - Initialize sequence tree
+2017-11-20 17:32:02,004 - Initialize sequence tree
+2017-11-20 17:32:02,161 - ZMQ Server Start, Port: 5555
+2017-11-20 17:32:03,463 - Start test
+2017-11-20 17:32:03,596 - Test item: function1
+2017-11-20 17:32:03,598 - Test item: function1
+2017-11-20 17:32:03,599 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 17:32:03,599 - Skip item: function2
+2017-11-20 17:32:03,599 - function2 result:[None, None]
+2017-11-20 17:32:03,600 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 17:32:03,601 - Skip item: function2
+2017-11-20 17:32:03,601 - function2 result:[None, None]
+2017-11-20 17:32:04,100 - Test item: function3
+2017-11-20 17:32:04,108 - function3 result:[0, 'fun3']
+2017-11-20 17:32:04,611 - Test item: function4
+2017-11-20 17:32:04,611 - function4 result:[0.5, 'fun4']
+2017-11-20 17:32:05,115 - Test item: function5
+2017-11-20 17:32:05,119 - function5 result:[0.5, 'fun5']
+2017-11-20 17:32:05,601 - Test item: function3
+2017-11-20 17:32:05,601 - function3 result:[0.1, 'fun3']
+2017-11-20 17:32:05,621 - Test item: function6
+2017-11-20 17:32:05,621 - function6 result:[0.5, 'fun6']
+2017-11-20 17:32:06,107 - Test item: function4
+2017-11-20 17:32:06,107 - function4 result:[0.5, 'fun4']
+2017-11-20 17:32:06,121 - Test item: function7
+2017-11-20 17:32:06,125 - function7 result:[0.5, 'fun7']
+2017-11-20 17:32:06,611 - Test item: function5
+2017-11-20 17:32:06,611 - function5 result:[0.5, 'fun5']
+2017-11-20 17:32:06,625 - Test item: function8
+2017-11-20 17:32:06,630 - function8 result:[0.9, 'fun8']
+2017-11-20 17:32:07,111 - Test item: function6
+2017-11-20 17:32:07,112 - function6 result:[0.5, 'fun6']
+2017-11-20 17:32:07,131 - Test item: function9
+2017-11-20 17:32:07,132 - function9 result:[0.9, 'fun9']
+2017-11-20 17:32:07,615 - Test item: function7
+2017-11-20 17:32:07,616 - function7 result:[0.5, 'fun7']
+2017-11-20 17:32:07,632 - Test item: function9
+2017-11-20 17:32:07,639 - function9 result:[0.9, 'fun9']
+2017-11-20 17:32:08,126 - Test item: function8
+2017-11-20 17:32:08,129 - function8 result:[0.9, 'fun8']
+2017-11-20 17:32:08,141 - Test item: function10
+2017-11-20 17:32:08,148 - function10 result:[0.5, 'fun10']
+2017-11-20 17:32:08,148 - total time£º 4.60
+2017-11-20 17:32:08,631 - Test item: function9
+2017-11-20 17:32:08,631 - function9 result:[0.9, 'fun9']
+2017-11-20 17:32:09,132 - Test item: function9
+2017-11-20 17:32:09,132 - function9 result:[0.9, 'fun9']
+2017-11-20 17:32:09,632 - Test item: function10
+2017-11-20 17:32:09,636 - function10 result:[0.5, 'fun10']
+2017-11-20 17:32:09,638 - total time£º 6.10
+2017-11-20 17:35:49,838 - Administrator login
+2017-11-20 17:35:49,901 - Initialize UI
+2017-11-20 17:39:01,036 - Administrator login
+2017-11-20 17:39:01,100 - Initialize UI
+2017-11-20 17:39:30,660 - Administrator login
+2017-11-20 17:39:30,736 - Initialize UI
+2017-11-20 17:39:30,800 - Initialize sequence table
+2017-11-20 17:39:30,892 - Initialize sequence tree
+2017-11-20 17:39:30,895 - Initialize sequence tree
+2017-11-20 17:39:31,013 - ZMQ Server Start, Port: 5555
+2017-11-20 17:39:32,985 - Start test
+2017-11-20 17:39:33,121 - Test item: function1
+2017-11-20 17:39:33,121 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 17:39:33,124 - Test item: function1
+2017-11-20 17:39:33,125 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 17:39:33,126 - Skip item: function2
+2017-11-20 17:39:33,126 - function2 result:[None, None]
+2017-11-20 17:39:33,127 - Skip item: function2
+2017-11-20 17:39:33,127 - function2 result:[None, None]
+2017-11-20 17:39:33,627 - Test item: function3
+2017-11-20 17:39:33,632 - function3 result:[0, 'fun3']
+2017-11-20 17:39:34,135 - Test item: function4
+2017-11-20 17:39:34,141 - function4 result:[0.5, 'fun4']
+2017-11-20 17:39:34,641 - Test item: function5
+2017-11-20 17:39:34,641 - function5 result:[0.5, 'fun5']
+2017-11-20 17:39:35,126 - Test item: function3
+2017-11-20 17:39:35,126 - function3 result:[0.1, 'fun3']
+2017-11-20 17:39:35,145 - Test item: function6
+2017-11-20 17:39:35,151 - function6 result:[0.5, 'fun6']
+2017-11-20 17:39:35,625 - Test item: function4
+2017-11-20 17:39:35,630 - function4 result:[0.5, 'fun4']
+2017-11-20 17:39:35,651 - Test item: function7
+2017-11-20 17:39:35,660 - function7 result:[0.5, 'fun7']
+2017-11-20 17:39:36,131 - Test item: function5
+2017-11-20 17:39:36,131 - function5 result:[0.5, 'fun5']
+2017-11-20 17:39:36,163 - Test item: function8
+2017-11-20 17:39:36,171 - function8 result:[0.9, 'fun8']
+2017-11-20 17:39:36,635 - Test item: function6
+2017-11-20 17:39:36,640 - function6 result:[0.5, 'fun6']
+2017-11-20 17:39:36,672 - Test item: function9
+2017-11-20 17:39:36,680 - function9 result:[0.9, 'fun9']
+2017-11-20 17:39:37,140 - Test item: function7
+2017-11-20 17:39:37,141 - function7 result:[0.5, 'fun7']
+2017-11-20 17:39:37,182 - Test item: function9
+2017-11-20 17:39:37,187 - function9 result:[0.9, 'fun9']
+2017-11-20 17:39:37,644 - Test item: function8
+2017-11-20 17:39:37,644 - function8 result:[0.9, 'fun8']
+2017-11-20 17:39:37,687 - Test item: function10
+2017-11-20 17:39:37,688 - function10 result:[0.5, 'fun10']
+2017-11-20 17:39:37,692 - total time£º 4.60
+2017-11-20 17:39:38,148 - Test item: function9
+2017-11-20 17:39:38,148 - function9 result:[0.9, 'fun9']
+2017-11-20 17:39:38,652 - Test item: function9
+2017-11-20 17:39:38,656 - function9 result:[0.9, 'fun9']
+2017-11-20 17:39:39,156 - Test item: function10
+2017-11-20 17:39:39,161 - function10 result:[0.5, 'fun10']
+2017-11-20 17:39:39,161 - total time£º 6.10
+2017-11-20 18:01:54,118 - Administrator login
+2017-11-20 18:01:54,214 - Initialize UI
+2017-11-20 18:01:54,280 - Initialize sequence table
+2017-11-20 18:01:54,399 - Initialize sequence tree
+2017-11-20 18:01:54,401 - Initialize sequence tree
+2017-11-20 18:01:54,483 - ZMQ Server Start, Port: 5555
+2017-11-20 18:01:56,279 - Start test
+2017-11-20 18:01:56,401 - Test item: function1
+2017-11-20 18:01:56,401 - Test item: function1
+2017-11-20 18:01:56,403 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 18:01:56,404 - function1 result:[0.5, 0.5, 'child1', 'child2']
+2017-11-20 18:01:56,404 - Skip item: function2
+2017-11-20 18:01:56,404 - Skip item: function2
+2017-11-20 18:01:56,404 - function2 result:[None, None]
+2017-11-20 18:01:56,408 - function2 result:[None, None]
+2017-11-20 18:01:56,927 - Test item: function3
+2017-11-20 18:01:56,927 - function3 result:[0, 'fun3']
+2017-11-20 18:01:57,427 - Test item: function4
+2017-11-20 18:01:57,431 - function4 result:[0.5, 'fun4']
+2017-11-20 18:01:57,931 - Test item: function5
+2017-11-20 18:01:57,931 - function5 result:[0.5, 'fun5']
+2017-11-20 18:01:58,431 - Test item: function6
+2017-11-20 18:01:58,436 - function6 result:[0.5, 'fun6']
+2017-11-20 18:01:58,438 - Test item: function3
+2017-11-20 18:01:58,438 - function3 result:[0.1, 'fun3']
+2017-11-20 18:01:58,937 - Test item: function7
+2017-11-20 18:01:58,937 - function7 result:[0.5, 'fun7']
+2017-11-20 18:01:58,943 - Test item: function4
+2017-11-20 18:01:58,943 - function4 result:[0.5, 'fun4']
+2017-11-20 18:01:59,437 - Test item: function8
+2017-11-20 18:01:59,438 - function8 result:[0.9, 'fun8']
+2017-11-20 18:01:59,443 - Test item: function5
+2017-11-20 18:01:59,443 - function5 result:[0.5, 'fun5']
+2017-11-20 18:01:59,937 - Test item: function9
+2017-11-20 18:01:59,942 - function9 result:[0.9, 'fun9']
+2017-11-20 18:01:59,943 - Test item: function6
+2017-11-20 18:01:59,944 - function6 result:[0.5, 'fun6']
+2017-11-20 18:02:00,441 - Test item: function9
+2017-11-20 18:02:00,447 - function9 result:[0.9, 'fun9']
+2017-11-20 18:02:00,447 - Test item: function7
+2017-11-20 18:02:00,452 - function7 result:[0.5, 'fun7']
+2017-11-20 18:02:00,947 - Test item: function10
+2017-11-20 18:02:00,947 - function10 result:[0.5, 'fun10']
+2017-11-20 18:02:00,951 - total time£º 4.60
+2017-11-20 18:02:00,952 - Test item: function8
+2017-11-20 18:02:00,952 - function8 result:[0.9, 'fun8']
+2017-11-20 18:02:01,454 - Test item: function9
+2017-11-20 18:02:01,455 - function9 result:[0.9, 'fun9']
+2017-11-20 18:02:01,958 - Test item: function9
+2017-11-20 18:02:01,958 - function9 result:[0.9, 'fun9']
+2017-11-20 18:02:02,457 - Test item: function10
+2017-11-20 18:02:02,457 - function10 result:[0.5, 'fun10']
+2017-11-20 18:02:02,463 - total time£º 6.11

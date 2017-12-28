@@ -1,0 +1,28 @@
+2017-10-27 10:25:12,635 - Administrator login
+2017-10-27 10:25:13,026 - Initialize UI
+2017-10-27 10:25:13,073 - Initialize sequence table
+2017-10-27 10:25:13,385 - Load sequence
+2017-10-27 10:25:13,385 - Initialize sequence tree
+2017-10-27 10:25:13,401 - Connect PLC OK!
+2017-10-27 10:25:13,854 - ZMQ Server Start, Port: 5555
+2017-10-27 10:26:59,417 - Administrator login
+2017-10-27 10:26:59,588 - Initialize UI
+2017-10-27 10:26:59,635 - Initialize sequence table
+2017-10-27 10:26:59,807 - Load sequence
+2017-10-27 10:26:59,807 - Initialize sequence tree
+2017-10-27 10:27:00,260 - ZMQ Server Start, Port: 5555
+2017-10-27 10:27:00,260 - Connect PLC OK!
+2017-10-27 10:27:40,370 - Administrator login
+2017-10-27 10:27:40,526 - Initialize UI
+2017-10-27 10:27:40,573 - Initialize sequence table
+2017-10-27 10:27:41,010 - Load sequence
+2017-10-27 10:27:41,010 - Initialize sequence tree
+2017-10-27 10:27:41,026 - Connect PLC OK!
+2017-10-27 10:27:41,166 - ZMQ Server Start, Port: 5555
+2017-10-27 17:46:51,183 - Administrator login
+2017-10-27 17:46:51,432 - Initialize UI
+2017-10-27 17:46:51,479 - Initialize sequence table
+2017-10-27 17:46:52,073 - Load sequence
+2017-10-27 17:46:52,073 - Initialize sequence tree
+2017-10-27 17:46:52,604 - ZMQ Server Start, Port: 5555
+2017-10-27 17:46:52,604 - Connect PLC OK!

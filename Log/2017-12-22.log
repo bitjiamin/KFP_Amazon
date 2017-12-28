@@ -1,0 +1,162 @@
+2017-12-22 10:08:19,016 - Administrator login
+2017-12-22 10:08:19,166 - Initialize UI
+2017-12-22 10:08:21,095 - Initialize sequence table
+2017-12-22 10:08:21,305 - ThreadID1:Initialize sequence tree
+2017-12-22 10:08:21,335 - ZMQ Server Start, Port: 5555
+2017-12-22 10:09:31,006 - Administrator login
+2017-12-22 10:09:31,065 - Initialize UI
+2017-12-22 10:09:32,886 - open camera ok
+2017-12-22 10:09:32,895 - Initialize sequence table
+2017-12-22 10:09:33,075 - ThreadID1:Initialize sequence tree
+2017-12-22 10:09:33,246 - ZMQ Server Start, Port: 5555
+2017-12-22 12:15:55,009 - Administrator login
+2017-12-22 12:15:55,079 - Initialize UI
+2017-12-22 12:16:30,880 - Administrator login
+2017-12-22 12:16:30,929 - Initialize UI
+2017-12-22 12:21:15,308 - Administrator login
+2017-12-22 12:21:15,368 - Initialize UI
+2017-12-22 12:21:17,659 - open camera ok
+2017-12-22 12:21:54,867 - Administrator login
+2017-12-22 12:21:54,928 - Initialize UI
+2017-12-22 12:21:56,847 - open camera ok
+2017-12-22 12:21:56,851 - Initialize sequence table
+2017-12-22 12:21:57,060 - ThreadID1:Initialize sequence tree
+2017-12-22 12:21:57,143 - ZMQ Server Start, Port: 5555
+2017-12-22 12:24:29,928 - Administrator login
+2017-12-22 12:24:29,988 - Initialize UI
+2017-12-22 12:24:31,828 - open camera ok
+2017-12-22 12:24:31,828 - Initialize sequence table
+2017-12-22 12:24:32,019 - ThreadID1:Initialize sequence tree
+2017-12-22 12:24:32,049 - ZMQ Server Start, Port: 5555
+2017-12-22 12:25:57,628 - Administrator login
+2017-12-22 12:25:57,668 - Initialize UI
+2017-12-22 12:25:59,448 - open camera ok
+2017-12-22 12:25:59,459 - Initialize sequence table
+2017-12-22 12:25:59,639 - ThreadID1:Initialize sequence tree
+2017-12-22 12:25:59,708 - ZMQ Server Start, Port: 5555
+2017-12-22 12:28:07,899 - Administrator login
+2017-12-22 12:28:07,968 - Initialize UI
+2017-12-22 12:28:09,888 - open camera ok
+2017-12-22 12:28:09,899 - Initialize sequence table
+2017-12-22 12:28:10,118 - ThreadID1:Initialize sequence tree
+2017-12-22 12:28:15,289 - ZMQ Server Start, Port: 5555
+2017-12-22 12:30:04,499 - Administrator login
+2017-12-22 12:30:04,559 - Initialize UI
+2017-12-22 12:30:06,328 - open camera ok
+2017-12-22 12:30:06,338 - Initialize sequence table
+2017-12-22 12:30:06,519 - ThreadID1:Initialize sequence tree
+2017-12-22 12:30:06,549 - ZMQ Server Start, Port: 5555
+2017-12-22 12:51:32,756 - Administrator login
+2017-12-22 12:51:32,886 - Initialize UI
+2017-12-22 12:51:35,055 - open camera ok
+2017-12-22 12:51:35,065 - Initialize sequence table
+2017-12-22 12:51:35,265 - ThreadID1:Initialize sequence tree
+2017-12-22 12:51:35,555 - ZMQ Server Start, Port: 5555
+2017-12-22 13:37:30,471 - Administrator login
+2017-12-22 13:37:30,532 - Initialize UI
+2017-12-22 13:37:32,792 - open camera ok
+2017-12-22 13:37:32,801 - Initialize sequence table
+2017-12-22 13:37:33,022 - ThreadID1:Initialize sequence tree
+2017-12-22 13:37:33,171 - ZMQ Server Start, Port: 5555
+2017-12-22 13:43:21,191 - Administrator login
+2017-12-22 13:43:21,252 - Initialize UI
+2017-12-22 13:43:23,041 - open camera ok
+2017-12-22 13:43:23,062 - Initialize sequence table
+2017-12-22 13:43:23,241 - ThreadID1:Initialize sequence tree
+2017-12-22 13:43:23,312 - ZMQ Server Start, Port: 5555
+2017-12-22 13:45:01,121 - Administrator login
+2017-12-22 13:45:01,171 - Initialize UI
+2017-12-22 13:45:02,982 - open camera ok
+2017-12-22 13:45:02,992 - Initialize sequence table
+2017-12-22 13:45:03,182 - ThreadID1:Initialize sequence tree
+2017-12-22 13:45:03,422 - ZMQ Server Start, Port: 5555
+2017-12-22 13:53:54,742 - Administrator login
+2017-12-22 13:53:54,792 - Initialize UI
+2017-12-22 13:53:56,611 - open camera ok
+2017-12-22 13:53:56,622 - ThreadID1:Initialize sequence tree
+2017-12-22 13:53:56,622 - Initialize sequence table
+2017-12-22 13:53:56,881 - ZMQ Server Start, Port: 5555
+2017-12-22 14:16:47,831 - Administrator login
+2017-12-22 14:16:47,871 - Initialize UI
+2017-12-22 14:16:49,820 - open camera ok
+2017-12-22 14:16:49,820 - ThreadID1:Initialize sequence tree
+2017-12-22 14:16:49,831 - Initialize sequence table
+2017-12-22 14:16:50,260 - ZMQ Server Start, Port: 5555
+2017-12-22 16:08:17,983 - Administrator login
+2017-12-22 16:08:18,062 - Initialize UI
+2017-12-22 16:08:20,562 - open camera ok
+2017-12-22 16:08:20,562 - ThreadID1:Initialize sequence tree
+2017-12-22 16:08:20,572 - Initialize sequence table
+2017-12-22 16:08:20,952 - ZMQ Server Start, Port: 5555
+2017-12-22 16:37:11,996 - Administrator login
+2017-12-22 16:37:12,056 - Initialize UI
+2017-12-22 16:37:14,587 - open camera ok
+2017-12-22 16:37:14,596 - ThreadID1:Initialize sequence tree
+2017-12-22 16:37:14,607 - Initialize sequence table
+2017-12-22 16:37:14,856 - ZMQ Server Start, Port: 5555
+2017-12-22 17:26:14,081 - Administrator login
+2017-12-22 17:26:14,134 - Initialize UI
+2017-12-22 17:26:16,064 - open camera ok
+2017-12-22 17:26:16,075 - Initialize sequence table
+2017-12-22 17:26:16,253 - ThreadID1:Initialize sequence tree
+2017-12-22 17:26:16,297 - ZMQ Server Start, Port: 5555
+2017-12-22 17:37:55,435 - Administrator login
+2017-12-22 17:37:55,510 - Initialize UI
+2017-12-22 17:37:57,552 - open camera ok
+2017-12-22 17:37:57,564 - Initialize sequence table
+2017-12-22 17:37:57,742 - ThreadID1:Initialize sequence tree
+2017-12-22 17:37:57,809 - ZMQ Server Start, Port: 5555
+2017-12-22 17:40:46,281 - Administrator login
+2017-12-22 17:40:46,382 - Initialize UI
+2017-12-22 17:40:48,592 - open camera ok
+2017-12-22 17:40:48,601 - Initialize sequence table
+2017-12-22 17:40:48,772 - ThreadID1:Initialize sequence tree
+2017-12-22 17:40:48,951 - ZMQ Server Start, Port: 5555
+2017-12-22 17:50:17,307 - Administrator login
+2017-12-22 17:50:30,251 - Administrator login
+2017-12-22 17:50:50,207 - Administrator login
+2017-12-22 17:50:50,264 - Initialize UI
+2017-12-22 17:50:52,140 - open camera ok
+2017-12-22 17:50:52,151 - Initialize sequence table
+2017-12-22 17:50:52,328 - ThreadID1:Initialize sequence tree
+2017-12-22 17:50:52,496 - ZMQ Server Start, Port: 5555
+2017-12-22 17:54:33,305 - Administrator login
+2017-12-22 17:54:33,375 - Initialize UI
+2017-12-22 17:54:35,236 - open camera ok
+2017-12-22 17:54:35,248 - Initialize sequence table
+2017-12-22 17:54:35,437 - ThreadID1:Initialize sequence tree
+2017-12-22 17:54:35,529 - ZMQ Server Start, Port: 5555
+2017-12-22 17:54:52,512 - Administrator login
+2017-12-22 17:54:52,572 - Initialize UI
+2017-12-22 17:54:54,438 - open camera ok
+2017-12-22 17:54:54,448 - Initialize sequence table
+2017-12-22 17:54:54,636 - ThreadID1:Initialize sequence tree
+2017-12-22 17:54:54,841 - ZMQ Server Start, Port: 5555
+2017-12-22 17:56:04,742 - Administrator login
+2017-12-22 17:56:04,799 - Initialize UI
+2017-12-22 17:56:06,632 - open camera ok
+2017-12-22 17:56:06,643 - Initialize sequence table
+2017-12-22 17:56:06,828 - ThreadID1:Initialize sequence tree
+2017-12-22 17:56:06,863 - ZMQ Server Start, Port: 5555
+2017-12-22 18:00:09,983 - Administrator login
+2017-12-22 18:00:10,026 - Initialize UI
+2017-12-22 18:01:02,624 - Administrator login
+2017-12-22 18:01:02,689 - Initialize UI
+2017-12-22 18:02:06,148 - Administrator login
+2017-12-22 18:02:06,193 - Initialize UI
+2017-12-22 18:02:08,049 - open camera ok
+2017-12-22 18:02:08,060 - Initialize sequence table
+2017-12-22 18:02:08,239 - ThreadID1:Initialize sequence tree
+2017-12-22 18:02:08,384 - ZMQ Server Start, Port: 5555
+2017-12-22 18:03:20,619 - Administrator login
+2017-12-22 18:03:20,674 - Initialize UI
+2017-12-22 18:03:22,569 - open camera ok
+2017-12-22 18:03:22,579 - Initialize sequence table
+2017-12-22 18:03:22,759 - ThreadID1:Initialize sequence tree
+2017-12-22 18:03:22,891 - ZMQ Server Start, Port: 5555
+2017-12-22 18:03:42,875 - Administrator login
+2017-12-22 18:03:42,919 - Initialize UI
+2017-12-22 18:03:44,740 - open camera ok
+2017-12-22 18:03:44,751 - Initialize sequence table
+2017-12-22 18:03:44,923 - ThreadID1:Initialize sequence tree
+2017-12-22 18:03:44,987 - ZMQ Server Start, Port: 5555

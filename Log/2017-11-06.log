@@ -1,0 +1,7 @@
+2017-11-06 18:00:17,608 - Administrator login
+2017-11-06 18:00:17,748 - Initialize UI
+2017-11-06 18:00:17,795 - Initialize sequence table
+2017-11-06 18:00:17,811 - Load sequence
+2017-11-06 18:00:17,811 - Initialize sequence tree
+2017-11-06 18:00:17,826 - Connect PLC OK!
+2017-11-06 18:00:17,842 - ZMQ Server Start, Port: 5555
