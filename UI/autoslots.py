@@ -11,6 +11,7 @@ version 1.0.0
 import csv
 import sys
 import time
+from imp import reload
 import threading
 from PyQt5 import QtCore
 from PyQt5.QtWidgets import *
@@ -41,7 +42,6 @@ class AutoThread(Ui_automation, QDialog, QtCore.QThread):
         self.screen = QDesktopWidget().screenGeometry()
         self.width = self.screen.width()
         self.height = self.screen.height()
-        self.lb_axis.setMaximumHeight(self.height*0.1)
         self.lb_title.setMaximumHeight(self.height*0.1)
         self.io_name = []
         self.io_desc = []
@@ -49,30 +49,37 @@ class AutoThread(Ui_automation, QDialog, QtCore.QThread):
         self.io_index = []
         self.read_axis_config()
         self.writing = False
-
         self.auto =  automationscript.auto
-        self.connect_signals()
-        self.init_para_table()
-        self.auto.refreshui.connect(self.refresh_para)
-        self.auto.syncdata.connect(self.sync_read_write)
-        self.d1 = [330, 300, 670, 672, 332, 302, 674, 676, 334,338, 304, 0, 0, 342, 344, 356, 358]
-        self.d2 = [510, 512, 408, 394, 518, 390, 392, 400, 402, 408, 42, 40, 44, 46, 48, 50, 52]
+        try:
+            self.connect_signals()
+            self.init_para_table()
+            self.auto.refreshui.connect(self.refresh_para)
+            self.auto.syncdata.connect(self.sync_read_write)
+        except Exception as e:
+            print(e)
+        self.d1 = [330, 300, 670, 672, 332, 302, 674, 676, 334,338, 304, 0, 0, 356, 358]
+        self.d2 = [510, 512, 408, 390, 392, 394, 518, 400, 402, 366, 42, 40, 48, 50, 58]
         self.d3 = [1000, 3000, 1002, 3002, 1004, 3004, 1006, 3006, 1008, 3008, 1010, 3010, 1012, 3012, 1014, 3014, 1016, 3016, 1018, 3018]
 
     def  init_para_table(self):
         self.tw_para1.setRowCount(50)
         self.tw_para2.setRowCount(50)
         self.tw_para3.setRowCount(50)
-        self.tw_para1.setColumnCount(3)
-        self.tw_para2.setColumnCount(3)
-        self.tw_para3.setColumnCount(3)
-        self.tw_para1.setHorizontalHeaderLabels(['参数', '读取值', '写入值'])
-        self.tw_para2.setHorizontalHeaderLabels(['参数', '读取值','写入值'])
-        self.tw_para3.setHorizontalHeaderLabels(['参数', '读取值', '写入值'])
+        self.tw_para1.setColumnCount(2)
+        self.tw_para2.setColumnCount(2)
+        self.tw_para3.setColumnCount(2)
+        self.tw_para1.horizontalHeader().setStretchLastSection(True)
+        self.tw_para2.horizontalHeader().setStretchLastSection(True)
+        self.tw_para3.horizontalHeader().setStretchLastSection(True)
+        self.tw_para1.setHorizontalHeaderLabels(['参数', '读取值'])
+        self.tw_para2.setHorizontalHeaderLabels(['参数', '读取值'])
+        self.tw_para3.setHorizontalHeaderLabels(['参数', '读取值'])
         paras1 = ['X轴自动速度','X轴手动速度','X轴正极限','X轴负极限','Y轴自动速度','Y轴手动速度','Y轴正极限','Y轴负极限',
-                  'Z轴向下自动速度', 'Z轴向上自动速度', 'Z轴手动速度', 'Z轴正极限', 'Z轴负极限','X轴加速时间','Y轴加速时间','Z向下加速时间','Z向上加速时间']
-        paras2 = ['放料位置X','放料位置Y','放料位置Z','进料位置X','进料位置Y','放料位速度X','放料位速度Y','初始位','按压位',
-                  '进料抬高位','循环次数','当前次数','上下总时间(s)','XY停顿时间(s)','循环延时(s)','保压时间(s)','触发关断时间(s)']
+                  'Z轴向下自动速度', 'Z轴向上自动速度', 'Z轴手动速度', 'Z轴正极限', 'Z轴负极限','Z向下加速时间','Z向上加速时间']
+
+        paras2 = ['放料位置X','放料位置Y','放料位置Z','放料位速度X','放料位速度Y','进料位置X','进料位置Y','初始位','按压位', '键高',
+                  '循环次数','当前次数','循环延时(s)','保压时间(s)','触发关断时间(s)']
+
         paras3 = ['键1测点1-X', '键1测点1-Y', '键1测点2-X', '键1测点2-Y', '键1测点3-X', '键1测点3-Y','键1测点4-X', '键1测点4-Y', '键1测点5-X', '键1测点5-Y',
                   '键2测点1-X', '键2测点1-Y', '键2测点2-X', '键2测点2-Y', '键2测点3-X', '键2测点3-Y','键2测点4-X', '键2测点4-Y', '键2测点5-X', '键2测点5-Y']
 
@@ -93,93 +100,143 @@ class AutoThread(Ui_automation, QDialog, QtCore.QThread):
             k = k + 1
 
     def sync_read_write(self):
-        for i in range(len(self.d1)):
-            #newItem1 = self.tw_para1.item(i, 1)
-            newItem1 = QTableWidgetItem(self.tw_para1.item(i, 1).text())
-            self.tw_para1.setItem(i, 2, newItem1)
-        for i in range(len(self.d2)):
-            newItem1 = QTableWidgetItem(self.tw_para2.item(i, 1).text())
-            self.tw_para2.setItem(i, 2, newItem1)
+            # refresh paras
+            i = 0
+            for d in self.d1:
+                if(i<13):
+                    newItem1 = QTableWidgetItem(str(self.auto.plcD[int(d / 2)]/100))
+                else:
+                    newItem1 = QTableWidgetItem(str(self.auto.plcD[int(d / 2)] / 1000))
+                self.tw_para1.setItem(i, 1, newItem1)
+                i = i + 1
+            j = 0
+            for d in self.d2:
+                if (j < 10):
+                    newItem1 = QTableWidgetItem(str(self.auto.plcD[int(d / 2)]/100))
+                elif(j<12):
+                    newItem1 = QTableWidgetItem(str(self.auto.plcD[int(d / 2)]))
+                else:
+                    newItem1 = QTableWidgetItem(str(self.auto.plcD[int(d / 2)]/1000))
+                self.tw_para2.setItem(j, 1, newItem1)
+                j = j + 1
+            k = 0
+            # 0,10,1,11,2,12
+            for d in self.d3:
+                if(k%2 == 0):
+                    newItem1 = QTableWidgetItem(str(self.auto.plcP[int(k/2)] / 100))
+                else:
+                    newItem1 = QTableWidgetItem(str(self.auto.plcP[int(k/2) + 10] / 100))
+                self.tw_para3.setItem(k, 1, newItem1)
+                k = k + 1
 
-        for i in range(len(self.d3)):
-            newItem1 = QTableWidgetItem(self.tw_para3.item(i, 1).text())
-            self.tw_para3.setItem(i, 2, newItem1)
+            if (self.auto.switch[0] == '1'):
+                self.cb_manual.setChecked(True)
+            else:
+                self.cb_manual.setChecked(False)
+
+            if (self.auto.switch[1] == '1'):
+                self.cb_door.setChecked(True)
+            else:
+                self.cb_door.setChecked(False)
+
+            if (self.auto.switch[2] == '1'):
+                self.cb_light.setChecked(True)
+            else:
+                self.cb_light.setChecked(False)
+
+            if (self.auto.switch[3] == '1'):
+                self.cb_daq.setChecked(True)
+            else:
+                self.cb_daq.setChecked(False)
+            try:
+                self.dsb_xpos.setValue(float(self.auto.plcD[int(450 / 2)]) / 100)
+                self.dsb_ypos.setValue(float(self.auto.plcD[int(452 / 2)]) / 100)
+                self.dsb_zpos.setValue(float(self.auto.plcD[int(454 / 2)]) / 100)
+            except Exception as e:
+                print(e)
 
     def refresh_para(self):
-        # refresh paras
-        i = 0
-        for d in self.d1:
-            if(i<13):
-                newItem1 = QTableWidgetItem(str(self.auto.plcD[int(d / 2)]/100))
+        try:
+            # refresh axis paras
+            dx = [250, 270, 300, 330, 450]  #当前位置，当前速度，手动速度，自动速度, 绝对位置
+            dy = [252, 272, 302, 332, 452]
+            dz = [254, 274, 304, 334, 454]
+            self.dsb_rtpx.setValue(float(self.auto.plcD[int(dx[0] / 2)])/100)
+            self.dsb_rtsx.setValue(float(self.auto.plcD[int(dx[1] / 2)])/100)
+            self.dsb_manualsx.setValue(float(self.auto.plcD[int(dx[2] / 2)]) / 100)
+            self.dsb_autosx.setValue(float(self.auto.plcD[int(dx[3] / 2)]) / 100)
+
+            self.dsb_rtpy.setValue(float(self.auto.plcD[int(dy[0] / 2)]) / 100)
+            self.dsb_rtsy.setValue(float(self.auto.plcD[int(dy[1] / 2)]) / 100)
+            self.dsb_manualsy.setValue(float(self.auto.plcD[int(dy[2] / 2)]) / 100)
+            self.dsb_autosy.setValue(float(self.auto.plcD[int(dy[3] / 2)]) / 100)
+
+            self.dsb_rtpz.setValue(float(self.auto.plcD[int(dz[0] / 2)]) / 100)
+            self.dsb_rtsz.setValue(float(self.auto.plcD[int(dz[1] / 2)]) / 100)
+            self.dsb_manualsz.setValue(float(self.auto.plcD[int(dz[2] / 2)]) / 100)
+            self.dsb_autosz.setValue(float(self.auto.plcD[int(dz[3] / 2)]) / 100)
+
+            sensorx = [665, 660, 661]
+            sensory = [685, 680, 681]
+            sensorz = [705, 700, 701]
+            switch = [227, 236, 118, 119]
+            sensor = [sensorx, sensory, sensorz]
+
+            if(self.auto.plcM[sensorx[0]-660] == '0'):
+                self.cb_zerox.setChecked(True)
             else:
-                newItem1 = QTableWidgetItem(str(self.auto.plcD[int(d / 2)] / 1000))
-            self.tw_para1.setItem(i, 1, newItem1)
-            i = i + 1
-        j = 0
-        for d in self.d2:
-            if (j < 9):
-                newItem1 = QTableWidgetItem(str(self.auto.plcD[int(d / 2)]/100))
-            elif(j<11):
-                newItem1 = QTableWidgetItem(str(self.auto.plcD[int(d / 2)]))
+                self.cb_zerox.setChecked(False)
+
+            if (self.auto.plcM[sensorx[1]-660] == '0'):
+                self.cb_limit1x.setChecked(True)
             else:
-                newItem1 = QTableWidgetItem(str(self.auto.plcD[int(d / 2)]/1000))
-            self.tw_para2.setItem(j, 1, newItem1)
-            j = j + 1
+                self.cb_limit1x.setChecked(False)
 
-        k = 0
-        # 0,10,1,11,2,12
-        for d in self.d3:
-            if(k%2 == 0):
-                newItem1 = QTableWidgetItem(str(self.auto.plcP[int(k/2)] / 100))
+            if (self.auto.plcM[sensorx[2]-660] == '0'):
+                self.cb_limit2x.setChecked(True)
             else:
-                newItem1 = QTableWidgetItem(str(self.auto.plcP[int(k/2) + 10] / 100))
-            self.tw_para3.setItem(k, 1, newItem1)
-            k = k + 1
+                self.cb_limit2x.setChecked(False)
 
-        # refresh axis paras
-        dx = [250, 270, 300, 330, 670, 672]
-        dy = [252, 272, 302, 332, 674, 676]
-        dz = [254, 274, 304, 334, 0, 0]
-        daxis = [dx, dy, dz]
-        self.dsb_rtp.setValue(float(self.auto.plcD[int(daxis[automationscript.axis][0] / 2)])/100)
-        self.dsb_rts.setValue(float(self.auto.plcD[int(daxis[automationscript.axis][1] / 2)])/100)
-        self.dsb_manuals.setValue(float(self.auto.plcD[int(daxis[automationscript.axis][2] / 2)])/100)
-        self.dsb_autos.setValue(float(self.auto.plcD[int(daxis[automationscript.axis][3] / 2)])/100)
-        self.dsb_limit1.setValue(float(self.auto.plcD[int(daxis[automationscript.axis][4] / 2)])/100)
-        self.dsb_limit2.setValue(float(self.auto.plcD[int(daxis[automationscript.axis][5] / 2)])/100)
+            if (self.auto.plcM[sensory[0] - 660] == '0'):
+                self.cb_zeroy.setChecked(True)
+            else:
+                self.cb_zeroy.setChecked(False)
 
-        sensorx = [665, 660, 661]
-        sensory = [685, 680, 681]
-        sensorz = [705, 700, 701]
-        sensor = [sensorx, sensory, sensorz]
+            if (self.auto.plcM[sensory[1] - 660] == '0'):
+                self.cb_limit1y.setChecked(True)
+            else:
+                self.cb_limit1y.setChecked(False)
 
-        if(self.auto.plcM[sensor[automationscript.axis][0]-660] == '1'):
-            self.cb_zero.setChecked(True)
-        else:
-            self.cb_zero.setChecked(False)
+            if (self.auto.plcM[sensory[2] - 660] == '0'):
+                self.cb_limit2y.setChecked(True)
+            else:
+                self.cb_limit2y.setChecked(False)
 
-        if (self.auto.plcM[sensor[automationscript.axis][1]-660] == '1'):
-            self.cb_limit1.setChecked(True)
-        else:
-            self.cb_limit1.setChecked(False)
+            if (self.auto.plcM[sensorz[0] - 660] == '0'):
+                self.cb_zeroz.setChecked(True)
+            else:
+                self.cb_zeroz.setChecked(False)
 
-        if (self.auto.plcM[sensor[automationscript.axis][2]-660] == '1'):
-            self.cb_limit2.setChecked(True)
-        else:
-            self.cb_limit2.setChecked(False)
+            if (self.auto.plcM[sensorz[1] - 660] == '0'):
+                self.cb_limit1z.setChecked(True)
+            else:
+                self.cb_limit1z.setChecked(False)
+
+            if (self.auto.plcM[sensorz[2] - 660] == '0'):
+                self.cb_limit2z.setChecked(True)
+            else:
+                self.cb_limit2z.setChecked(False)
+        except Exception as e:
+            print(e)
 
     def showEvent(self, e):
         self.tabWidget.setCurrentIndex(0)
         automationscript.read_thread = True
 
     def closeEvent(self, e):
-        print('close.....')
+        automationscript.read_thread = False
 
     def connect_signals(self):
-        self.pb_cyin.clicked.connect(self.auto.dut_in)
-        self.pb_cyout.clicked.connect(self.auto.dut_out)
-        self.pb_cypress.clicked.connect(self.auto.dut_press)
-        self.pb_cyrelease.clicked.connect(self.auto.dut_release)
         self.pb_cyair1.clicked.connect(self.auto.air_in)
         self.pb_cyair2.clicked.connect(self.auto.air_out)
         self.pb_dutin.clicked.connect(self.auto.dut_in)
@@ -191,24 +248,28 @@ class AutoThread(Ui_automation, QDialog, QtCore.QThread):
         self.pb_loopstop.clicked.connect(self.auto.loop_stop)
         self.pb_clear.clicked.connect(self.auto.clear_loop_count)
 
-        self.pb_jog1.pressed.connect(self.auto.axis_jog1_run)
-        self.pb_jog1.released.connect(self.auto.axis_jog1_stop)
-        self.pb_jog2.pressed.connect(self.auto.axis_jog2_run)
-        self.pb_jog2.released.connect(self.auto.axis_jog2_stop)
-        self.pb_reset.released.connect(self.auto.axis_reset)
-        self.pb_axis_stop.released.connect(self.auto.axis_stop)
+        self.pb_x1.pressed.connect(self.auto.axisx_jog1_run)
+        self.pb_x1.released.connect(self.auto.axisx_jog1_stop)
+        self.pb_x2.pressed.connect(self.auto.axisx_jog2_run)
+        self.pb_x2.released.connect(self.auto.axisx_jog2_stop)
+        self.pb_xhome.clicked.connect(self.auto.x_home)
+        self.pb_xrun.clicked.connect(self.x_absolute)
 
-        self.cb_axis.currentIndexChanged.connect(self.change_axis)
-        self.cb_red.stateChanged.connect(self.auto.switch_red)
-        self.cb_yellow.stateChanged.connect(self.auto.switch_yellow)
-        self.cb_green.stateChanged.connect(self.auto.switch_green)
-        self.cb_buzz.stateChanged.connect(self.auto.switch_buzz)
-        self.cb_fail.stateChanged.connect(self.auto.switch_fail)
+        self.pb_y1.pressed.connect(self.auto.axisy_jog1_run)
+        self.pb_y1.released.connect(self.auto.axisy_jog1_stop)
+        self.pb_y2.pressed.connect(self.auto.axisy_jog2_run)
+        self.pb_y2.released.connect(self.auto.axisy_jog2_stop)
+        self.pb_yhome.clicked.connect(self.auto.y_home)
+        self.pb_yrun.clicked.connect(self.y_absolute)
+
+        self.pb_z1.pressed.connect(self.auto.axisz_jog1_run)
+        self.pb_z1.released.connect(self.auto.axisz_jog1_stop)
+        self.pb_z2.pressed.connect(self.auto.axisz_jog2_run)
+        self.pb_z2.released.connect(self.auto.axisz_jog2_stop)
+        self.pb_zhome.clicked.connect(self.auto.z_home)
+        self.pb_zrun.clicked.connect(self.z_absolute)
+
         self.cb_daq.stateChanged.connect(self.auto.switch_daq)
-        self.cb_start.stateChanged.connect(self.auto.switch_start)
-        self.cb_stop.stateChanged.connect(self.auto.switch_stop)
-        self.cb_reset.stateChanged.connect(self.auto.switch_reset)
-        self.cb_pass.stateChanged.connect(self.auto.switch_pass)
         self.cb_light.stateChanged.connect(self.auto.switch_light)
         self.cb_manual.stateChanged.connect(self.auto.switch_manual)
         self.cb_door.stateChanged.connect(self.auto.switch_door)
@@ -216,6 +277,23 @@ class AutoThread(Ui_automation, QDialog, QtCore.QThread):
         self.pb_save1.clicked.connect(self.save_para1)
         self.pb_save2.clicked.connect(self.save_para2)
         self.pb_save3.clicked.connect(self.save_para3)
+
+        self.pb_clearerror.clicked.connect(self.auto.clear_error)
+
+    def x_absolute(self):
+        data = int(self.dsb_xpos.value()*100)
+        self.auto.plc.write_intD("450", data)
+        self.auto.plc.write_M('903', "1")
+
+    def y_absolute(self):
+        data = int(self.dsb_ypos.value() * 100)
+        self.auto.plc.write_intD("452", data)
+        self.auto.plc.write_M('904', "1")
+
+    def z_absolute(self):
+        data = int(self.dsb_zpos.value() * 100)
+        self.auto.plc.write_intD("454", data)
+        self.auto.plc.write_M('905', "1")
 
     def change_axis(self):
         automationscript.axis = self.cb_axis.currentIndex()
@@ -290,22 +368,22 @@ class AutoThread(Ui_automation, QDialog, QtCore.QThread):
     def save_para1(self):
         for i in range(len(self.d1)):
             if (i < 13):
-                data = int(float(self.tw_para1.item(i, 2).text()) * 100)
+                data = int(float(self.tw_para1.item(i, 1).text()) * 100)
             else:
-                data = int(float(self.tw_para1.item(i, 2).text()) * 1000)
+                data = int(float(self.tw_para1.item(i, 1).text()) * 1000)
             self.auto.plc.write_intD(str(self.d1[i]), data)
 
     def save_para2(self):
         for i in range(len(self.d2)):
-            if (i < 9):
-                data = int(float(self.tw_para2.item(i, 2).text()) * 100)
-            elif(i<11):
-                data = int(float(self.tw_para2.item(i, 2).text()))
+            if (i < 10):
+                data = int(float(self.tw_para2.item(i, 1).text()) * 100)
+            elif(i<12):
+                data = int(float(self.tw_para2.item(i, 1).text()))
             else:
-                data = int(float(self.tw_para2.item(i, 2).text()) * 1000)
+                data = int(float(self.tw_para2.item(i, 1).text()) * 1000)
             self.auto.plc.write_intD(str(self.d2[i]), data)
 
     def save_para3(self):
         for i in range(len(self.d3)):
-            data = int(float(self.tw_para3.item(i, 2).text()) * 100)
+            data = int(float(self.tw_para3.item(i, 1).text()) * 100)
             self.auto.plc.write_intD(str(self.d3[i]), data)

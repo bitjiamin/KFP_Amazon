@@ -47,10 +47,11 @@ class AutoMation(QtCore.QThread):
             super(AutoMation, self).__init__(parent)
             plccomm.plc = plccomm.PlcCom()
             self.plc = plccomm.plc
-            #self.create_connect()
+            self.create_connect()
             self.plc_para1 = threading.Thread(target=self.read_plcpara1)
             self.plc_para1.setDaemon(True)
-            #self.plc_para1.start()
+            self.plc_error = threading.Thread(target=self.read_plcerror)
+            self.plc_error.setDaemon(True)
             self.axisM = ['10','11','12','13','14','15']
             self.mainD = [0,0,0,0]
             self.singledone = '00000000'
@@ -64,29 +65,34 @@ class AutoMation(QtCore.QThread):
             value = ''
         return value
 
-    def read_plcpara1(self):
-        time.sleep(2)
-        j = 0
+    def read_plcerror(self):
         while (True):
             self.errM = self.plc.read_blockM("800", 50)
-            self.mainD = self.plc.read_block_intD("490", 4)
             for i in range(len(self.errM)):
                 if (self.errM[i] == '1'):
                     err = self.read_error(str(i + 1))
                     if (err != ''):
                         #time.sleep(1)
                         log.loginfo.process_log(err)
+            time.sleep(1)
+
+    def read_plcpara1(self):
+        j = 0
+        while (True):
+            self.mainD = self.plc.read_block_intD("490", 4)
             if(read_thread):
                 self.plcD = self.plc.read_block_intD('0', 200) + self.plc.read_block_intD('200', 200) \
                             + self.plc.read_block_intD('400', 200) + self.plc.read_block_intD('600', 100)
                 self.plcP = self.plc.read_block_intD('1000', 20) + self.plc.read_block_intD('3000', 20)
                 self.plcM = self.plc.read_blockM('660', 50)
+                self.switch = self.plc.read_blockM('227', 1) + self.plc.read_blockM('236', 1) + self.plc.read_blockM('118', 2)
                 self.refreshui.emit()
-                if(j<10):
+                if(j<5):
                     self.syncdata.emit()
                 j =j + 1
-                time.sleep(0.1)
-            time.sleep(0.01)
+            else:
+                j = 0
+            time.sleep(0.2)
 
     #读取IO配置列表
     def read_config(self):
@@ -112,12 +118,10 @@ class AutoMation(QtCore.QThread):
         self.tcp_close()
 
     def dut_in(self):
-        self.plc.write_M("97", "1")
-        self.plc.write_M("104", "0")
+        self.plc.write_M("230", "1")
 
     def dut_out(self):
-        self.plc.write_M("97", "0")
-        self.plc.write_M("104", "1")
+        self.plc.write_M("231", "1")
 
     def dut_press(self):
         self.plc.write_M("98", "1")
@@ -126,12 +130,6 @@ class AutoMation(QtCore.QThread):
     def dut_release(self):
         self.plc.write_M("98", "0")
         self.plc.write_M("116", "1")
-
-    def mannual_in(self):
-        self.plc.write_M("230", "1")
-
-    def mannual_out(self):
-        self.plc.write_M("231", "1")
 
     def air_in(self):
         self.plc.write_M("99", "1")
@@ -228,6 +226,7 @@ class AutoMation(QtCore.QThread):
             self.plc.write_M("227", "0")
         else:
             self.plc.write_M("227", "1")
+            self.plc.write_M("9", "1")
 
     def switch_door(self, index):
         if (index == 0):
@@ -235,29 +234,78 @@ class AutoMation(QtCore.QThread):
         else:
             self.plc.write_M("236", "1")
 
-    def axis_jog1_run(self):
+    def axisx_jog1_run(self):
         self.plc.write_M("9", "1")
-        self.plc.write_M(self.axisM[2*axis], "1")
+        self.plc.write_M(self.axisM[0], "1")
 
-    def axis_jog1_stop(self):
+    def axisx_jog1_stop(self):
         self.plc.write_M("9", "1")
-        self.plc.write_M(self.axisM[2*axis], "0")
+        self.plc.write_M(self.axisM[0], "0")
 
-    def axis_jog2_run(self):
+    def axisx_jog2_run(self):
         self.plc.write_M("9", "1")
-        self.plc.write_M(self.axisM[2*axis + 1], "1")
+        self.plc.write_M(self.axisM[1], "1")
 
-    def axis_jog2_stop(self):
+    def axisx_jog2_stop(self):
         self.plc.write_M("9", "1")
-        self.plc.write_M(self.axisM[2*axis + 1], "0")
+        self.plc.write_M(self.axisM[1], "0")
 
-    def axis_reset(self):
-        if(axis == 0):
-            self.plc.write_M('61', "1")
-        elif(axis == 1):
-            self.plc.write_M('65', "1")
-        elif (axis == 2):
-            self.plc.write_M('69', "1")
+    def axisy_jog1_run(self):
+        self.plc.write_M("9", "1")
+        self.plc.write_M(self.axisM[2], "1")
+
+    def axisy_jog1_stop(self):
+        self.plc.write_M("9", "1")
+        self.plc.write_M(self.axisM[2], "0")
+
+    def axisy_jog2_run(self):
+        self.plc.write_M("9", "1")
+        self.plc.write_M(self.axisM[3], "1")
+
+    def axisy_jog2_stop(self):
+        self.plc.write_M("9", "1")
+        self.plc.write_M(self.axisM[3], "0")
+
+    def axisz_jog1_run(self):
+        self.plc.write_M("9", "1")
+        self.plc.write_M(self.axisM[4], "1")
+
+    def axisz_jog1_stop(self):
+        self.plc.write_M("9", "1")
+        self.plc.write_M(self.axisM[4], "0")
+
+    def axisz_jog2_run(self):
+        self.plc.write_M("9", "1")
+        self.plc.write_M(self.axisM[5], "1")
+
+    def axisz_jog2_stop(self):
+        self.plc.write_M("9", "1")
+        self.plc.write_M(self.axisM[5], "0")
+
+    def x_home(self):
+        self.plc.write_M('61', "1")
+        self.plc.write_M('61', "0")
+
+    def y_home(self):
+        self.plc.write_M('65', "1")
+        self.plc.write_M('65', "0")
+
+    def y_absolute(self):
+        self.plc.write_M('904', "1")
+
+    def z_home(self):
+        self.plc.write_M('69', "1")
+        self.plc.write_M('69', "0")
+
+    def z_absolute(self):
+        self.plc.write_M('905', "1")
+
+    def system_reset(self):
+        print(11111111111111111111)
+        self.plc.write_M('4', "1")
+
+    def clear_error(self):
+        self.plc.write_M('6', "1")
 
     def axis_stop(self):
         return True

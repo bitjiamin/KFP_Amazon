@@ -13,6 +13,8 @@ import systempath
 import time
 import clr
 import log
+import inihelper
+import dataexchange
 
 clr.FindAssembly('KFPVisionLib.dll')  # 加载c#dll文件
 from KFPVisionLib import *  # 导入命名空间
@@ -29,12 +31,8 @@ class Vision():
     def __init__(self):
         if (self.__class__.__first_init):  # 只初始化一次
             self.__class__.__first_init = False
+            print('init')
             self.kfpv = KFPVision()
-            if(self.kfpv.open_camera()):
-                log.loginfo.process_log('open camera ok')
-            else:
-                log.loginfo.process_log('open camera fail')
-            self.kfpv.set_extime(100000.0)
 
     def init_window(self,id,row1,col1,row2,col2):
         self.kfpv.init_window(id, row1, col1, row2, col2)
@@ -67,5 +65,26 @@ class Vision():
         return ret
 
     def snap(self):
-        self.kfpv.snap()
-        self.kfpv.disp_image()
+        try:
+            save = inihelper.read_ini(systempath.bundle_dir + '/Config/Config.ini', 'Config', 'SaveImage')
+            if(save == 'true'):
+                savetime = time.strftime('%Y-%m-%d-%H-%M-%S', time.localtime(time.time()))
+                self.kfpv.snap(True, systempath.bundle_dir + '/Image/' + dataexchange.sn + '-' + savetime + '.bmp')
+            else:
+                self.kfpv.snap()
+            self.kfpv.disp_image()
+        except Exception as e:
+            print(e)
+
+    def find_test_point(self):
+        try:
+            ret = self.kfpv.find_point(200)
+        except Exception as e:
+            log.loginfo.process_log(str(e))
+        return ret
+
+    def disp_test_point(self, num):
+        try:
+            self.kfpv.disp_point(num)
+        except Exception as e:
+            log.loginfo.process_log(str(e))
