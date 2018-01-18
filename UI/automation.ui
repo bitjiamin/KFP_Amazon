@@ -34,7 +34,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Automation</string>
+      <string>Debug Tool</string>
      </property>
     </widget>
    </item>
@@ -290,7 +290,7 @@
              </font>
             </property>
             <property name="text">
-             <string>DAQ</string>
+             <string>相机光源</string>
             </property>
            </widget>
           </item>
@@ -337,6 +337,9 @@
               <pointsize>13</pointsize>
              </font>
             </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 0);</string>
+            </property>
             <property name="readOnly">
              <bool>true</bool>
             </property>
@@ -375,6 +378,9 @@
             </property>
             <property name="readOnly">
              <bool>true</bool>
+            </property>
+            <property name="minimum">
+             <double>-10000.000000000000000</double>
             </property>
             <property name="maximum">
              <double>10000.000000000000000</double>
@@ -533,6 +539,9 @@
             <property name="readOnly">
              <bool>true</bool>
             </property>
+            <property name="minimum">
+             <double>-10000.000000000000000</double>
+            </property>
             <property name="maximum">
              <double>10000.000000000000000</double>
             </property>
@@ -569,8 +578,11 @@
             <property name="readOnly">
              <bool>true</bool>
             </property>
+            <property name="minimum">
+             <double>-100000.000000000000000</double>
+            </property>
             <property name="maximum">
-             <double>10000.000000000000000</double>
+             <double>100000.000000000000000</double>
             </property>
            </widget>
           </item>
@@ -625,6 +637,9 @@
               <pointsize>13</pointsize>
              </font>
             </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 0);</string>
+            </property>
             <property name="readOnly">
              <bool>true</bool>
             </property>
@@ -667,6 +682,9 @@
               <pointsize>13</pointsize>
              </font>
             </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 0);</string>
+            </property>
             <property name="readOnly">
              <bool>true</bool>
             </property>
@@ -689,6 +707,9 @@
           </item>
           <item row="0" column="3">
            <widget class="QPushButton" name="pb_xhome">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(0, 255, 127);</string>
+            </property>
             <property name="text">
              <string>X Home</string>
             </property>
@@ -696,6 +717,9 @@
           </item>
           <item row="1" column="5">
            <widget class="QPushButton" name="pb_zhome">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(0, 255, 127);</string>
+            </property>
             <property name="text">
              <string>Z Home</string>
             </property>
@@ -802,6 +826,9 @@
           </item>
           <item row="2" column="3">
            <widget class="QPushButton" name="pb_yhome">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(0, 255, 127);</string>
+            </property>
             <property name="text">
              <string>Y Home</string>
             </property>
@@ -988,6 +1015,9 @@
               <pointsize>13</pointsize>
              </font>
             </property>
+            <property name="minimum">
+             <double>-99999.000000000000000</double>
+            </property>
             <property name="maximum">
              <double>99999.990000000005239</double>
             </property>
@@ -1007,6 +1037,9 @@
               <pointsize>13</pointsize>
              </font>
             </property>
+            <property name="minimum">
+             <double>-99999.000000000000000</double>
+            </property>
             <property name="maximum">
              <double>99999.990000000005239</double>
             </property>
@@ -1025,6 +1058,9 @@
              <font>
               <pointsize>13</pointsize>
              </font>
+            </property>
+            <property name="minimum">
+             <double>-99999.000000000000000</double>
             </property>
             <property name="maximum">
              <double>99999.990000000005239</double>
@@ -1046,6 +1082,9 @@
           </item>
           <item row="4" column="5">
            <widget class="QPushButton" name="pb_clearerror">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 170, 0);</string>
+            </property>
             <property name="text">
              <string>ClearError</string>
             </property>
@@ -1085,6 +1124,9 @@
        </item>
        <item row="0" column="1">
         <widget class="QPushButton" name="pb_save1">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(85, 255, 127);</string>
+         </property>
          <property name="text">
           <string>保存</string>
          </property>
@@ -1099,6 +1141,9 @@
        </item>
        <item row="0" column="3">
         <widget class="QPushButton" name="pb_save2">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(85, 255, 0);</string>
+         </property>
          <property name="text">
           <string>保存</string>
          </property>
@@ -1113,6 +1158,9 @@
        </item>
        <item row="0" column="5">
         <widget class="QPushButton" name="pb_save3">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(85, 255, 0);</string>
+         </property>
          <property name="text">
           <string>保存</string>
          </property>
@@ -1131,160 +1179,406 @@
      </widget>
      <widget class="QWidget" name="tab_3">
       <attribute name="title">
-       <string>校准</string>
+       <string>系统校准</string>
       </attribute>
-      <layout class="QGridLayout" name="gridLayout_7" columnstretch="2,2,2,2,3,3" rowminimumheight="0,0,0,0,0,0,0,0">
-       <item row="0" column="1">
-        <widget class="QLabel" name="label">
-         <property name="text">
-          <string>X</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="2">
-        <widget class="QLabel" name="label_2">
-         <property name="text">
-          <string>Y</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="3">
-        <widget class="QLabel" name="label_3">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="text">
-          <string>Force</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_5">
-         <property name="text">
-          <string>校准位1</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QDoubleSpinBox" name="calpos1X"/>
-       </item>
-       <item row="1" column="2">
-        <widget class="QDoubleSpinBox" name="calpos1Y"/>
-       </item>
-       <item row="1" column="3">
-        <widget class="QDoubleSpinBox" name="calpos1F"/>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="label_6">
-         <property name="text">
-          <string>校准位2</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QDoubleSpinBox" name="calpos2X"/>
-       </item>
-       <item row="2" column="2">
-        <widget class="QDoubleSpinBox" name="calpos2Y"/>
-       </item>
-       <item row="2" column="3">
-        <widget class="QDoubleSpinBox" name="calpos2F"/>
-       </item>
-       <item row="3" column="0">
-        <widget class="QLabel" name="label_7">
-         <property name="text">
-          <string>校准位3</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="1">
-        <widget class="QDoubleSpinBox" name="calpos3X"/>
-       </item>
+      <layout class="QGridLayout" name="gridLayout_8" columnstretch="1,0,0,0">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <property name="horizontalSpacing">
+        <number>10</number>
+       </property>
+       <property name="verticalSpacing">
+        <number>0</number>
+       </property>
        <item row="3" column="2">
-        <widget class="QDoubleSpinBox" name="calpos3Y"/>
-       </item>
-       <item row="3" column="3">
-        <widget class="QDoubleSpinBox" name="calpos3F"/>
-       </item>
-       <item row="4" column="0">
-        <widget class="QLabel" name="label_8">
-         <property name="text">
-          <string>校准位4</string>
+        <widget class="QDoubleSpinBox" name="calpos3Y">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="minimum">
+          <double>-99999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>9999999.990000000223517</double>
          </property>
         </widget>
-       </item>
-       <item row="4" column="1">
-        <widget class="QDoubleSpinBox" name="calpos4X"/>
-       </item>
-       <item row="4" column="2">
-        <widget class="QDoubleSpinBox" name="calpos4Y"/>
-       </item>
-       <item row="4" column="3">
-        <widget class="QDoubleSpinBox" name="calpos4F"/>
        </item>
        <item row="5" column="0">
         <widget class="QLabel" name="label_9">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
          <property name="text">
-          <string>相机位置：</string>
+          <string>拍摄基准点时相机位置：</string>
          </property>
         </widget>
        </item>
        <item row="5" column="1">
-        <widget class="QDoubleSpinBox" name="caneraposX"/>
+        <widget class="QDoubleSpinBox" name="cameraposX">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="minimum">
+          <double>-99999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>9999999.990000000223517</double>
+         </property>
+        </widget>
        </item>
        <item row="5" column="2">
-        <widget class="QDoubleSpinBox" name="cameraposY"/>
+        <widget class="QDoubleSpinBox" name="cameraposY">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="minimum">
+          <double>-99999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>9999999.990000000223517</double>
+         </property>
+        </widget>
        </item>
        <item row="6" column="0">
         <widget class="QLabel" name="label_10">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>基准点位置：</string>
          </property>
         </widget>
        </item>
        <item row="6" column="1">
-        <widget class="QDoubleSpinBox" name="markX"/>
+        <widget class="QDoubleSpinBox" name="markX">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="minimum">
+          <double>-99999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>9999999.990000000223517</double>
+         </property>
+        </widget>
        </item>
        <item row="6" column="2">
-        <widget class="QDoubleSpinBox" name="markY"/>
+        <widget class="QDoubleSpinBox" name="markY">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="minimum">
+          <double>-99999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>9999999.990000000223517</double>
+         </property>
+        </widget>
        </item>
        <item row="7" column="0">
         <widget class="QLabel" name="label_11">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
          <property name="text">
-          <string>打头位置：</string>
+          <string>打头在基准点时位置：</string>
          </property>
         </widget>
        </item>
        <item row="7" column="1">
-        <widget class="QDoubleSpinBox" name="headX"/>
+        <widget class="QDoubleSpinBox" name="headX">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="minimum">
+          <double>-99999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>9999999.990000000223517</double>
+         </property>
+        </widget>
        </item>
        <item row="7" column="2">
-        <widget class="QDoubleSpinBox" name="headY"/>
+        <widget class="QDoubleSpinBox" name="headY">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="minimum">
+          <double>-99999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>9999999.990000000223517</double>
+         </property>
+        </widget>
        </item>
-       <item row="7" column="4">
+       <item row="0" column="1">
+        <widget class="QLabel" name="label">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>X:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="label_2">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Y:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3" rowspan="11">
+        <layout class="QGridLayout" name="grid_wave">
+         <item row="0" column="0">
+          <widget class="QLabel" name="lb_imagecal">
+           <property name="font">
+            <font>
+             <pointsize>13</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>Loadcell校准曲线：</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Sensor校准位1:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QDoubleSpinBox" name="calpos1X">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="minimum">
+          <double>-99999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>9999999.990000000223517</double>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QDoubleSpinBox" name="calpos1Y">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="minimum">
+          <double>-99999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>9999999.990000000223517</double>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Sensor校准位2:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QDoubleSpinBox" name="calpos2X">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="minimum">
+          <double>-99999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>9999999.990000000223517</double>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QDoubleSpinBox" name="calpos2Y">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="minimum">
+          <double>-99999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>9999999.990000000223517</double>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_7">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Sensor校准位3:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QDoubleSpinBox" name="calpos3X">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="minimum">
+          <double>-99999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>9999999.990000000223517</double>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1">
+        <widget class="QDoubleSpinBox" name="dsb_deltax">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="0">
+        <widget class="QLabel" name="lb_delta">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>探针偏差：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="2">
+        <widget class="QDoubleSpinBox" name="dsb_deltay">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="2">
         <widget class="QPushButton" name="pb_sensorcal">
-         <property name="text">
-          <string>SensorCalibration</string>
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
          </property>
-        </widget>
-       </item>
-       <item row="7" column="5">
-        <widget class="QPushButton" name="pb_cameracal">
-         <property name="text">
-          <string>CameraCalibration</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="4" rowspan="6" colspan="2">
-        <widget class="QLabel" name="lb_imagecal">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(0, 0, 0);</string>
+          <string notr="true">background-color: rgb(255, 255, 127);</string>
          </property>
          <property name="text">
-          <string/>
+          <string>Loadcell校准</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="2">
+        <widget class="QPushButton" name="pb_cameracal">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 127);</string>
+         </property>
+         <property name="text">
+          <string>相机标定</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="2">
+        <widget class="QPushButton" name="pb_probe">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 127);</string>
+         </property>
+         <property name="text">
+          <string>打头探针标定</string>
          </property>
         </widget>
        </item>

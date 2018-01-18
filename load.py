@@ -13,6 +13,7 @@ import csv
 import os
 import inihelper
 import systempath
+import log
 
 threadnum = int(inihelper.read_ini(systempath.bundle_dir + '/Config/Config.ini', 'Config', 'Thread'))
 class Load():
@@ -74,27 +75,30 @@ class Load():
             self.seq_col7.append(seq[6])
 
     def write_csv(self, data, seqnum):
-        st = time.strftime('%Y-%m-%d', time.localtime(time.time()))
-        filepath = systempath.bundle_dir + '/Result/' + st + '_sequence' + str(seqnum+1) + '.csv'
-        if (not os.path.exists(filepath)):
-            f = open(filepath, 'a+')
+        try:
+            st = time.strftime('%Y-%m-%d', time.localtime(time.time()))
+            filepath = systempath.bundle_dir + '/Result/' + st + '_sequence' + str(seqnum+1) + '.csv'
+            if (not os.path.exists(filepath)):
+                f = open(filepath, 'a+',newline='')
+                writer = csv.writer(f)
+                datalog1 = ['SN', 'Pass/Fail', 'errStr', 'StartTime', 'EndTime', 'TestTime']
+                datalog1.extend(self.seq_col1[1:len(self.seq_col1)])
+                datalog2 = ['Function', '', '', '', '', '']
+                datalog2.extend(self.seq_col2[1:len(self.seq_col2)])
+                datalog3 = ['Mode', '', '', '', '', '']
+                datalog3.extend(self.seq_col3[1:len(self.seq_col3)])
+                datalog4 = ['Lower Limit', '', '', '', '', '']
+                datalog4.extend(self.seq_col4[1:len(self.seq_col4)])
+                datalog5 = ['Upper Limit', '', '', '', '', '']
+                datalog5.extend(self.seq_col5[1:len(self.seq_col5)])
+                writer.writerow(datalog1)
+                writer.writerow(datalog2)
+                writer.writerow(datalog3)
+                writer.writerow(datalog4)
+                writer.writerow(datalog5)
+                f.close()
+            f = open(filepath, 'a+',newline='')
             writer = csv.writer(f)
-            datalog1 = ['SN', 'Pass/Fail', 'errStr', 'StartTime', 'EndTime', 'TestTime']
-            datalog1.extend(self.seq_col1[1:len(self.seq_col1)])
-            datalog2 = ['Function', '', '', '', '', '']
-            datalog2.extend(self.seq_col2[1:len(self.seq_col2)])
-            datalog3 = ['Mode', '', '', '', '', '']
-            datalog3.extend(self.seq_col3[1:len(self.seq_col3)])
-            datalog4 = ['Lower Limit', '', '', '', '', '']
-            datalog4.extend(self.seq_col4[1:len(self.seq_col4)])
-            datalog5 = ['Upper Limit', '', '', '', '', '']
-            datalog5.extend(self.seq_col5[1:len(self.seq_col5)])
-            writer.writerow(datalog1)
-            writer.writerow(datalog2)
-            writer.writerow(datalog3)
-            writer.writerow(datalog4)
-            writer.writerow(datalog5)
-            f.close()
-        f = open(filepath, 'a+')
-        writer = csv.writer(f)
-        writer.writerow(data)
+            writer.writerow(data)
+        except Exception as e:
+            log.loginfo.process_log(str(e))

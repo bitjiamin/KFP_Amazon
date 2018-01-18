@@ -1,9 +1,18 @@
 # -*- coding: utf-8 -*-
-import csv
+from tkinter import *
+import tkinter.filedialog
 
+root = Tk()
+root.withdraw()
+filename = tkinter.filedialog.askopenfilename()
 
-filepath = 'C:\\Project\\Amazon\\test1.csv'
-f = open(filepath, 'a+',encoding='utf8',newline='')
-writer = csv.writer(f)
-writer.writerow([4, 5, 6])
-f.close()
+# if filename != '':
+#     lb.config(text = "您选择的文件是："+filename)
+# else:
+#     lb.config(text = "您没有选择任何文件")
+# lb = Label(root,text = '')
+# lb.pack()
+# btn = Button(root,text="弹出选择文件对话框",command=xz)
+# btn.pack()
+# root.mainloop()
+xz()

@@ -55,6 +55,8 @@ class AutoMation(QtCore.QThread):
             self.axisM = ['10','11','12','13','14','15']
             self.mainD = [0,0,0,0]
             self.singledone = '00000000'
+            self.emergency = '0'
+            self.stop = '0'
 
     def read_error(self, key):
         try:
@@ -80,6 +82,8 @@ class AutoMation(QtCore.QThread):
         j = 0
         while (True):
             self.mainD = self.plc.read_block_intD("490", 4)
+            self.emergency = self.plc.read_blockM('130',1)
+            self.stop = self.plc.read_blockM('160', 1)
             if(read_thread):
                 self.plcD = self.plc.read_block_intD('0', 200) + self.plc.read_block_intD('200', 200) \
                             + self.plc.read_block_intD('400', 200) + self.plc.read_block_intD('600', 100)
@@ -87,7 +91,7 @@ class AutoMation(QtCore.QThread):
                 self.plcM = self.plc.read_blockM('660', 50)
                 self.switch = self.plc.read_blockM('227', 1) + self.plc.read_blockM('236', 1) + self.plc.read_blockM('118', 2)
                 self.refreshui.emit()
-                if(j<5):
+                if(j<2):
                     self.syncdata.emit()
                 j =j + 1
             else:
@@ -187,9 +191,9 @@ class AutoMation(QtCore.QThread):
 
     def switch_daq(self, index):
         if (index == 0):
-            self.plc.write_M("119", "0")
+            self.plc.write_M("300", "0")
         else:
-            self.plc.write_M("119", "1")
+            self.plc.write_M("300", "1")
 
     def switch_start(self, index):
         if (index == 0):
@@ -301,7 +305,6 @@ class AutoMation(QtCore.QThread):
         self.plc.write_M('905', "1")
 
     def system_reset(self):
-        print(11111111111111111111)
         self.plc.write_M('4', "1")
 
     def clear_error(self):

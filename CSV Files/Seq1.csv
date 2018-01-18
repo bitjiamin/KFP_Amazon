@@ -3,17 +3,17 @@ Pre Test,pre_test,test,nan,nan,continue,root
 Test Point1,test_point1,test,nan,nan,continue,root
 Test Point1:X Position,test_point1,test,nan,nan,continue,child
 Test Point1:Y Position,test_point1,test,nan,nan,continue,child
-Test Point1:Fmax,test_point1,test,nan,nan,continue,child
-Test Point1:Fmin,test_point1,test,nan,nan,continue,child
+Test Point1:Fmax,test_point1,test,80,90,continue,child
+Test Point1:Fmin,test_point1,test,10,20,continue,child
 Test Point1:Fc,test_point1,test,nan,nan,continue,child
 Test Point1:Fb,test_point1,test,nan,nan,continue,child
-Test Point1:Frmax,test_point1,test,nan,nan,continue,child
-Test Point1:Frmin,test_point1,test,nan,nan,continue,child
-Test Point1:Tfmax,test_point1,test,nan,nan,continue,child
-Test Point1:Tfmin,test_point1,test,nan,nan,continue,child
-Test Point1:Tfrmax,test_point1,test,nan,nan,continue,child
-Test Point1:Tfrmin,test_point1,test,nan,nan,continue,child
-Test Point1:SnapRadio,test_point1,test,nan,nan,continue,child
+Test Point1:Frmax,test_point1,test,105,120,continue,child
+Test Point1:Frmin,test_point1,test,20,45,continue,child
+Test Point1:Tfmax,test_point1,test,0.3,0.35,continue,child
+Test Point1:Tfmin,test_point1,test,0.32,0.36,continue,child
+Test Point1:Tfrmax,test_point1,test,0.19,0.2,continue,child
+Test Point1:Tfrmin,test_point1,test,0.21,0.23,continue,child
+Test Point1:SnapRatio,test_point1,test,nan,nan,continue,child
 Test Point1:Tfactor,test_point1,test,nan,nan,continue,child
 Test Point1:Frfactor,test_point1,test,nan,nan,continue,child
 Test Point1:Trfactor,test_point1,test,nan,nan,continue,child
@@ -24,19 +24,19 @@ Test Point1:Factor2,test_point1,test,nan,nan,continue,child
 Test Point1:Factor3,test_point1,test,nan,nan,continue,child
 Test Point1:Factor4,test_point1,test,nan,nan,continue,child
 Test Point2,test_point2,test,nan,nan,continue,root
-Test Point2:X Position,test_point1,test,nan,nan,continue,child
-Test Point2:Y Position,test_point1,test,nan,nan,continue,child
-Test Point2:Fmax,test_point2,test,nan,nan,continue,child
-Test Point2:Fmin,test_point2,test,nan,nan,continue,child
+Test Point2:X Position,test_point2,test,nan,nan,continue,child
+Test Point2:Y Position,test_point2,test,nan,nan,continue,child
+Test Point2:Fmax,test_point2,test,90,120,continue,child
+Test Point2:Fmin,test_point2,test,40,70,continue,child
 Test Point2:Fc,test_point2,test,nan,nan,continue,child
 Test Point2:Fb,test_point2,test,nan,nan,continue,child
-Test Point2:Frmax,test_point2,test,nan,nan,continue,child
-Test Point2:Frmin,test_point2,test,nan,nan,continue,child
-Test Point2:Tfmax,test_point2,test,nan,nan,continue,child
-Test Point2:Tfmin,test_point2,test,nan,nan,continue,child
-Test Point2:Tfrmax,test_point2,test,nan,nan,continue,child
-Test Point2:Tfrmin,test_point2,test,nan,nan,continue,child
-Test Point2:SnapRadio,test_point2,test,nan,nan,continue,child
+Test Point2:Frmax,test_point2,test,100,120,continue,child
+Test Point2:Frmin,test_point2,test,20,50,continue,child
+Test Point2:Tfmax,test_point2,test,0.3,0.35,continue,child
+Test Point2:Tfmin,test_point2,test,0.32,0.36,continue,child
+Test Point2:Tfrmax,test_point2,test,0.2,0.22,continue,child
+Test Point2:Tfrmin,test_point2,test,0.21,0.23,continue,child
+Test Point2:SnapRatio,test_point2,test,nan,nan,continue,child
 Test Point2:Tfactor,test_point2,test,nan,nan,continue,child
 Test Point2:Frfactor,test_point2,test,nan,nan,continue,child
 Test Point2:Trfactor,test_point2,test,nan,nan,continue,child
@@ -47,19 +47,19 @@ Test Point2:Factor2,test_point2,test,nan,nan,continue,child
 Test Point2:Factor3,test_point2,test,nan,nan,continue,child
 Test Point2:Factor4,test_point2,test,nan,nan,continue,child
 Test Point3,test_point3,test,nan,nan,continue,root
-Test Point3:X Position,test_point1,test,nan,nan,continue,child
-Test Point3:Y Position,test_point1,test,nan,nan,continue,child
-Test Point3:Fmax,test_point3,test,nan,nan,continue,child
-Test Point3:Fmin,test_point3,test,nan,nan,continue,child
+Test Point3:X Position,test_point3,test,nan,nan,continue,child
+Test Point3:Y Position,test_point3,test,nan,nan,continue,child
+Test Point3:Fmax,test_point3,test,90,120,continue,child
+Test Point3:Fmin,test_point3,test,40,70,continue,child
 Test Point3:Fc,test_point3,test,nan,nan,continue,child
 Test Point3:Fb,test_point3,test,nan,nan,continue,child
-Test Point3:Frmax,test_point3,test,nan,nan,continue,child
-Test Point3:Frmin,test_point3,test,nan,nan,continue,child
-Test Point3:Tfmax,test_point3,test,nan,nan,continue,child
-Test Point3:Tfmin,test_point3,test,nan,nan,continue,child
-Test Point3:Tfrmax,test_point3,test,nan,nan,continue,child
-Test Point3:Tfrmin,test_point3,test,nan,nan,continue,child
-Test Point3:SnapRadio,test_point3,test,nan,nan,continue,child
+Test Point3:Frmax,test_point3,test,100,120,continue,child
+Test Point3:Frmin,test_point3,test,20,50,continue,child
+Test Point3:Tfmax,test_point3,test,0.3,0.35,continue,child
+Test Point3:Tfmin,test_point3,test,0.32,0.36,continue,child
+Test Point3:Tfrmax,test_point3,test,0.2,0.22,continue,child
+Test Point3:Tfrmin,test_point3,test,0.21,0.23,continue,child
+Test Point3:SnapRatio,test_point3,test,nan,nan,continue,child
 Test Point3:Tfactor,test_point3,test,nan,nan,continue,child
 Test Point3:Frfactor,test_point3,test,nan,nan,continue,child
 Test Point3:Trfactor,test_point3,test,nan,nan,continue,child
@@ -70,19 +70,19 @@ Test Point3:Factor2,test_point3,test,nan,nan,continue,child
 Test Point3:Factor3,test_point3,test,nan,nan,continue,child
 Test Point3:Factor4,test_point3,test,nan,nan,continue,child
 Test Point4,test_point4,test,nan,nan,continue,root
-Test Point4:X Position,test_point1,test,nan,nan,continue,child
-Test Point4:Y Position,test_point1,test,nan,nan,continue,child
-Test Point4:Fmax,test_point4,test,nan,nan,continue,child
-Test Point4:Fmin,test_point4,test,nan,nan,continue,child
+Test Point4:X Position,test_point4,test,nan,nan,continue,child
+Test Point4:Y Position,test_point4,test,nan,nan,continue,child
+Test Point4:Fmax,test_point4,test,90,120,continue,child
+Test Point4:Fmin,test_point4,test,40,70,continue,child
 Test Point4:Fc,test_point4,test,nan,nan,continue,child
 Test Point4:Fb,test_point4,test,nan,nan,continue,child
-Test Point4:Frmax,test_point4,test,nan,nan,continue,child
-Test Point4:Frmin,test_point4,test,nan,nan,continue,child
-Test Point4:Tfmax,test_point4,test,nan,nan,continue,child
-Test Point4:Tfmin,test_point4,test,nan,nan,continue,child
-Test Point4:Tfrmax,test_point4,test,nan,nan,continue,child
-Test Point4:Tfrmin,test_point4,test,nan,nan,continue,child
-Test Point4:SnapRadio,test_point4,test,nan,nan,continue,child
+Test Point4:Frmax,test_point4,test,100,120,continue,child
+Test Point4:Frmin,test_point4,test,20,50,continue,child
+Test Point4:Tfmax,test_point4,test,0.3,0.35,continue,child
+Test Point4:Tfmin,test_point4,test,0.32,0.36,continue,child
+Test Point4:Tfrmax,test_point4,test,0.2,0.22,continue,child
+Test Point4:Tfrmin,test_point4,test,0.21,0.23,continue,child
+Test Point4:SnapRatio,test_point4,test,nan,nan,continue,child
 Test Point4:Tfactor,test_point4,test,nan,nan,continue,child
 Test Point4:Frfactor,test_point4,test,nan,nan,continue,child
 Test Point4:Trfactor,test_point4,test,nan,nan,continue,child
@@ -93,19 +93,19 @@ Test Point4:Factor2,test_point4,test,nan,nan,continue,child
 Test Point4:Factor3,test_point4,test,nan,nan,continue,child
 Test Point4:Factor4,test_point4,test,nan,nan,continue,child
 Test Point5,test_point5,test,nan,nan,continue,root
-Test Point5:X Position,test_point1,test,nan,nan,continue,child
-Test Point5:Y Position,test_point1,test,nan,nan,continue,child
-Test Point5:Fmax,test_point5,test,nan,nan,continue,child
-Test Point5:Fmin,test_point5,test,nan,nan,continue,child
+Test Point5:X Position,test_point5,test,nan,nan,continue,child
+Test Point5:Y Position,test_point5,test,nan,nan,continue,child
+Test Point5:Fmax,test_point5,test,90,120,continue,child
+Test Point5:Fmin,test_point5,test,40,70,continue,child
 Test Point5:Fc,test_point5,test,nan,nan,continue,child
 Test Point5:Fb,test_point5,test,nan,nan,continue,child
-Test Point5:Frmax,test_point5,test,nan,nan,continue,child
-Test Point5:Frmin,test_point5,test,nan,nan,continue,child
-Test Point5:Tfmax,test_point5,test,nan,nan,continue,child
-Test Point5:Tfmin,test_point5,test,nan,nan,continue,child
-Test Point5:Tfrmax,test_point5,test,nan,nan,continue,child
-Test Point5:Tfrmin,test_point5,test,nan,nan,continue,child
-Test Point5:SnapRadio,test_point5,test,nan,nan,continue,child
+Test Point5:Frmax,test_point5,test,100,120,continue,child
+Test Point5:Frmin,test_point5,test,20,50,continue,child
+Test Point5:Tfmax,test_point5,test,0.3,0.35,continue,child
+Test Point5:Tfmin,test_point5,test,0.32,0.36,continue,child
+Test Point5:Tfrmax,test_point5,test,0.2,0.22,continue,child
+Test Point5:Tfrmin,test_point5,test,0.21,0.23,continue,child
+Test Point5:SnapRatio,test_point5,test,nan,nan,continue,child
 Test Point5:Tfactor,test_point5,test,nan,nan,continue,child
 Test Point5:Frfactor,test_point5,test,nan,nan,continue,child
 Test Point5:Trfactor,test_point5,test,nan,nan,continue,child
@@ -116,19 +116,19 @@ Test Point5:Factor2,test_point5,test,nan,nan,continue,child
 Test Point5:Factor3,test_point5,test,nan,nan,continue,child
 Test Point5:Factor4,test_point5,test,nan,nan,continue,child
 Test Point6,test_point6,test,nan,nan,continue,root
-Test Point6:X Position,test_point1,test,nan,nan,continue,child
-Test Point6:Y Position,test_point1,test,nan,nan,continue,child
-Test Point6:Fmax,test_point6,test,nan,nan,continue,child
-Test Point6:Fmin,test_point6,test,nan,nan,continue,child
+Test Point6:X Position,test_point6,test,nan,nan,continue,child
+Test Point6:Y Position,test_point6,test,nan,nan,continue,child
+Test Point6:Fmax,test_point6,test,110,140,continue,child
+Test Point6:Fmin,test_point6,test,60,80,continue,child
 Test Point6:Fc,test_point6,test,nan,nan,continue,child
 Test Point6:Fb,test_point6,test,nan,nan,continue,child
-Test Point6:Frmax,test_point6,test,nan,nan,continue,child
-Test Point6:Frmin,test_point6,test,nan,nan,continue,child
-Test Point6:Tfmax,test_point6,test,nan,nan,continue,child
-Test Point6:Tfmin,test_point6,test,nan,nan,continue,child
-Test Point6:Tfrmax,test_point6,test,nan,nan,continue,child
-Test Point6:Tfrmin,test_point6,test,nan,nan,continue,child
-Test Point6:SnapRadio,test_point6,test,nan,nan,continue,child
+Test Point6:Frmax,test_point6,test,100,130,continue,child
+Test Point6:Frmin,test_point6,test,30,60,continue,child
+Test Point6:Tfmax,test_point6,test,0.25,0.29,continue,child
+Test Point6:Tfmin,test_point6,test,0.26,0.3,continue,child
+Test Point6:Tfrmax,test_point6,test,0.15,0.18,continue,child
+Test Point6:Tfrmin,test_point6,test,0.17,0.19,continue,child
+Test Point6:SnapRatio,test_point6,test,nan,nan,continue,child
 Test Point6:Tfactor,test_point6,test,nan,nan,continue,child
 Test Point6:Frfactor,test_point6,test,nan,nan,continue,child
 Test Point6:Trfactor,test_point6,test,nan,nan,continue,child

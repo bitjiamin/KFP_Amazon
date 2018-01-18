@@ -58,6 +58,7 @@ class Vision():
 
     def open_camera(self, num):
         ret = self.kfpv.open_camera()
+        #self.kfpv.set_extime(50000)
         return ret
 
     def close_camera(self):
@@ -78,7 +79,14 @@ class Vision():
 
     def find_test_point(self):
         try:
-            ret = self.kfpv.find_point(200)
+            ret = self.kfpv.find_point(200,300)
+        except Exception as e:
+            log.loginfo.process_log(str(e))
+        return ret
+
+    def find_mark_point(self):
+        try:
+            ret = self.kfpv.find_mark()
         except Exception as e:
             log.loginfo.process_log(str(e))
         return ret

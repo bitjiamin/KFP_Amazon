@@ -25,6 +25,14 @@ class MainUI(Ui_MainWindow, QMainWindow):
         self.lb_ia.setFixedHeight(self.height * 0.11)
         self.lb_ia.setScaledContents(True)
         self.lb_ia.setPixmap(pixMap)
+
+        # 添加IA Logo
+        pixMap = QPixmap(systempath.bundle_dir + '/Resource/kindle.png')
+        self.lb_kindle.setMaximumWidth(self.width * 0.2)
+        self.lb_kindle.setFixedHeight(self.height * 0.2)
+        self.lb_kindle.setScaledContents(True)
+        self.lb_kindle.setPixmap(pixMap)
+
         # 读取标题与版本号
         self.lb_title.setText(inihelper.read_ini(systempath.bundle_dir + '/Config/Config.ini', 'Config', 'Title'))
         self.lb_ver.setText(inihelper.read_ini(systempath.bundle_dir + '/Config/Config.ini', 'Config', 'Version'))

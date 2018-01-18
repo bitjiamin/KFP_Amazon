@@ -14,6 +14,9 @@ import time
 import struct
 from PyQt5 import QtCore
 import log
+import dataexchange
+import inihelper
+import systempath
 
 global daq
 socket.setdefaulttimeout(0.2)
@@ -30,7 +33,11 @@ class DAQ(QtCore.QThread):
         self.skt.settimeout(0.1)
         try:
             con_ok = self.skt.connect((self.ip, self.port))
+            print(con_ok)
             if(con_ok == None):
+                k = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'k'))
+                self.send_cal_cmd()
+                self.write_calibration(k)
                 log.loginfo.process_log('connect daq ok')
                 self.recv_thread = threading.Thread(target=self.tcp_recv)
                 self.recv_thread.setDaemon(True)
@@ -38,6 +45,7 @@ class DAQ(QtCore.QThread):
             else:
                 log.loginfo.process_log('connect daq fail')
         except Exception as e:
+            print(e)
             log.loginfo.process_log(str(e))
 
     def tcp_send(self,sendmsg):
@@ -46,11 +54,29 @@ class DAQ(QtCore.QThread):
         except Exception as e:
             log.loginfo.process_log(str(e))
 
+    def send_cal_cmd(self):
+        print('send')
+        sendmsg = b'\x0B\x00\x00\x00\x4B\x46\x50\x5F\x43\x41\x4C'
+        self.skt.send(sendmsg)
+
     def tcp_recv(self):
+        i = 0
         while(True):
             try:
                 if(True):
                     recvmsg = self.skt.recv(1024)
+                    print ("------------------------------")
+                    print (recvmsg)
+                    if ('OK' in str(recvmsg)):
+                        print(recvmsg)
+                    if ('CAL' in str(recvmsg)):
+                        f1 = struct.unpack('<f', recvmsg[7:11])[0]
+                        f2 = struct.unpack('<f', recvmsg[11:15])[0]
+                        dataexchange.daqcal1[i] = f1
+                        dataexchange.daqcal2[i] = f2
+                        i = i + 1
+                        if(i == 15):
+                            i = 0
                     self.totalmsg = self.totalmsg + recvmsg
             except Exception as e:
                 pass
@@ -85,7 +111,7 @@ class DAQ(QtCore.QThread):
                 displace0 = struct.unpack('<f', data[107 + 4 * l_force1 + 4*i:111 + 4 * l_force1 + 4*i])[0]
                 #displace0 = round(displace0, 4)
                 displace.append(displace0)
-            self.refreshwave.emit([displace, force, point1])
+            # self.refreshwave.emit([displace, force, point1])
             return [point1, displace, force]
         except Exception as e:
             log.loginfo.process_log(str(e))
@@ -93,3 +119,18 @@ class DAQ(QtCore.QThread):
             for i in range(20):
                 ret.append(-1)
             return [ret,[-1],[-1]]
+
+    def write_calibration(self, k):
+        Data = [k, 1000, 0.001, 1, 0, 20, 250, 250, 10000]
+        # CHJ[ForceSlope,FilterLowpass,PositionSlope,Filter(unuser), GetRaw, RIOlow, RIOHigh, High1(unuser), SampleFreq
+        cmdData = "".encode()
+        for d in Data:
+            if d == Data[len(Data) - 1]:
+                cmdData = cmdData + struct.pack("<f", d)
+            else:
+                cmdData = cmdData + struct.pack("<f", d) + ",".encode()
+        cmd = struct.pack("<i", 60) + "KFP_DAQSET{".encode() + cmdData + "}".encode()
+        try:
+            self.skt.send(cmd)
+        except Exception as e:
+            log.loginfo.process_log(str(e))

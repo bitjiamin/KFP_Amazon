@@ -72,78 +72,77 @@ class TestThread(QtCore.QThread):
         i = 1
         # 主测试项的序号
         j = 0
-        try:
-            for seq in range(len(self.load.seq_col1)-1):
-                self.result = []
-                if(self.load.seq_col7[i] == 'root'):
-                    self.refresh.emit([j, '', '', "Testing", 1, self.threadid])
-                    st_int = time.time()
-                    st = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(st_int))
-                    if self.load.seq_col3[i]!='skip':
-                        k = getattr(self.ts, self.load.seq_col2[i])
-                        self.ret = k()
-                        log.loginfo.process_log('Thread' + str(self.threadid+1) + ':'+'Test item: ' + self.load.seq_col2[i])
-                        # 每个测试项测试结果个数
-                        l_result = int(len(self.ret))-1
-                        # 如果有子项，则需判断子项pass或fail
-                        for m in range(l_result):
-                            # 有子项时需索引子项的limit
-                            if(l_result > 1):
-                                index = i+m+1
-                            # 无子项时直接索引当前行的limit
-                            else:
-                                index = i+m
-                            # limit为nan时，表示无穷大
-                            if(self.load.seq_col5[index] == 'nan'):
-                                uplimit = float('Inf')
-                            else:
-                                uplimit = float(self.load.seq_col5[index])
-                            if (self.load.seq_col4[index] == 'nan'):
-                                lowlimit = float('-Inf')
-                            else:
-                                lowlimit = float(self.load.seq_col4[index])
-                            if (self.ret[m] < uplimit)&(self.ret[m] > lowlimit):
-                                self.result.append('Pass')   # 所有结果的列表
-                                single_result = 'Pass'       #单个测试项的结果
-                            else:
-                                self.result.append('Fail')
-                                single_result = 'Fail'
-                                total_result = 'Fail'        #总的测试结果，有任何一项失败都会Fail
-                    else:
-                        log.loginfo.process_log('Thread' + str(self.threadid+1) + ':'+'Skip item: ' + self.load.seq_col2[i])
-                        # skip时测试结果与结果详细描述都是None
-                        self.ret = ['Skip','Skip']
-                        l_result = 1
-                        single_result = 'skip'
-                        self.result = ['Skip']
-                    # 有子项时，将子项测试数据添加到写入csv的data中
-                    if(l_result > 1):
-                        total_data.append('0')
-                    for n in range (l_result):
-                        total_data.append(str(self.ret[n]))
-                    # 统计测试时间
-                    et_int = time.time()
-                    et = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(et_int))
-                    tt = round(et_int - st_int, 2)
-                    total_time = total_time + tt
-                    # 暂停测试
-                    while (self.pause):
-                        time.sleep(0.02)
-                        self.refresh.emit([j, tt, self.ret[0:len(self.ret)-1], 'Pause', self.ret[len(self.ret)-1:], self.threadid])  #发送暂停测试信号，更新界面
-                    # 发送测试结果并更新界面,测试脚本返回的结果中前半部分为结果，后半部分为详细描述
-                    self.refresh.emit([j, tt, self.ret[0:len(self.ret)-1], self.result,  self.ret[len(self.ret)-1:], self.threadid])
-                    log.loginfo.process_log('Thread' + str(self.threadid+1) + ':'+self.load.seq_col2[i] + ' result:' + str(self.ret))
-                    # 按了停止后结束测试
-                    if(self.stop):
-                        total_result = 'Break'
-                        break
-                    # 判断失败后是否跳出测试
-                    if (self.load.seq_col6[i] == 'finish' and single_result == 'Fail'):
-                        break
-                    j = j + 1
-                i = i + 1
-        except Exception as e:
-            print(e)
+        for seq in range(len(self.load.seq_col1)-1):
+            self.result = []
+            if(self.load.seq_col7[i] == 'root'):
+                self.refresh.emit([j, '', '', "Testing", 1, self.threadid])
+                st_int = time.time()
+                st = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(st_int))
+                if self.load.seq_col3[i]!='skip':
+                    k = getattr(self.ts, self.load.seq_col2[i])
+                    self.ret = k()
+                    log.loginfo.process_log('Thread' + str(self.threadid+1) + ':'+'Test item: ' + self.load.seq_col2[i])
+                    # 每个测试项测试结果个数
+                    l_result = int(len(self.ret))-1
+                    # 如果有子项，则需判断子项pass或fail
+                    for m in range(l_result):
+                        # 有子项时需索引子项的limit
+                        if(l_result > 1):
+                            index = i+m
+                        # 无子项时直接索引当前行的limit
+                        else:
+                            index = i+m
+                        # limit为nan时，表示无穷大
+                        if(self.load.seq_col5[index] == 'nan'):
+                            uplimit = float('Inf')
+                        else:
+                            uplimit = float(self.load.seq_col5[index])
+                        if (self.load.seq_col4[index] == 'nan'):
+                            lowlimit = float('-Inf')
+                        else:
+                            lowlimit = float(self.load.seq_col4[index])
+                        if (self.ret[m] < uplimit)&(self.ret[m] > lowlimit):
+                            self.result.append('Pass')   # 所有结果的列表
+                            single_result = 'Pass'       #单个测试项的结果
+                        else:
+                            self.result.append('Fail')
+                            single_result = 'Fail'
+                            total_result = 'Fail'        #总的测试结果，有任何一项失败都会Fail
+                else:
+                    log.loginfo.process_log('Thread' + str(self.threadid+1) + ':'+'Skip item: ' + self.load.seq_col2[i])
+                    # skip时测试结果与结果详细描述都是None
+                    self.ret = ['Skip','Skip']
+                    l_result = 1
+                    single_result = 'skip'
+                    self.result = ['Skip']
+                # 有子项时，将子项测试数据添加到写入csv的data中
+                if(l_result > 1):
+                    # total_data.append('0')
+                    pass
+                for n in range (l_result):
+                    total_data.append(str(self.ret[n]))
+                # 统计测试时间
+                et_int = time.time()
+                et = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(et_int))
+                tt = round(et_int - st_int, 2)
+                total_time = total_time + tt
+                # 暂停测试
+                while (self.pause):
+                    time.sleep(0.02)
+                    self.refresh.emit([j, tt, self.ret[0:len(self.ret)-1], 'Pause', self.ret[len(self.ret)-1:], self.threadid])  #发送暂停测试信号，更新界面
+                # 发送测试结果并更新界面,测试脚本返回的结果中前半部分为结果，后半部分为详细描述
+                self.refresh.emit([j, tt, self.ret[0:len(self.ret)-1], self.result,  self.ret[len(self.ret)-1:], self.threadid])
+                print(self.ret[0:int(len(self.ret)/2)])
+                log.loginfo.process_log('Thread' + str(self.threadid+1) + ':'+self.load.seq_col2[i] + ' result:' + str(self.ret))
+                # 按了停止后结束测试
+                if(self.stop):
+                    total_result = 'Break'
+                    break
+                # 判断失败后是否跳出测试
+                if (self.load.seq_col6[i] == 'finish' and single_result == 'Fail'):
+                    break
+                j = j + 1
+            i = i + 1
         # 更新测试时间和测试结果，保存测试结果
         time2 = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
 
@@ -156,6 +155,7 @@ class TestThread(QtCore.QThread):
 
     # 重写 run() 函数，在该线程中执行测试函数
     def run(self):
+        print('run')
         if(self.loop):
             while(True):
                 self.test_func()

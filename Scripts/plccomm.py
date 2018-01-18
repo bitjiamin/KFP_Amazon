@@ -128,7 +128,12 @@ class PlcCom():
             recv = self.send_and_recv(msg, size * 4 + 100)
             for i in range(int(size / 2)):
                 sub = recv[22 + 4 * (2 * i + 1): 26 + 4 * (2 * i + 1)] + recv[22 + 8 * i:26 + 8 * i]
-                ret.append(int(sub, 16))
+                if(int(sub, 16)>2**31):
+                    ret.append(int(sub, 16)-2**32)
+                    print(111111111111111111111)
+                    print(int(sub, 16))
+                else:
+                    ret.append(int(sub, 16))
             return ret
         except Exception as e:
             ret1 = []

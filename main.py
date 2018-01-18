@@ -64,7 +64,6 @@ class TestSeq(MainSlots, QMainWindow):
         # self.myeditbar.textEdited.connect(self.edit_looptime)
         self.mystepbar.clicked.connect(self.step_test)
         self.actionLog.triggered.connect(self.test_log)
-
         self.switch_to_mainwindow()
         # 两个树形控件的root items
         self.root = []
@@ -109,7 +108,7 @@ class TestSeq(MainSlots, QMainWindow):
     # 初始化显示测试信息的树形结构
     def initialize_tree(self, tree, items, levels):
         tree.setColumnCount(5)
-        tree.setHeaderLabels(['TestItems', 'Test Time', 'TestData', 'TestResult', 'TestDetails'])
+        tree.setHeaderLabels(['TestItems', 'Test Time', 'TestData', 'TestResult', 'Coordinate(X,Y,Z)'])
         # 设置行高为25
         tree.setStyleSheet("QTreeWidget::item{height:%dpx}"%int(self.height*0.03))
         header = tree.header()
@@ -255,43 +254,53 @@ class TestSeq(MainSlots, QMainWindow):
         self.te_log.append(msg)
 
     # 测试过程中刷新UI，线程1
-    def refresh_ui(self,ls):
+    def refresh_ui(self, ls):
         thread_id = ls[5]
         # 每个测试项测试结果个数
-        l_result = len(ls[2])
+        l_result = len(ls[2]) - 1
         # 有子项时显示子项
-        if(l_result > 1):
+        if (l_result > 1):
             for i in range(l_result):
-                self.root[thread_id][ls[0]].child(i).setText(2, str(ls[2][i]))
-                self.root[thread_id][ls[0]].child(i).setText(3, ls[3][i])
+                self.root[thread_id][ls[0]].child(i).setText(2, str(ls[2][i + 1]))
+                self.root[thread_id][ls[0]].child(i).setText(3, ls[3][i + 1])
         # 将结果列表的括号去掉后再显示
-        ls[2] = str(ls[2])[1:len(str(ls[2])) - 1]
+        # ls[2] = str(ls[2])[1:len(str(ls[2])) - 1]
         ls[4] = str(ls[4])[1:len(str(ls[4])) - 1]
         # 显示其他信息
         for i in range(1, 5):
-            if (i != 3):
+            if (i == 0 or i == 1 or i == 4 or i == 5):
                 self.root[thread_id][ls[0]].setText(i, str(ls[i]))
-            else:
-                if('Fail' in ls[i]):
+
+            if (i == 2):
+                try:
+                    if (l_result > 1):
+                        self.root[thread_id][ls[0]].setText(i, str(ls[i][0]))
+                    else:
+                        self.root[thread_id][ls[0]].setText(i, str(ls[i][0]))
+                except Exception as e:
+                    pass
+
+            if (i == 3):
+                if ('Fail' in ls[i]):
                     self.root[thread_id][ls[0]].setText(i, 'Fail')
-                elif(ls[i][0]== 'Skip'):
+                elif (ls[i][0] == 'Skip'):
                     self.root[thread_id][ls[0]].setText(i, 'Skip')
-                elif('Testing' in ls[i]):
+                elif ('Testing' in ls[i]):
                     self.root[thread_id][ls[0]].setText(i, 'Testing')
                 else:
                     self.root[thread_id][ls[0]].setText(i, 'Pass')
 
         if ls[3] == "Testing":
-            for i in range(0,5):
-                self.root[thread_id][ls[0]].setBackground(i, QBrush(QColor(0,255,100)))
+            for i in range(0, 5):
+                self.root[thread_id][ls[0]].setBackground(i, QBrush(QColor(0, 255, 100)))
         elif "Fail" in ls[3]:
             self.bar[thread_id].setValue(ls[0])
             for i in range(0, 5):
                 self.root[thread_id][ls[0]].setBackground(i, QBrush(QColor(255, 0, 0)))
 
-            if(len(ls[3]) > 1):      # 将fail的子项标红
+            if (len(ls[3]) > 1):  # 将fail的子项标红
                 for j in range(len(ls[3])):
-                    if(ls[3][j] == 'Fail'):
+                    if (ls[3][j] == 'Fail'):
                         for i in range(0, 5):
                             self.root[thread_id][ls[0]].child(j).setBackground(i, QBrush(QColor(255, 0, 0)))
                             pass
@@ -302,8 +311,8 @@ class TestSeq(MainSlots, QMainWindow):
                 self.root[thread_id][ls[0]].setBackground(i, QBrush(QColor(255, 255, 0)))
         else:
             self.bar[thread_id].setValue(ls[0])
-            for i in range(0,5):
-                self.root[thread_id][ls[0]].setBackground(i, QBrush(QColor(255,255,255)))
+            for i in range(0, 5):
+                self.root[thread_id][ls[0]].setBackground(i, QBrush(QColor(255, 255, 255)))
 
     # 清除除了测试名称外测试树形结构的其他内容以及进度条
     def clear_seq(self, tree, bar):
@@ -391,6 +400,10 @@ class TestSeq(MainSlots, QMainWindow):
         if (ls[0] == 'Debug'):
             self.debug = True
             self.test_start()
+        if (ls[0] == 'Break'):
+            self.test_break()
+        if (ls[0] == 'Stop'):
+            self.test_pause()
 
     def open_sequence(self):
         filename = QFileDialog.getOpenFileName(self, "open", systempath.bundle_dir + '/CSV Files', "Csv files(*.csv)")

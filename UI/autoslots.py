@@ -16,9 +16,16 @@ import threading
 from PyQt5 import QtCore
 from PyQt5.QtWidgets import *
 import systempath
-import sys
+import inihelper
 import log
 from automation import *
+import dataexchange
+import daqcomm
+import numpy as np
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
+from matplotlib.figure import Figure
+import matplotlib.pyplot as plt
+from visionscript import *
 
 sys.path.append(systempath.bundle_dir + '/Scripts')
 try:
@@ -50,6 +57,7 @@ class AutoThread(Ui_automation, QDialog, QtCore.QThread):
         self.read_axis_config()
         self.writing = False
         self.auto =  automationscript.auto
+        self.init_wave()
         try:
             self.connect_signals()
             self.init_para_table()
@@ -58,7 +66,7 @@ class AutoThread(Ui_automation, QDialog, QtCore.QThread):
         except Exception as e:
             print(e)
         self.d1 = [330, 300, 670, 672, 332, 302, 674, 676, 334,338, 304, 0, 0, 356, 358]
-        self.d2 = [510, 512, 408, 390, 392, 394, 518, 400, 402, 366, 42, 40, 48, 50, 58]
+        self.d2 = [510, 512, 408, 390, 392, 394, 518, 400, 402, 366, 526, 528, 530, 42, 40, 48, 50, 58, 46]
         self.d3 = [1000, 3000, 1002, 3002, 1004, 3004, 1006, 3006, 1008, 3008, 1010, 3010, 1012, 3012, 1014, 3014, 1016, 3016, 1018, 3018]
 
     def  init_para_table(self):
@@ -78,7 +86,7 @@ class AutoThread(Ui_automation, QDialog, QtCore.QThread):
                   'Z轴向下自动速度', 'Z轴向上自动速度', 'Z轴手动速度', 'Z轴正极限', 'Z轴负极限','Z向下加速时间','Z向上加速时间']
 
         paras2 = ['放料位置X','放料位置Y','放料位置Z','放料位速度X','放料位速度Y','进料位置X','进料位置Y','初始位','按压位', '键高',
-                  '循环次数','当前次数','循环延时(s)','保压时间(s)','触发关断时间(s)']
+                  '探针标定X：','探针标定Y：','探针标定Z：','循环次数','当前次数','循环延时(s)','保压时间(s)','触发关断时间(s)', 'XY停顿时间(s)']
 
         paras3 = ['键1测点1-X', '键1测点1-Y', '键1测点2-X', '键1测点2-Y', '键1测点3-X', '键1测点3-Y','键1测点4-X', '键1测点4-Y', '键1测点5-X', '键1测点5-Y',
                   '键2测点1-X', '键2测点1-Y', '键2测点2-X', '键2测点2-Y', '键2测点3-X', '键2测点3-Y','键2测点4-X', '键2测点4-Y', '键2测点5-X', '键2测点5-Y']
@@ -111,9 +119,9 @@ class AutoThread(Ui_automation, QDialog, QtCore.QThread):
                 i = i + 1
             j = 0
             for d in self.d2:
-                if (j < 10):
+                if (j < 13):
                     newItem1 = QTableWidgetItem(str(self.auto.plcD[int(d / 2)]/100))
-                elif(j<12):
+                elif(j<15):
                     newItem1 = QTableWidgetItem(str(self.auto.plcD[int(d / 2)]))
                 else:
                     newItem1 = QTableWidgetItem(str(self.auto.plcD[int(d / 2)]/1000))
@@ -179,7 +187,7 @@ class AutoThread(Ui_automation, QDialog, QtCore.QThread):
             sensorx = [665, 660, 661]
             sensory = [685, 680, 681]
             sensorz = [705, 700, 701]
-            switch = [227, 236, 118, 119]
+            switch = [227, 236, 118, 300]
             sensor = [sensorx, sensory, sensorz]
 
             if(self.auto.plcM[sensorx[0]-660] == '0'):
@@ -232,6 +240,23 @@ class AutoThread(Ui_automation, QDialog, QtCore.QThread):
     def showEvent(self, e):
         self.tabWidget.setCurrentIndex(0)
         automationscript.read_thread = True
+        try:
+            self.calpos1X.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'pos1x')))
+            self.calpos1Y.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'pos1y')))
+            self.calpos2X.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'pos2x')))
+            self.calpos2Y.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'pos2y')))
+            self.calpos3X.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'pos3x')))
+            self.calpos3Y.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'pos3y')))
+
+            self.cameraposX.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'markcapx')))
+            self.cameraposY.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'markcapy')))
+            self.markX.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'markx')))
+            self.markY.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'marky')))
+            self.headX.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'loadcellx')))
+            self.headY.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'loadcelly')))
+
+        except Exception as e:
+            print(e)
 
     def closeEvent(self, e):
         automationscript.read_thread = False
@@ -279,6 +304,10 @@ class AutoThread(Ui_automation, QDialog, QtCore.QThread):
         self.pb_save3.clicked.connect(self.save_para3)
 
         self.pb_clearerror.clicked.connect(self.auto.clear_error)
+
+        self.pb_sensorcal.clicked.connect(self.sensor_calibration_thread)
+        self.pb_cameracal.clicked.connect(self.camera_calibration_thread)
+        self.pb_probe.clicked.connect(self.probe_calibration_thread)
 
     def x_absolute(self):
         data = int(self.dsb_xpos.value()*100)
@@ -375,9 +404,9 @@ class AutoThread(Ui_automation, QDialog, QtCore.QThread):
 
     def save_para2(self):
         for i in range(len(self.d2)):
-            if (i < 10):
+            if (i < 13):
                 data = int(float(self.tw_para2.item(i, 1).text()) * 100)
-            elif(i<12):
+            elif(i<15):
                 data = int(float(self.tw_para2.item(i, 1).text()))
             else:
                 data = int(float(self.tw_para2.item(i, 1).text()) * 1000)
@@ -387,3 +416,201 @@ class AutoThread(Ui_automation, QDialog, QtCore.QThread):
         for i in range(len(self.d3)):
             data = int(float(self.tw_para3.item(i, 1).text()) * 100)
             self.auto.plc.write_intD(str(self.d3[i]), data)
+
+    def sensor_calibration_thread(self):
+        self.zpos = [62, 62.03, 62.06, 62.09, 62.12, 62.15, 50]
+        self.zpos[0] = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'posz1'))
+        self.zpos[1] = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'posz2'))
+        self.zpos[2] = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'posz3'))
+        self.zpos[3] = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'posz4'))
+        self.zpos[4] = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'posz5'))
+        self.zpos[5] = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'posz6'))
+        sensorthread = threading.Thread(target=self.sensor_calibration)
+        sensorthread.setDaemon(True)
+        sensorthread.start()
+
+    def absoluteX(self, pos):
+        self.auto.plc.write_intD("450", int(pos * 100))
+        self.auto.plc.write_M('903', "1")
+        i = 0
+        while (True):
+            if (self.auto.plc.read_M("840")[0] == '1' or i > 200):
+                if (i > 200):
+                    jump = True
+                else:
+                    jump = False
+                break  # X轴绝对运动完成
+            time.sleep(0.05)
+            i = i + 1
+        return jump
+
+    def absoluteY(self, pos):
+        self.auto.plc.write_intD("452", int(pos * 100))
+        self.auto.plc.write_M('904', "1")
+        i = 0
+        while (True):
+            if (self.auto.plc.read_M("841")[0] == '1' or i > 200):
+                if (i > 200):
+                    jump = True
+                else:
+                    jump = False
+                break  # Y轴绝对运动完成
+            time.sleep(0.05)
+            i = i + 1
+        return jump
+
+    def absoluteZ(self, pos):
+        self.auto.plc.write_intD("454", int(pos * 100))
+        self.auto.plc.write_M('905', "1")
+        i = 0
+        while (True):
+            if (self.auto.plc.read_M("842")[0] == '1' or i > 200):
+                if (i > 200):
+                    jump = True
+                else:
+                    jump = False
+                break  # Y轴绝对运动完成
+            time.sleep(0.05)
+            i = i + 1
+        return jump
+
+    def init_wave(self):
+        # a figure instance to plot on
+        self.figure = Figure()
+        self.figure.subplots_adjust(left=0.14, bottom=0.2, right=0.9, top=0.9)
+        # this is the Canvas Widget that displays the `figure`
+        # it takes the `figure` instance as a parameter to __init__
+        self.canvas = FigureCanvas(self.figure)
+        self.grid_wave.addWidget(self.canvas)
+        self.grid_wave.setRowStretch(0, 1)
+        self.grid_wave.setRowStretch(1, 1)
+        ''' plot some random stuff '''
+        # create an axis
+        self.ax = self.figure.add_subplot(111)
+        self.ax.set_xlabel('Voltage(v)')
+        self.ax.set_ylabel('Force(g)')
+
+    def sensor_calibration(self):
+        log.loginfo.process_log('Start sensor calibration!')
+        self.pb_sensorcal.setEnabled(False)
+        try:
+            # x轴到指定位置
+            xpos = [self.calpos1X.value(), self.calpos2X.value(), self.calpos3X.value()]
+            ypos = [self.calpos1Y.value(), self.calpos2Y.value(), self.calpos3Y.value()]
+            jump = False
+            for j in range(3):
+                log.loginfo.process_log('Calibration point: ' + str(j+1))
+                print('loop time: '+ str(j))
+                # x轴到指定位置
+                ret = self.absoluteX(xpos[j])
+                if(ret):
+                    break
+                # y轴到指定位置
+                ret = self.absoluteY(ypos[j])
+                if (ret):
+                    break
+                # z轴到指定位置
+                for k in range(6):
+                    ret = self.absoluteZ(self.zpos[k])
+                    if (ret):
+                        break
+                    time.sleep(2)
+                    daqcomm.daq.send_cal_cmd()
+                    time.sleep(0.5)
+                #log.loginfo.process_log(str(dataexchange.daqcal1))
+                # z轴到起始位置
+                ret = self.absoluteZ(self.zpos[6])
+            datax = dataexchange.daqcal1
+            log.loginfo.process_log(str(datax))
+            datay = [x*251.1160045527 -125.1905129219 for x in dataexchange.daqcal2]
+            log.loginfo.process_log(str(datay))
+            line = np.polyfit(datax, datay, 1)
+            liney = [x * line[0] + line[1] for x in datax]
+            self.ax.plot(datax, liney, '-')
+            self.ax.plot(datax, datay, '.r')
+            self.ax.text(4, 180, 'Min Slope: 59, Max Slope: 61', fontsize=20)
+            self.ax.text(4, 200, 'Slope: ' + str(line[0]), fontsize=20)
+            self.canvas.draw()
+            # 校准完成，复位系统
+            self.auto.system_reset()
+            # 校准完成，复位系统
+            log.loginfo.process_log('Slope: ' + str(line[0]))
+            if(line[0]<60.5 and line[0]>60):
+                daqcomm.daq.write_calibration(line[0])
+                log.loginfo.process_log('Calibration Success!')
+            else:
+                log.loginfo.process_log('Calibration Fail!')
+            self.pb_sensorcal.setEnabled(True)
+        except Exception as e:
+            print(e)
+            self.pb_sensorcal.setEnabled(True)
+
+
+    def camera_calibration_thread(self):
+        camerathread = threading.Thread(target=self.camera_calibration)
+        camerathread.setDaemon(True)
+        camerathread.start()
+
+    def camera_calibration(self):
+        try:
+            self.pb_cameracal.setEnabled(False)
+            log.loginfo.process_log('Start camera calibration!')
+            # x轴到指定位置
+            markcapx = float(
+                inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'markcapx'))
+            markcapy = float(
+                inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'markcapy'))
+
+            ret = self.absoluteX(markcapx)
+
+            # y轴到指定位置
+            if(ret == False):
+                ret = self.absoluteY(markcapy)
+            if(ret == False):
+                self.vision = Vision()
+                self.auto.plc.write_M('300', '1')
+                self.vision.kfpv.set_extime(50000.0)
+                self.vision.snap()
+                self.auto.plc.write_M('300', '0')
+                self.vision.kfpv.set_extime(180000.0)
+                retxy = self.vision.find_mark_point()
+            # 校准完成，复位系统
+            self.auto.system_reset()
+            self.pb_cameracal.setEnabled(True)
+        except Exception as e:
+            print(e)
+            self.pb_cameracal.setEnabled(True)
+
+    def probe_calibration_thread(self):
+        probethread = threading.Thread(target=self.probe_calibration)
+        probethread.setDaemon(True)
+        probethread.start()
+
+    def probe_calibration(self):
+        self.auto.plc.write_M('284', '1')
+        i = 0
+        while(True):
+            if(self.auto.plc.read_blockM('286',1)=='1' or i>100):
+                break
+            time.sleep(0.1)
+            i = i + 1
+        # read XY
+        time.sleep(2)
+        x = self.dsb_rtpx.value()
+        print('xxxxxxxxxxxxxxxxxx')
+        print(x)
+        # get XY ok
+        self.auto.plc.write_M('287', '1')
+
+        while (True):
+            if (self.auto.plc.read_blockM('291', 1) == '1' or i > 100):
+                break
+            time.sleep(0.1)
+            i = i + 1
+        # read XY
+        time.sleep(2)
+        y = self.dsb_rtpy.value()
+        print('yyyyyyyyyyyyyyyyyyyyyy')
+        print(y)
+        # get XY ok
+        self.auto.plc.write_M('292', '1')
