@@ -3,6 +3,7 @@ import socket
 import log
 import time
 import threading
+import dataexchange
 
 
 global plc
@@ -18,9 +19,11 @@ class PlcCom():
         con_ok = skt.connect(('169.254.142.39', 5010))
         if (con_ok == None):
             log.loginfo.process_log('plc connect ok')
+            dataexchange.plcconn = True
         else:
             skt.close()
             log.loginfo.process_log('plc connect fail')
+            dataexchange.plcconn = False
 
     def send_and_recv(self, msg, cnt):
         l.acquire()
@@ -130,8 +133,6 @@ class PlcCom():
                 sub = recv[22 + 4 * (2 * i + 1): 26 + 4 * (2 * i + 1)] + recv[22 + 8 * i:26 + 8 * i]
                 if(int(sub, 16)>2**31):
                     ret.append(int(sub, 16)-2**32)
-                    print(111111111111111111111)
-                    print(int(sub, 16))
                 else:
                     ret.append(int(sub, 16))
             return ret

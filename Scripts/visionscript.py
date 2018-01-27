@@ -11,12 +11,13 @@ version 1.0.0
 
 import systempath
 import time
+import sys
+sys.path.append(systempath.bundle_dir + '/Lib')
 import clr
 import log
 import inihelper
 import dataexchange
-
-clr.FindAssembly('KFPVisionLib.dll')  # 加载c#dll文件
+clr.FindAssembly(systempath.bundle_dir + '\Lib\KFPVisionLib.dll')  # 加载c#dll文件
 from KFPVisionLib import *  # 导入命名空间
 
 class Vision():
@@ -31,7 +32,6 @@ class Vision():
     def __init__(self):
         if (self.__class__.__first_init):  # 只初始化一次
             self.__class__.__first_init = False
-            print('init')
             self.kfpv = KFPVision()
 
     def init_window(self,id,row1,col1,row2,col2):
@@ -79,14 +79,17 @@ class Vision():
 
     def find_test_point(self):
         try:
-            ret = self.kfpv.find_point(200,300)
+            mmperpix = 0.01196
+            distance = 3
+            pix = int(4/mmperpix)
+            ret = self.kfpv.find_point(systempath.bundle_dir + '\Lib\kfp_Caltab.tup', 200, pix)
         except Exception as e:
             log.loginfo.process_log(str(e))
         return ret
 
     def find_mark_point(self):
         try:
-            ret = self.kfpv.find_mark()
+            ret = self.kfpv.find_mark(systempath.bundle_dir + '\Lib\kfp_Caltab.tup')
         except Exception as e:
             log.loginfo.process_log(str(e))
         return ret

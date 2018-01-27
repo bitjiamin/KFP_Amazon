@@ -33,17 +33,18 @@ class DAQ(QtCore.QThread):
         self.skt.settimeout(0.1)
         try:
             con_ok = self.skt.connect((self.ip, self.port))
-            print(con_ok)
             if(con_ok == None):
-                k = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'k'))
+                k = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Sensor', 'k'))
                 self.send_cal_cmd()
                 self.write_calibration(k)
                 log.loginfo.process_log('connect daq ok')
+                dataexchange.daqconn = True
                 self.recv_thread = threading.Thread(target=self.tcp_recv)
                 self.recv_thread.setDaemon(True)
                 self.recv_thread.start()
             else:
                 log.loginfo.process_log('connect daq fail')
+                dataexchange.daqconn = False
         except Exception as e:
             print(e)
             log.loginfo.process_log(str(e))
@@ -55,7 +56,6 @@ class DAQ(QtCore.QThread):
             log.loginfo.process_log(str(e))
 
     def send_cal_cmd(self):
-        print('send')
         sendmsg = b'\x0B\x00\x00\x00\x4B\x46\x50\x5F\x43\x41\x4C'
         self.skt.send(sendmsg)
 
@@ -65,13 +65,11 @@ class DAQ(QtCore.QThread):
             try:
                 if(True):
                     recvmsg = self.skt.recv(1024)
-                    print ("------------------------------")
-                    print (recvmsg)
-                    if ('OK' in str(recvmsg)):
-                        print(recvmsg)
                     if ('CAL' in str(recvmsg)):
                         f1 = struct.unpack('<f', recvmsg[7:11])[0]
                         f2 = struct.unpack('<f', recvmsg[11:15])[0]
+                        log.loginfo.process_log('Loadcell: '+ str(f1))
+                        log.loginfo.process_log('Calibration Sensor: '+ str(f2))
                         dataexchange.daqcal1[i] = f1
                         dataexchange.daqcal2[i] = f2
                         i = i + 1

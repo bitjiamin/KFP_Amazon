@@ -33,21 +33,25 @@ class MainSlots(MainUI):
         self.load1.load_seq()
         self.lowall =  self.load1.seq_col4
         self.upall = self.load1.seq_col5
-        index = [5,6,9,10,11,12,13,14]
+        #index = [5,6,9,10,11,12,13,14]
+        index = [6, 7, 8, 9, 10, 11, 12, 13]
         self.up = [[],[],[],[],[],[]]
         self.low = [[],[],[],[],[],[]]
         for j in range(6):
             for i in index:
-                self.low[j].append(float(self.load1.seq_col4[i + j*23]))
-                self.up[j].append(float(self.load1.seq_col5[i + j*23]))
+                self.low[j].append(float(self.load1.seq_col4[i + j*17]))
+                self.up[j].append(float(self.load1.seq_col5[i + j*17]))
 
     def plot_limit(self, point):
-        l = int(len(self.low[point-1])/2)
-        for i in range(l):
-            x = [self.low[point-1][i], self.up[point-1][i], self.up[point-1][i], self.low[point-1][i], self.low[point-1][i]]
-            y = [self.low[point-1][i + l], self.low[point-1][i + l], self.up[point-1][i + l], self.up[point-1][i + l], self.low[point-1][i + l]]
-            color = ['-r','-g','-b','-r','-g','-b']
-            self.ax.plot(y, x, '-r',alpha=0.5)
+        try:
+            l = int(len(self.low[point-1])/2)
+            for i in range(l):
+                x = [self.low[point-1][i], self.up[point-1][i], self.up[point-1][i], self.low[point-1][i], self.low[point-1][i]]
+                y = [self.low[point-1][i + l], self.low[point-1][i + l], self.up[point-1][i + l], self.up[point-1][i + l], self.low[point-1][i + l]]
+                color = ['-r','-g','-b','-r','-g','-b']
+                self.ax.plot(y, x, '-r',alpha=0.5)
+        except Exception as e:
+            print(e)
 
     def showEvent(self, e):
         try:
@@ -59,11 +63,22 @@ class MainSlots(MainUI):
             self.pb_reset.clicked.connect(self.auto.system_reset)
             self.cb_debug.clicked.connect(self.set_test_mode)
             if (self.vision.kfpv.open_camera()):
-                log.loginfo.process_log('open camera ok')
+                log.loginfo.process_log('Connect camera ok')
+                dataexchange.cameraconn = True
             else:
-                log.loginfo.process_log('open camera fail')
+                log.loginfo.process_log('Connect camera fail')
+                dataexchange.cameraconn = False
             self.vision.kfpv.set_extime(180000.0)
-            pass
+            if(dataexchange.plcconn):
+                log.loginfo.process_log('Connect plc ok')
+            else:
+                log.loginfo.process_log('Connect plc fail')
+            if (dataexchange.daqconn):
+                log.loginfo.process_log('Connect daq ok')
+            else:
+                log.loginfo.process_log('Connect daq fail')
+            if(dataexchange.daqconn == False or dataexchange.daqconn == False or dataexchange.cameraconn == False):
+                QMessageBox.information(self, 'info','System initialization fail!', QMessageBox.Ok)
         except Exception as e:
             print(e)
 
@@ -83,9 +98,10 @@ class MainSlots(MainUI):
             pass
 
     def check_wave_thread(self):
-        self.wave = threading.Thread(target=self.check_wave)
-        self.wave.setDaemon(True)
-        self.wave.start()
+        # self.wave = threading.Thread(target=self.check_wave)
+        # self.wave.setDaemon(True)
+        # self.wave.start()
+        self.check_wave()
 
     def check_wave(self):
         try:
@@ -163,8 +179,11 @@ class MainSlots(MainUI):
             self.ax.set_ylabel('Force(g)')
             # plot data
             index = xy[1].index(max(xy[1]))
-            self.ax.plot(xy[0][0:index], xy[1][0:index], '-g')
-            self.ax.plot(xy[0][index:], xy[1][index:], '-b')
+            self.ax.plot(xy[0][0:index], xy[1][0:index], '-g', label="Forward Curve")
+            self.ax.plot(xy[0][index:], xy[1][index:], '-b', label="Return Curve")
+            self.ax.legend(loc='upper left')
+            #x = [xy[2][6],xy[2][7], xy[2][8], xy[2][9]]
+            #y = [xy[2][0],xy[2][1], xy[2][4], xy[2][5]]
             x = [xy[2][6],xy[2][7], xy[2][8], xy[2][9]]
             y = [xy[2][0],xy[2][1], xy[2][4], xy[2][5]]
             self.ax.text(0.02,250,'Point' + str(dataexchange.testpoint),fontsize=10)
@@ -173,11 +192,11 @@ class MainSlots(MainUI):
             # self.ax.plot(x, y, marker="o",markersize=20,alpha=0.2)
             self.plot_limit(dataexchange.testpoint)
             self.ax.set_xlim(0, 0.5)
-            self.ax.set_ylim(0, 300)
+            self.ax.set_ylim(0, 400)
             # refresh canvas
             self.canvas.draw()
         except Exception as e:
-            pass
+            print(e)
 
     def info_changed(self, item):
         if(item.row()==5 and item.column()==1):

@@ -22,13 +22,14 @@ import os
 import platform
 from mainwindow import *
 from usermanage import *
-import testthread
 import zmqserver
 from mainslots import *
+import testthread
 from editslots import *
 import autoslots
 from PyQt5.QtGui import QPixmap, QPalette, QColor, QBrush
 sys.path.append(systempath.bundle_dir + '/UI')
+
 
 class TestSeq(MainSlots, QMainWindow):
     def __init__(self, parent=None):
@@ -46,9 +47,9 @@ class TestSeq(MainSlots, QMainWindow):
         self.actionEdit_Window.triggered.connect(self.seq_debug_tool)
         self.actionMotion_Window.triggered.connect(self.motion_debug)
         self.actionToolBar.triggered.connect(self.view_toolbar)
-        self.actionOpen_CSV.triggered.connect(self.open_sequence)
-        self.actionOpen_Result.triggered.connect(self.open_result)
-        self.actionOpen_Log.triggered.connect(self.open_log)
+        self.actionOpen_CSV.triggered.connect(self.open_sequence_thread)
+        self.actionOpen_Result.triggered.connect(self.open_result_thread)
+        self.actionOpen_Log.triggered.connect(self.open_log_thread)
         self.actionClose_System.triggered.connect(self.close)
         # 工具栏信号连接
         self.actionStart.triggered.connect(self.test_start)
@@ -255,64 +256,67 @@ class TestSeq(MainSlots, QMainWindow):
 
     # 测试过程中刷新UI，线程1
     def refresh_ui(self, ls):
-        thread_id = ls[5]
-        # 每个测试项测试结果个数
-        l_result = len(ls[2]) - 1
-        # 有子项时显示子项
-        if (l_result > 1):
-            for i in range(l_result):
-                self.root[thread_id][ls[0]].child(i).setText(2, str(ls[2][i + 1]))
-                self.root[thread_id][ls[0]].child(i).setText(3, ls[3][i + 1])
-        # 将结果列表的括号去掉后再显示
-        # ls[2] = str(ls[2])[1:len(str(ls[2])) - 1]
-        ls[4] = str(ls[4])[1:len(str(ls[4])) - 1]
-        # 显示其他信息
-        for i in range(1, 5):
-            if (i == 0 or i == 1 or i == 4 or i == 5):
-                self.root[thread_id][ls[0]].setText(i, str(ls[i]))
+        try:
+            thread_id = ls[5]
+            # 每个测试项测试结果个数
+            l_result = len(ls[2]) - 1
+            # 有子项时显示子项
+            if (l_result > 1):
+                for i in range(l_result):
+                    self.root[thread_id][ls[0]].child(i).setText(2, str(ls[2][i + 1]))
+                    self.root[thread_id][ls[0]].child(i).setText(3, ls[3][i + 1])
+            # 将结果列表的括号去掉后再显示
+            # ls[2] = str(ls[2])[1:len(str(ls[2])) - 1]
+            ls[4] = str(ls[4])[1:len(str(ls[4])) - 1]
+            # 显示其他信息
+            for i in range(1, 5):
+                if (i == 0 or i == 1 or i == 4 or i == 5):
+                    self.root[thread_id][ls[0]].setText(i, str(ls[i]))
 
-            if (i == 2):
-                try:
-                    if (l_result > 1):
-                        self.root[thread_id][ls[0]].setText(i, str(ls[i][0]))
+                if (i == 2):
+                    try:
+                        if (l_result > 1):
+                            self.root[thread_id][ls[0]].setText(i, str(ls[i][0]))
+                        else:
+                            self.root[thread_id][ls[0]].setText(i, str(ls[i][0]))
+                    except Exception as e:
+                        pass
+
+                if (i == 3):
+                    if ('Fail' in ls[i]):
+                        self.root[thread_id][ls[0]].setText(i, 'Fail')
+                    elif (ls[i][0] == 'Skip'):
+                        self.root[thread_id][ls[0]].setText(i, 'Skip')
+                    elif ('Testing' in ls[i]):
+                        self.root[thread_id][ls[0]].setText(i, 'Testing')
                     else:
-                        self.root[thread_id][ls[0]].setText(i, str(ls[i][0]))
-                except Exception as e:
-                    pass
+                        self.root[thread_id][ls[0]].setText(i, 'Pass')
 
-            if (i == 3):
-                if ('Fail' in ls[i]):
-                    self.root[thread_id][ls[0]].setText(i, 'Fail')
-                elif (ls[i][0] == 'Skip'):
-                    self.root[thread_id][ls[0]].setText(i, 'Skip')
-                elif ('Testing' in ls[i]):
-                    self.root[thread_id][ls[0]].setText(i, 'Testing')
-                else:
-                    self.root[thread_id][ls[0]].setText(i, 'Pass')
+            if ls[3] == "Testing":
+                for i in range(0, 5):
+                    self.root[thread_id][ls[0]].setBackground(i, QBrush(QColor(0, 255, 100)))
+            elif "Fail" in ls[3]:
+                self.bar[thread_id].setValue(ls[0])
+                for i in range(0, 5):
+                    self.root[thread_id][ls[0]].setBackground(i, QBrush(QColor(255, 0, 0)))
 
-        if ls[3] == "Testing":
-            for i in range(0, 5):
-                self.root[thread_id][ls[0]].setBackground(i, QBrush(QColor(0, 255, 100)))
-        elif "Fail" in ls[3]:
-            self.bar[thread_id].setValue(ls[0])
-            for i in range(0, 5):
-                self.root[thread_id][ls[0]].setBackground(i, QBrush(QColor(255, 0, 0)))
+                if (len(ls[3]) > 1):  # 将fail的子项标红
+                    for j in range(len(ls[3]-1)):
+                        if (ls[3][j+1] == 'Fail'):
+                            for i in range(0, 5):
+                                self.root[thread_id][ls[0]].child(j).setBackground(i, QBrush(QColor(255, 0, 0)))
+                                pass
 
-            if (len(ls[3]) > 1):  # 将fail的子项标红
-                for j in range(len(ls[3])):
-                    if (ls[3][j] == 'Fail'):
-                        for i in range(0, 5):
-                            self.root[thread_id][ls[0]].child(j).setBackground(i, QBrush(QColor(255, 0, 0)))
-                            pass
-
-        elif ls[3] == 'Pause':
-            self.bar[thread_id].setValue(ls[0])
-            for i in range(0, 5):
-                self.root[thread_id][ls[0]].setBackground(i, QBrush(QColor(255, 255, 0)))
-        else:
-            self.bar[thread_id].setValue(ls[0])
-            for i in range(0, 5):
-                self.root[thread_id][ls[0]].setBackground(i, QBrush(QColor(255, 255, 255)))
+            elif ls[3] == 'Pause':
+                self.bar[thread_id].setValue(ls[0])
+                for i in range(0, 5):
+                    self.root[thread_id][ls[0]].setBackground(i, QBrush(QColor(255, 255, 0)))
+            else:
+                self.bar[thread_id].setValue(ls[0])
+                for i in range(0, 5):
+                    self.root[thread_id][ls[0]].setBackground(i, QBrush(QColor(255, 255, 255)))
+        except Exception as e:
+            print(e)
 
     # 清除除了测试名称外测试树形结构的其他内容以及进度条
     def clear_seq(self, tree, bar):
@@ -405,6 +409,11 @@ class TestSeq(MainSlots, QMainWindow):
         if (ls[0] == 'Stop'):
             self.test_pause()
 
+    def open_sequence_thread(self):
+        seqthread = threading.Thread(target=self.open_sequence)
+        seqthread.setDaemon(True)
+        seqthread.start()
+
     def open_sequence(self):
         filename = QFileDialog.getOpenFileName(self, "open", systempath.bundle_dir + '/CSV Files', "Csv files(*.csv)")
         if (platform.system() == "Windows"):
@@ -413,6 +422,11 @@ class TestSeq(MainSlots, QMainWindow):
             import subprocess
             subprocess.call(["open", filename[0]])
 
+    def open_result_thread(self):
+        resultthread = threading.Thread(target=self.open_result)
+        resultthread.setDaemon(True)
+        resultthread.start()
+
     def open_result(self):
         filename = QFileDialog.getOpenFileName(self, "open", systempath.bundle_dir + '/Result', "Csv files(*.csv)")
         if (platform.system() == "Windows"):
@@ -420,6 +434,11 @@ class TestSeq(MainSlots, QMainWindow):
         else:
             import subprocess
             subprocess.call(["open", filename[0]])
+
+    def open_log_thread(self):
+        logthread = threading.Thread(target=self.open_log)
+        logthread.setDaemon(True)
+        logthread.start()
 
     def open_log(self):
         filename = QFileDialog.getOpenFileName(self, "open", systempath.bundle_dir + '/Log',"Log files(*.log)")
@@ -440,12 +459,10 @@ class TestSeq(MainSlots, QMainWindow):
             self.actionUser_Manage.setVisible(True)
             self.actionEdit_Window.setVisible(True)
             self.actionMotion_Window.setVisible(True)
-            self.actionVision_Window.setVisible(True)
             self.mystepbar.setDisabled(False)
             self.nextAction.setDisabled(False)
             self.myloopbar.setDisabled(False)
             # self.myeditbar.setDisabled(False)
-
         else:
             self.actionPause.setVisible(False)
             self.actionContinue.setVisible(False)
@@ -456,7 +473,6 @@ class TestSeq(MainSlots, QMainWindow):
             self.actionUser_Manage.setVisible(False)
             self.actionEdit_Window.setVisible(False)
             self.actionMotion_Window.setVisible(False)
-            self.actionVision_Window.setVisible(False)
             self.mystepbar.setDisabled(True)
             self.nextAction.setDisabled(True)
             self.myloopbar.setDisabled(True)

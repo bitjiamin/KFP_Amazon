@@ -1125,7 +1125,7 @@
        <item row="0" column="1">
         <widget class="QPushButton" name="pb_save1">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(85, 255, 127);</string>
+          <string notr="true">background-color: rgb(85, 255, 0);</string>
          </property>
          <property name="text">
           <string>保存</string>
@@ -1207,6 +1207,12 @@
            <pointsize>13</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(180, 180, 180);</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
          <property name="minimum">
           <double>-99999999.000000000000000</double>
          </property>
@@ -1234,6 +1240,12 @@
            <pointsize>13</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(180, 180, 180);</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
          <property name="minimum">
           <double>-99999999.000000000000000</double>
          </property>
@@ -1248,6 +1260,12 @@
           <font>
            <pointsize>13</pointsize>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(180, 180, 180);</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
          </property>
          <property name="minimum">
           <double>-99999999.000000000000000</double>
@@ -1276,6 +1294,12 @@
            <pointsize>13</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(180, 180, 180);</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
          <property name="minimum">
           <double>-99999999.000000000000000</double>
          </property>
@@ -1290,6 +1314,12 @@
           <font>
            <pointsize>13</pointsize>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(180, 180, 180);</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
          </property>
          <property name="minimum">
           <double>-99999999.000000000000000</double>
@@ -1415,6 +1445,12 @@
            <pointsize>13</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(180, 180, 180);</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
          <property name="minimum">
           <double>-99999999.000000000000000</double>
          </property>
@@ -1429,6 +1465,12 @@
           <font>
            <pointsize>13</pointsize>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(180, 180, 180);</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
          </property>
          <property name="minimum">
           <double>-99999999.000000000000000</double>
@@ -1457,6 +1499,12 @@
            <pointsize>13</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(180, 180, 180);</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
          <property name="minimum">
           <double>-99999999.000000000000000</double>
          </property>
@@ -1471,6 +1519,12 @@
           <font>
            <pointsize>13</pointsize>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(180, 180, 180);</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
          </property>
          <property name="minimum">
           <double>-99999999.000000000000000</double>
@@ -1499,6 +1553,12 @@
            <pointsize>13</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(180, 180, 180);</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
          <property name="minimum">
           <double>-99999999.000000000000000</double>
          </property>
@@ -1513,6 +1573,18 @@
           <font>
            <pointsize>13</pointsize>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(180, 180, 180);</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="minimum">
+          <double>-10000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>100000.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -1535,6 +1607,12 @@
            <pointsize>13</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(180, 180, 180);</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item row="4" column="2">
@@ -1552,21 +1630,6 @@
          </property>
         </widget>
        </item>
-       <item row="8" column="2">
-        <widget class="QPushButton" name="pb_cameracal">
-         <property name="font">
-          <font>
-           <pointsize>13</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 255, 127);</string>
-         </property>
-         <property name="text">
-          <string>相机标定</string>
-         </property>
-        </widget>
-       </item>
        <item row="10" column="2">
         <widget class="QPushButton" name="pb_probe">
          <property name="font">
@@ -1578,7 +1641,37 @@
           <string notr="true">background-color: rgb(255, 255, 127);</string>
          </property>
          <property name="text">
-          <string>打头探针标定</string>
+          <string>探针位置标定</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1">
+        <widget class="QPushButton" name="pb_cameracal">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 127);</string>
+         </property>
+         <property name="text">
+          <string>开始相机标定</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="2">
+        <widget class="QPushButton" name="pb_savecamera">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 127);</string>
+         </property>
+         <property name="text">
+          <string>保存数据</string>
          </property>
         </widget>
        </item>

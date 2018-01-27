@@ -48,7 +48,6 @@ class TestFunc():
             self.zmq_open()
             daqcomm.daq = daqcomm.DAQ()
             self.daq = daqcomm.daq
-            print('aaaaaaaaaaa')
             self.daq.tcp_connect()
             self.vision = Vision()
             self.testing = False
@@ -155,14 +154,17 @@ class TestFunc():
         return ret_daq
 
     def get_position(self, point):
-        if(self.worldxy != ['']):
-            if(point<self.pointcnt/2):
-                self.plc.write_intD(self.xd[point], int(self.worldxy[point] * 100))
-                self.plc.write_intD(self.yd[point], int(self.worldxy[self.pointcnt + point] * 100))
-            else:
-                self.plc.write_intD(self.xd[point + 2], int(self.worldxy[point] * 100))
-                self.plc.write_intD(self.yd[point + 2], int(self.worldxy[self.pointcnt + point] * 100))
-            self.vision.disp_test_point(point)
+        try:
+            if(self.worldxy != ['']):
+                if(point<self.pointcnt/2):
+                    self.plc.write_intD(self.xd[point], int(self.worldxy[point] * 100))
+                    self.plc.write_intD(self.yd[point], int(self.worldxy[self.pointcnt + point] * 100))
+                else:
+                    self.plc.write_intD(self.xd[point + 2], int(self.worldxy[point] * 100))
+                    self.plc.write_intD(self.yd[point + 2], int(self.worldxy[self.pointcnt + point] * 100))
+                self.vision.disp_test_point(point)
+        except Exception as e:
+            print(e)
 
     def save_rawdata(self, force, displacement, point):
         # 保存波形数据
@@ -188,21 +190,19 @@ class TestFunc():
     def pre_test(self):
         i = 0
         # 获取Z轴位置
-        print('preeeeeeeeeeeeeeeeeee')
-        print(self.plc.read_block_intD('402', 2)[0])
         self.pressz = int(self.plc.read_block_intD('402', 2)[0])/100
         while(True):
-            time.sleep(0.01)
-            if(self.in_done or i>10):
+            time.sleep(0.02)
+            if(self.in_done or i>100):
                 break
             i = i + 1
         self.plc.write_intD("492", 3)  # 通知PLC开始测试
 
         if(self.in_done):
             self.capture_image()
-            return [0.2, 'pre']
+            return [1, 'pre']
         else:
-            return[0, 'time out']
+            return[-1, 'time out']
 
     def capture_image(self):
         try:
@@ -210,6 +210,7 @@ class TestFunc():
             self.vision.snap()
             self.plc.write_M('300', '0')
             self.worldxy = self.vision.find_test_point()
+            print(self.worldxy)
             self.worldxy = self.worldxy[1:len(self.worldxy)-2]
             self.worldxy = self.worldxy.split(',')
             # 若视觉定位失败，则使用上次测试的坐标值
@@ -221,23 +222,22 @@ class TestFunc():
             else:
                 capx = int(self.plc.read_block_intD('394',2)[0])/100
                 capy = int(self.plc.read_block_intD('518', 2)[0])/100
-                print('capture position:')
-                print(capx)
-                print(capy)
-                markcapx = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'markcapx'))
-                markcapy = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'markcapy'))
-                markx = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'markx'))
-                marky = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'marky'))
+                markcapx = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Camera', 'markcapx'))
+                markcapy = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Camera', 'markcapy'))
+                markx = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Camera', 'markx'))
+                marky = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Camera', 'marky'))
+                deltax = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Probe', 'deltax'))
+                deltay = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Probe', 'deltay'))
                 loadcellx = float(
-                    inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'loadcellx'))
+                    inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Camera', 'loadcellx'))
                 loadcelly = float(
-                    inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'loadcelly'))
+                    inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Camera', 'loadcelly'))
                 for i in range(len(self.worldxy)):
                     if(i<int(len(self.worldxy)/2)):
                         #mark
-                        self.worldxy[i] = markx + loadcellx - float(self.worldxy[i]) + 282.31 - markcapx
+                        self.worldxy[i] = markx + loadcellx - float(self.worldxy[i]) + capx - markcapx + deltax
                     else:
-                        self.worldxy[i] = marky + loadcelly - float(self.worldxy[i]) + 29.05 - markcapy
+                        self.worldxy[i] = marky + loadcelly - float(self.worldxy[i]) + capy - markcapy + deltay
         except Exception as e:
             log.loginfo.process_log(str(e))
         return [0, 'capture']
@@ -246,42 +246,52 @@ class TestFunc():
         self.get_position(0)
         ret = self.press_one_key(1, 1)
         dataexchange.testpoint = 1
-        data = [round(self.worldxy[0],3), round(self.worldxy[6],3)]
-        data = [ret[0][10]] +data + ret[0]
+        data = [round(self.worldxy[0],3), round(self.worldxy[6],3), round(self.pressz, 3)]
+
+        data = [ret[0][10]] +data +  ret[0][0:2] + ret[0][4:15]
+        #dataexchange.points[0] = ret[0][0:2] + ret[0][4:15]
         dataexchange.points[0] = ret[0]
+
         dataexchange.displacement[0] = ret[1]
         dataexchange.force[0] = ret[2]
         self.save_rawdata(ret[1], ret[2], 1)
         if(self.worldxy!=['']):
             detail = [str(round(self.worldxy[0],3)) + ', ' + str(round(self.worldxy[6],3)) + ', ' + str(self.pressz)]
         else:
-            detail = ['null, null']
-        print(data)
+            detail = ['null, null, null']
         return data+detail
 
     def test_point2(self):
-        self.get_position(1)
-        ret = self.press_one_key(1, 2)
-        dataexchange.testpoint = 2
-        data = [round(self.worldxy[1],3), round(self.worldxy[7],3)]
-        data = [ret[0][10]] +data + ret[0]
-        dataexchange.points[1] = ret[0]
-        dataexchange.displacement[1] = ret[1]
-        dataexchange.force[1] = ret[2]
-        self.save_rawdata(ret[1], ret[2], 2)
-        if (self.worldxy != ['']):
-            detail = [str(round(self.worldxy[1], 3)) + ', ' + str(round(self.worldxy[7], 3))+ ', ' + str(self.pressz)]
-        else:
-            detail = ['null, null']
+        try:
+            self.get_position(1)
+            ret = self.press_one_key(1, 2)
+            dataexchange.testpoint = 2
+            data = [round(self.worldxy[1],3), round(self.worldxy[7],3), round(self.pressz, 3)]
+            data = [ret[0][10]] +data + ret[0][0:2] + ret[0][4:15]
+            dataexchange.points[1] = ret[0]
+            #dataexchange.points[1] = ret[0][0:2] + ret[0][4:15]
+            dataexchange.displacement[1] = ret[1]
+            dataexchange.force[1] = ret[2]
+            self.save_rawdata(ret[1], ret[2], 2)
+            if (self.worldxy != ['']):
+                detail = [str(round(self.worldxy[1], 3)) + ', ' + str(round(self.worldxy[7], 3))+ ', ' + str(self.pressz)]
+            else:
+                detail = ['null, null, null']
+        except Exception as e:
+            print(e)
         return data + detail
 
     def test_point3(self):
         self.get_position(2)
         ret = self.press_one_key(1, 3)
         dataexchange.testpoint = 3
-        data = [round(self.worldxy[2],3), round(self.worldxy[8],3)]
-        data = [ret[0][10]] +data + ret[0]
+        data = [round(self.worldxy[2],3), round(self.worldxy[8],3), round(self.pressz, 3)]
+        #data = [ret[0][10]] +data + ret[0]
+        data = [ret[0][10]] +data +  ret[0][0:2] + ret[0][4:15]
+
         dataexchange.points[2] = ret[0]
+        #dataexchange.points[2] = ret[0][0:2] + ret[0][4:15]
+
         dataexchange.displacement[2] = ret[1]
         dataexchange.force[2] = ret[2]
         self.save_rawdata(ret[1], ret[2], 3)
@@ -289,16 +299,18 @@ class TestFunc():
         if (self.worldxy != ['']):
             detail = [str(round(self.worldxy[2], 3)) + ', ' + str(round(self.worldxy[8], 3))+ ', ' + str(self.pressz)]
         else:
-            detail = ['null, null']
+            detail = ['null, null, null']
         return data + detail
 
     def test_point4(self):
         self.get_position(3)
         ret = self.press_one_key(2, 1)
         dataexchange.testpoint = 4
-        data = [round(self.worldxy[3],3), round(self.worldxy[9],3)]
-        data = [ret[0][10]] +data + ret[0]
+        data = [round(self.worldxy[3],3), round(self.worldxy[9],3), round(self.pressz, 3)]
+        #data = [ret[0][10]] +data + ret[0]
+        data = [ret[0][10]] +data +  ret[0][0:2] + ret[0][4:15]
         dataexchange.points[3] = ret[0]
+        #dataexchange.points[3] = ret[0][0:2] + ret[0][4:15]
 
         dataexchange.displacement[3] = ret[1]
         dataexchange.force[3] = ret[2]
@@ -308,34 +320,38 @@ class TestFunc():
         if (self.worldxy != ['']):
             detail = [str(round(self.worldxy[3], 3)) + ', ' + str(round(self.worldxy[9], 3))+ ', ' + str(self.pressz)]
         else:
-            detail = ['null, null']
+            detail = ['null, null, null']
         return data + detail
 
     def test_point5(self):
         self.get_position(4)
         ret = self.press_one_key(2, 2)
         dataexchange.testpoint = 5
-        data = [round(self.worldxy[4],3), round(self.worldxy[10],3)]
-        data = [ret[0][10]] +data + ret[0]
+        data = [round(self.worldxy[4],3), round(self.worldxy[10],3), round(self.pressz, 3)]
+        #data = [ret[0][10]] +data + ret[0]
+        data = [ret[0][10]] +data +  ret[0][0:2] + ret[0][4:15]
         dataexchange.points[4] = ret[0]
+        #dataexchange.points[4] = ret[0][0:2] + ret[0][4:15]
         dataexchange.displacement[4] = ret[1]
         dataexchange.force[4] = ret[2]
-
         self.save_rawdata(ret[1], ret[2], 5)
 
         if (self.worldxy != ['']):
             detail = [str(round(self.worldxy[4], 3)) + ', ' + str(round(self.worldxy[10], 3))+ ', ' + str(self.pressz)]
         else:
-            detail = ['null, null']
+            detail = ['null, null, null']
         return data + detail
 
     def test_point6(self):
         self.get_position(5)
         ret = self.press_one_key(2, 3)
         dataexchange.testpoint = 6
-        data = [round(self.worldxy[5],3), round(self.worldxy[11],3)]
-        data = [ret[0][10]] +data + ret[0]
+        data = [round(self.worldxy[5],3), round(self.worldxy[11],3), round(self.pressz, 3)]
+        #data = [ret[0][10]] +data + ret[0]
+        data = [ret[0][10]] +data +  ret[0][0:2] + ret[0][4:15]
         dataexchange.points[5] = ret[0]
+        #dataexchange.points[5] = ret[0][0:2] + ret[0][4:15]
+
         dataexchange.displacement[5] = ret[1]
         dataexchange.force[5] = ret[2]
 
@@ -344,9 +360,9 @@ class TestFunc():
         if (self.worldxy != ['']):
             detail = [str(round(self.worldxy[5], 3)) + ', ' + str(round(self.worldxy[11], 3))+ ', ' + str(self.pressz)]
         else:
-            detail = ['null, null']
+            detail = ['null, null, null']
         return data + detail
 
     def post_test(self):
         self.plc.write_intD("490", 3)
-        return [0.9, 'post']
+        return [1, 'post']

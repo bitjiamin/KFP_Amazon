@@ -1,18 +1,22 @@
 # -*- coding: utf-8 -*-
-from tkinter import *
-import tkinter.filedialog
 
-root = Tk()
-root.withdraw()
-filename = tkinter.filedialog.askopenfilename()
 
-# if filename != '':
-#     lb.config(text = "您选择的文件是："+filename)
-# else:
-#     lb.config(text = "您没有选择任何文件")
-# lb = Label(root,text = '')
-# lb.pack()
-# btn = Button(root,text="弹出选择文件对话框",command=xz)
-# btn.pack()
-# root.mainloop()
-xz()
+
+import configparser
+
+
+def read_ini(filename, section, key):
+    cf = configparser.ConfigParser()
+    cf.read(filename)
+    value = cf.get(section, key)
+    return value
+
+def write_ini(filename, section, key, value):
+    cf = configparser.ConfigParser()
+    cf.read(filename)
+    cf.set(section, key, value)
+    # write to file
+    cf.write(open(filename, "w"))
+
+
+write_ini('C:\\Project\\TestSeq-Amazon\\Config\\Calibration.ini', 'Probe', 'probex', str(1.0))

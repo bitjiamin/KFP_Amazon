@@ -241,25 +241,36 @@ class AutoThread(Ui_automation, QDialog, QtCore.QThread):
         self.tabWidget.setCurrentIndex(0)
         automationscript.read_thread = True
         try:
-            self.calpos1X.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'pos1x')))
-            self.calpos1Y.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'pos1y')))
-            self.calpos2X.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'pos2x')))
-            self.calpos2Y.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'pos2y')))
-            self.calpos3X.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'pos3x')))
-            self.calpos3Y.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'pos3y')))
+            # 开启手动模式
+            self.auto.plc.write_M("227", "1")
+            self.auto.plc.write_M("9", "1")
 
-            self.cameraposX.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'markcapx')))
-            self.cameraposY.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'markcapy')))
-            self.markX.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'markx')))
-            self.markY.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'marky')))
-            self.headX.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'loadcellx')))
-            self.headY.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'loadcelly')))
+            self.calpos1X.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Sensor', 'pos1x')))
+            self.calpos1Y.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Sensor', 'pos1y')))
+            self.calpos2X.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Sensor', 'pos2x')))
+            self.calpos2Y.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Sensor', 'pos2y')))
+            self.calpos3X.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Sensor', 'pos3x')))
+            self.calpos3Y.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Sensor', 'pos3y')))
 
+            self.cameraposX.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Camera', 'markcapx')))
+            self.cameraposY.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Camera', 'markcapy')))
+            self.markX.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Camera', 'markx')))
+            self.markY.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Camera', 'marky')))
+            self.headX.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Camera', 'loadcellx')))
+            self.headY.setValue(float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Camera', 'loadcelly')))
+
+            self.dsb_deltax.setValue(
+                float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Probe', 'deltax')))
+            self.dsb_deltay.setValue(
+                float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Probe', 'deltay')))
         except Exception as e:
             print(e)
 
     def closeEvent(self, e):
         automationscript.read_thread = False
+        # 关闭手动模式
+        self.auto.plc.write_M("227", "0")
+        self.auto.plc.write_M("9", "0")
 
     def connect_signals(self):
         self.pb_cyair1.clicked.connect(self.auto.air_in)
@@ -308,6 +319,7 @@ class AutoThread(Ui_automation, QDialog, QtCore.QThread):
         self.pb_sensorcal.clicked.connect(self.sensor_calibration_thread)
         self.pb_cameracal.clicked.connect(self.camera_calibration_thread)
         self.pb_probe.clicked.connect(self.probe_calibration_thread)
+        self.pb_savecamera.clicked.connect(self.save_camera_cal)
 
     def x_absolute(self):
         data = int(self.dsb_xpos.value()*100)
@@ -419,12 +431,12 @@ class AutoThread(Ui_automation, QDialog, QtCore.QThread):
 
     def sensor_calibration_thread(self):
         self.zpos = [62, 62.03, 62.06, 62.09, 62.12, 62.15, 50]
-        self.zpos[0] = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'posz1'))
-        self.zpos[1] = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'posz2'))
-        self.zpos[2] = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'posz3'))
-        self.zpos[3] = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'posz4'))
-        self.zpos[4] = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'posz5'))
-        self.zpos[5] = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'posz6'))
+        self.zpos[0] = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Sensor', 'posz1'))
+        self.zpos[1] = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Sensor', 'posz2'))
+        self.zpos[2] = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Sensor', 'posz3'))
+        self.zpos[3] = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Sensor', 'posz4'))
+        self.zpos[4] = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Sensor', 'posz5'))
+        self.zpos[5] = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Sensor', 'posz6'))
         sensorthread = threading.Thread(target=self.sensor_calibration)
         sensorthread.setDaemon(True)
         sensorthread.start()
@@ -492,6 +504,12 @@ class AutoThread(Ui_automation, QDialog, QtCore.QThread):
 
     def sensor_calibration(self):
         log.loginfo.process_log('Start sensor calibration!')
+        # set mannual speed
+        log.loginfo.process_log('Set mannual speed: X:40, Y:40, Z:30!')
+        self.auto.plc.write_intD("300", 4000)
+        self.auto.plc.write_intD("302", 4000)
+        self.auto.plc.write_intD("304", 3000)
+
         self.pb_sensorcal.setEnabled(False)
         try:
             # x轴到指定位置
@@ -511,6 +529,7 @@ class AutoThread(Ui_automation, QDialog, QtCore.QThread):
                     break
                 # z轴到指定位置
                 for k in range(6):
+                    log.loginfo.process_log('Z position: ' + str(k + 1))
                     ret = self.absoluteZ(self.zpos[k])
                     if (ret):
                         break
@@ -535,7 +554,7 @@ class AutoThread(Ui_automation, QDialog, QtCore.QThread):
             self.auto.system_reset()
             # 校准完成，复位系统
             log.loginfo.process_log('Slope: ' + str(line[0]))
-            if(line[0]<60.5 and line[0]>60):
+            if(line[0]<310 and line[0]>305):
                 daqcomm.daq.write_calibration(line[0])
                 log.loginfo.process_log('Calibration Success!')
             else:
@@ -544,7 +563,6 @@ class AutoThread(Ui_automation, QDialog, QtCore.QThread):
         except Exception as e:
             print(e)
             self.pb_sensorcal.setEnabled(True)
-
 
     def camera_calibration_thread(self):
         camerathread = threading.Thread(target=self.camera_calibration)
@@ -555,12 +573,16 @@ class AutoThread(Ui_automation, QDialog, QtCore.QThread):
         try:
             self.pb_cameracal.setEnabled(False)
             log.loginfo.process_log('Start camera calibration!')
+            # set mannual speed
+            log.loginfo.process_log('Set mannual speed: X:40, Y:40, Z:30!')
+            self.auto.plc.write_intD("300", 4000)
+            self.auto.plc.write_intD("302", 4000)
+            self.auto.plc.write_intD("304", 3000)
             # x轴到指定位置
             markcapx = float(
-                inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'markcapx'))
+                inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Camera', 'markcapx'))
             markcapy = float(
-                inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Calibration', 'markcapy'))
-
+                inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Camera', 'markcapy'))
             ret = self.absoluteX(markcapx)
 
             # y轴到指定位置
@@ -569,17 +591,39 @@ class AutoThread(Ui_automation, QDialog, QtCore.QThread):
             if(ret == False):
                 self.vision = Vision()
                 self.auto.plc.write_M('300', '1')
-                self.vision.kfpv.set_extime(50000.0)
+                self.vision.kfpv.set_extime(40000.0)
                 self.vision.snap()
                 self.auto.plc.write_M('300', '0')
                 self.vision.kfpv.set_extime(180000.0)
                 retxy = self.vision.find_mark_point()
-            # 校准完成，复位系统
-            self.auto.system_reset()
+                log.loginfo.process_log('Mark position:' + retxy)
+                markxy = retxy.split(',')
+                self.markX.setValue(float(markxy[0]))
+                self.markY.setValue(float(markxy[1]))
+
             self.pb_cameracal.setEnabled(True)
+            log.loginfo.process_log('Move the probe to the mark point and save the data!')
         except Exception as e:
             print(e)
+            self.auto.system_reset()
             self.pb_cameracal.setEnabled(True)
+
+    def save_camera_cal(self):
+        try:
+            mx = self.markX.value()
+            my = self.markY.value()
+            lx = self.headX.value()
+            ly = self.headY.value()
+            inihelper.write_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Camera', 'markx', str(mx))
+            inihelper.write_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Camera', 'marky', str(my))
+            inihelper.write_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Camera', 'loadcellx', str(lx))
+            inihelper.write_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Camera', 'loadcelly', str(ly))
+            log.loginfo.process_log('Save data ok!')
+            # 校准完成，复位系统
+            self.auto.system_reset()
+        except Exception as e:
+            self.auto.system_reset()
+            log.loginfo.process_log(str(e))
 
     def probe_calibration_thread(self):
         probethread = threading.Thread(target=self.probe_calibration)
@@ -587,30 +631,49 @@ class AutoThread(Ui_automation, QDialog, QtCore.QThread):
         probethread.start()
 
     def probe_calibration(self):
-        self.auto.plc.write_M('284', '1')
-        i = 0
-        while(True):
-            if(self.auto.plc.read_blockM('286',1)=='1' or i>100):
-                break
-            time.sleep(0.1)
-            i = i + 1
-        # read XY
-        time.sleep(2)
-        x = self.dsb_rtpx.value()
-        print('xxxxxxxxxxxxxxxxxx')
-        print(x)
-        # get XY ok
-        self.auto.plc.write_M('287', '1')
+        try:
+            self.pb_probe.setEnabled(False)
+            log.loginfo.process_log('Start probe calibration!')
+            # set mannual speed
+            log.loginfo.process_log('Set mannual speed: X:40, Y:40, Z:30!')
+            self.auto.plc.write_intD("300", 4000)
+            self.auto.plc.write_intD("302", 4000)
+            self.auto.plc.write_intD("304", 3000)
 
-        while (True):
-            if (self.auto.plc.read_blockM('291', 1) == '1' or i > 100):
-                break
-            time.sleep(0.1)
-            i = i + 1
-        # read XY
-        time.sleep(2)
-        y = self.dsb_rtpy.value()
-        print('yyyyyyyyyyyyyyyyyyyyyy')
-        print(y)
-        # get XY ok
-        self.auto.plc.write_M('292', '1')
+            self.auto.plc.write_M('284', '1')
+            i = 0
+            while(True):
+                if(self.auto.plc.read_blockM('286',1)=='1' or i>100):
+                    break
+                time.sleep(0.1)
+                i = i + 1
+            # read XY
+            time.sleep(2)
+            x = self.dsb_rtpx.value()
+            print(x)
+            probex = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Probe', 'probex'))
+            deltax = x-probex
+            # inihelper.write_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Probe', 'probex', str(x))
+            inihelper.write_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Probe', 'deltax', str(deltax))
+            # get XY ok
+            self.auto.plc.write_M('287', '1')
+            while (True):
+                if (self.auto.plc.read_blockM('291', 1) == '1' or i > 100):
+                    break
+                time.sleep(0.1)
+                i = i + 1
+            # read XY
+            time.sleep(2)
+            y = self.dsb_rtpy.value()
+            print(y)
+            probey = float(inihelper.read_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Probe', 'probey'))
+            deltay = y-probey
+            # inihelper.write_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Probe', 'probey', str(y))
+            inihelper.write_ini(systempath.bundle_dir + '/Config/Calibration.ini', 'Probe', 'deltay', str(deltay))
+            self.dsb_deltay.setValue(deltay)
+            self.dsb_deltax.setValue(deltax)
+            # get XY ok
+            self.auto.plc.write_M('292', '1')
+            self.pb_probe.setEnabled(True)
+        except Exception as e:
+            self.pb_probe.setEnabled(True)

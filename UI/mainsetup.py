@@ -174,6 +174,10 @@ class MainUI(Ui_MainWindow, QMainWindow):
             self.actionEdit.setVisible(False)
             self.actionEdit_Window.setVisible(False)
             self.tabWidget.removeTab(1)
+        self.actionToolBar.setVisible(False)
+        self.actionOpen_CSV.setVisible(False)
+        self.actionOpen_Result.setVisible(False)
+        self.actionOpen_Log.setVisible(False)
 
     def Chinese_ui(self):
         # 工具栏

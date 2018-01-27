@@ -132,7 +132,6 @@ class TestThread(QtCore.QThread):
                     self.refresh.emit([j, tt, self.ret[0:len(self.ret)-1], 'Pause', self.ret[len(self.ret)-1:], self.threadid])  #发送暂停测试信号，更新界面
                 # 发送测试结果并更新界面,测试脚本返回的结果中前半部分为结果，后半部分为详细描述
                 self.refresh.emit([j, tt, self.ret[0:len(self.ret)-1], self.result,  self.ret[len(self.ret)-1:], self.threadid])
-                print(self.ret[0:int(len(self.ret)/2)])
                 log.loginfo.process_log('Thread' + str(self.threadid+1) + ':'+self.load.seq_col2[i] + ' result:' + str(self.ret))
                 # 按了停止后结束测试
                 if(self.stop):
@@ -144,14 +143,16 @@ class TestThread(QtCore.QThread):
                 j = j + 1
             i = i + 1
         # 更新测试时间和测试结果，保存测试结果
-        time2 = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
-
-        data_head = [dataexchange.sn, total_result, 'no error', time1, time2, str(total_time)]
-        data_head.extend(total_data)
-        self.load.write_csv(data_head, self.threadid)
-        log.loginfo.process_log('Thread' + str(self.threadid+1) + ':'+'total time： ' + str("%.2f" %total_time))
-        self.seq_end = True
-        self.finishSignal.emit([total_time, total_result, self.threadid])
+        try:
+            time2 = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
+            data_head = [dataexchange.sn, total_result, 'no error', time1, time2, str(total_time)]
+            data_head.extend(total_data)
+            self.load.write_csv(data_head, self.threadid)
+            log.loginfo.process_log('Thread' + str(self.threadid+1) + ':'+'total time： ' + str("%.2f" %total_time))
+            self.seq_end = True
+            self.finishSignal.emit([total_time, total_result, self.threadid])
+        except Exception as e:
+            print(e)
 
     # 重写 run() 函数，在该线程中执行测试函数
     def run(self):
